@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AC0D8B411ED0AF5A004F0757 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D8B401ED0AF5A004F0757 /* ViewController2.swift */; };
 		ACB84FEE1ECFCAEC00A4444D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB84FED1ECFCAEC00A4444D /* AppDelegate.swift */; };
 		ACB84FF01ECFCAEC00A4444D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB84FEF1ECFCAEC00A4444D /* ViewController.swift */; };
 		ACB84FF31ECFCAEC00A4444D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACB84FF11ECFCAEC00A4444D /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AC0D8B401ED0AF5A004F0757 /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		ACB84FEA1ECFCAEC00A4444D /* ImmiCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImmiCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB84FED1ECFCAEC00A4444D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACB84FEF1ECFCAEC00A4444D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				ACB84FED1ECFCAEC00A4444D /* AppDelegate.swift */,
 				ACB84FEF1ECFCAEC00A4444D /* ViewController.swift */,
+				AC0D8B401ED0AF5A004F0757 /* ViewController2.swift */,
 				ACB84FF11ECFCAEC00A4444D /* Main.storyboard */,
 				ACB84FF71ECFCAEC00A4444D /* Assets.xcassets */,
 				ACB84FF91ECFCAEC00A4444D /* LaunchScreen.storyboard */,
@@ -263,6 +266,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACB84FF61ECFCAEC00A4444D /* ImmiCalc.xcdatamodeld in Sources */,
+				AC0D8B411ED0AF5A004F0757 /* ViewController2.swift in Sources */,
 				ACB84FF01ECFCAEC00A4444D /* ViewController.swift in Sources */,
 				ACB84FEE1ECFCAEC00A4444D /* AppDelegate.swift in Sources */,
 			);
@@ -421,6 +425,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Raining.ImmiCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -433,6 +438,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Raining.ImmiCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -509,6 +515,7 @@
 				ACB850171ECFCAEC00A4444D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACB850181ECFCAEC00A4444D /* Build configuration list for PBXNativeTarget "ImmiCalcTests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +524,7 @@
 				ACB8501A1ECFCAEC00A4444D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ACB8501B1ECFCAEC00A4444D /* Build configuration list for PBXNativeTarget "ImmiCalcUITests" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +533,7 @@
 				ACB8501D1ECFCAEC00A4444D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
