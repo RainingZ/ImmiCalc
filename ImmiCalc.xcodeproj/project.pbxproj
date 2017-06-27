@@ -16,6 +16,7 @@
 		ACB84FFB1ECFCAEC00A4444D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACB84FF91ECFCAEC00A4444D /* LaunchScreen.storyboard */; };
 		ACB850061ECFCAEC00A4444D /* ImmiCalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB850051ECFCAEC00A4444D /* ImmiCalcTests.swift */; };
 		ACB850111ECFCAEC00A4444D /* ImmiCalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB850101ECFCAEC00A4444D /* ImmiCalcUITests.swift */; };
+		ACDB9BDD1F02AA4200230D14 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDB9BDC1F02AA4200230D14 /* ViewController3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		ACB8500C1ECFCAEC00A4444D /* ImmiCalcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ImmiCalcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB850101ECFCAEC00A4444D /* ImmiCalcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImmiCalcUITests.swift; sourceTree = "<group>"; };
 		ACB850121ECFCAEC00A4444D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ACDB9BDC1F02AA4200230D14 /* ViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				ACB84FED1ECFCAEC00A4444D /* AppDelegate.swift */,
 				ACB84FEF1ECFCAEC00A4444D /* ViewController.swift */,
 				AC0D8B401ED0AF5A004F0757 /* ViewController2.swift */,
+				ACDB9BDC1F02AA4200230D14 /* ViewController3.swift */,
 				ACB84FF11ECFCAEC00A4444D /* Main.storyboard */,
 				ACB84FF71ECFCAEC00A4444D /* Assets.xcassets */,
 				ACB84FF91ECFCAEC00A4444D /* LaunchScreen.storyboard */,
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACDB9BDD1F02AA4200230D14 /* ViewController3.swift in Sources */,
 				ACB84FF61ECFCAEC00A4444D /* ImmiCalc.xcdatamodeld in Sources */,
 				AC0D8B411ED0AF5A004F0757 /* ViewController2.swift in Sources */,
 				ACB84FF01ECFCAEC00A4444D /* ViewController.swift in Sources */,
