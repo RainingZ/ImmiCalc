@@ -49,6 +49,14 @@ class ViewController2: UIViewController, UITextFieldDelegate {
         land_text.text = vars.formatter.string(from: vars.land_date)
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+    @IBAction func done_touch(_ sender: UIButton) {
+        view.endEditing(true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

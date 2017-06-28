@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController3: UIViewController {
 
+    
+    // First tableview for input, second for storage and managing dates
+    // Using DatePickerCell from Cocoapod library
     override func viewDidLoad() {
         super.viewDidLoad()
         

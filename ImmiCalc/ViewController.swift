@@ -29,6 +29,10 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Hide the navigation bar on the first page
+        self.navigationController?.isNavigationBarHidden = true
+        
         // Make rounded corners for buttons
         pr_button.layer.cornerRadius = 10
         pr_button.layer.borderWidth = 0
@@ -38,6 +42,15 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
     }
 
+    // Hide the navigation bar on the first page
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = false
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
