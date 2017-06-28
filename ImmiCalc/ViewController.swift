@@ -13,6 +13,7 @@ struct vars {
     static let formatter = DateFormatter()
     static var pr_citi_flag:Int = 0
     static var land_date = Date()
+    static var expand_height:CGFloat = 0
 }
 
 class ViewController: UIViewController {

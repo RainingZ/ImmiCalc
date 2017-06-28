@@ -149,7 +149,7 @@
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="95Q-C6-kyr">
-                                <rect key="frame" x="16" y="481" width="343" height="138"/>
+                                <rect key="frame" x="16" y="0.0" width="343" height="138"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="jpK-tD-17q" kind="embed" id="Lfd-C2-QiI"/>
@@ -158,6 +158,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.25241416820000001" blue="0.27165030849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <connections>
+                        <outlet property="from_to_container" destination="S5X-nC-kQn" id="pwt-bA-UBg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="No1-gr-YL0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

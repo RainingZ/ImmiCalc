@@ -9,7 +9,6 @@
 import UIKit
 
 class ViewController2: UIViewController, UITextFieldDelegate {
-
     @IBOutlet weak var done_button: UIButton!
     @IBOutlet weak var land_label: UILabel!
     @IBOutlet weak var land_text: UITextField!

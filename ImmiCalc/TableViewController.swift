@@ -11,7 +11,7 @@ import DatePickerCell
 
 class TableViewController: UITableViewController {
     var cells:NSArray = []
-
+    
     @IBOutlet var from_to_table: UITableView!
     
     override func viewDidLoad() {
@@ -48,10 +48,18 @@ class TableViewController: UITableViewController {
         let cell = self.tableView(tableView, cellForRowAt: indexPath)
         if let datePickerCell = cell as? DatePickerCell {
             datePickerCell.selectedInTableView(tableView)
-            from_to_table.frame = CGRect(x: from_to_table.frame.origin.x, y: from_to_table.frame.origin.y, width: from_to_table.frame.size.width, height: from_to_table.frame.size.height + datePickerCell.datePicker.frame.size.height)
+            if (datePickerCell.expanded) {
+                vars.expand_height = datePickerCell.datePicker.frame.size.height
+            }
+            else {
+                vars.expand_height = 0 - datePickerCell.datePicker.frame.size.height
+            }
+            
+            // NEED TO SMOOTH OUT THE FRAME CHANGE
+            from_to_table.contentSize.height = from_to_table.contentSize.height + vars.expand_height
+            self.preferredContentSize = from_to_table.contentSize
             
             self.tableView.deselectRow(at: indexPath, animated: true)
-            // TODO: change table size here
         }
     }
     
