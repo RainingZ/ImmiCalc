@@ -56,6 +56,16 @@ class TableViewController: UITableViewController {
             }
             
             // NEED TO SMOOTH OUT THE FRAME CHANGE
+            // WHEN DATEPICKER CHANGES UPDATE FROM_DATE AND TO_DATE
+            // AND WHEN ADD BUTTON IS CLICKED THEY CAN GO ON TO SAVE_CONTAINER
+            
+            if (datePickerCell.leftLabel.text == "From") {
+                vars.from_expanded = datePickerCell.expanded
+            }
+            else {
+                vars.to_expanded = datePickerCell.expanded
+            }
+            
             from_to_table.contentSize.height = from_to_table.contentSize.height + vars.expand_height
             self.preferredContentSize = from_to_table.contentSize
             

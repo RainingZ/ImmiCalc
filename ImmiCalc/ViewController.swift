@@ -14,6 +14,11 @@ struct vars {
     static var pr_citi_flag:Int = 0
     static var land_date = Date()
     static var expand_height:CGFloat = 0
+    static var from_expanded:Bool = false
+    static var to_expanded:Bool = false
+    static var dates:NSArray = []
+    static var from_date = Date()
+    static var to_date = Date()
 }
 
 class ViewController: UIViewController {
