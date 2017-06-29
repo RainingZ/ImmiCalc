@@ -15,22 +15,42 @@ class TableViewController: UITableViewController {
     @IBOutlet var from_to_table: UITableView!
     
     override func viewDidLoad() {
+        // Let this TableView be an observer of add_button_press notification
+        NotificationCenter.default.addObserver(self, selector: #selector(TableViewController.NotificationHandler), name: vars.AddButtonNotification, object: nil)
+        
+        // Initialize tableView and datePickerCells
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 44
         
-        // The DatePickerCell.
-        let datePickerCell = DatePickerCell(style: UITableViewCellStyle.default, reuseIdentifier: nil)
-        let datePickerCell2 = DatePickerCell(style: UITableViewCellStyle.default, reuseIdentifier: nil)
-        datePickerCell.dateStyle = DateFormatter.Style.medium
-        datePickerCell.timeStyle = DateFormatter.Style.none
-        datePickerCell.datePicker.datePickerMode = UIDatePickerMode.date
-        datePickerCell.leftLabel.text = "From"
-        datePickerCell2.dateStyle = DateFormatter.Style.medium
-        datePickerCell2.timeStyle = DateFormatter.Style.none
-        datePickerCell2.datePicker.datePickerMode = UIDatePickerMode.date
-        datePickerCell2.leftLabel.text = "To"
+        vars.datePickerCell.dateStyle = DateFormatter.Style.medium
+        vars.datePickerCell.timeStyle = DateFormatter.Style.none
+        vars.datePickerCell.datePicker.datePickerMode = UIDatePickerMode.date
+        vars.datePickerCell.leftLabel.text = "From"
+        vars.datePickerCell2.dateStyle = DateFormatter.Style.medium
+        vars.datePickerCell2.timeStyle = DateFormatter.Style.none
+        vars.datePickerCell2.datePicker.datePickerMode = UIDatePickerMode.date
+        vars.datePickerCell2.leftLabel.text = "To"
         // Cells is a 2D array containing sections and rows.
-        cells = [[datePickerCell,datePickerCell2]]
+        cells = [[vars.datePickerCell,vars.datePickerCell2]]
+    }
+    
+    // Handle the notification from add_button_press, if any of the cell is expanded, select the cell again and update height
+    func NotificationHandler() {
+        if (vars.datePickerCell.expanded) {
+            vars.datePickerCell.selectedInTableView(tableView)
+            vars.expand_height = 0 - vars.datePickerCell.datePicker.frame.size.height
+            from_to_table.contentSize.height = from_to_table.contentSize.height + vars.expand_height
+            self.preferredContentSize = from_to_table.contentSize
+            self.tableView.deselectRow(at: IndexPath(row: 0, section: 0), animated: true)
+        }
+        if (vars.datePickerCell2.expanded) {
+            vars.datePickerCell2.selectedInTableView(tableView)
+            vars.expand_height = 0 - vars.datePickerCell2.datePicker.frame.size.height
+            from_to_table.contentSize.height = from_to_table.contentSize.height + vars.expand_height
+            self.preferredContentSize = from_to_table.contentSize
+            self.tableView.deselectRow(at: IndexPath(row: 1, section: 0), animated: true)
+        }
+        
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -55,17 +75,10 @@ class TableViewController: UITableViewController {
                 vars.expand_height = 0 - datePickerCell.datePicker.frame.size.height
             }
             
-            // NEED TO SMOOTH OUT THE FRAME CHANGE
-            // WHEN DATEPICKER CHANGES UPDATE FROM_DATE AND TO_DATE
+            // TODO: WHEN DATEPICKER CHANGES UPDATE FROM_DATE AND TO_DATE
             // AND WHEN ADD BUTTON IS CLICKED THEY CAN GO ON TO SAVE_CONTAINER
             
-            if (datePickerCell.leftLabel.text == "From") {
-                vars.from_expanded = datePickerCell.expanded
-            }
-            else {
-                vars.to_expanded = datePickerCell.expanded
-            }
-            
+            // Notify ViewController3 that table size has changed, so it can react and change view/button frames
             from_to_table.contentSize.height = from_to_table.contentSize.height + vars.expand_height
             self.preferredContentSize = from_to_table.contentSize
             
@@ -80,7 +93,6 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return (cells[section] as AnyObject).count
     }
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = cells[indexPath.section] as! NSArray

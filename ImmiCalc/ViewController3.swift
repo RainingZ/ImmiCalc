@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DatePickerCell
 
 class ViewController3: UIViewController {
 
@@ -18,10 +19,8 @@ class ViewController3: UIViewController {
     // Using DatePickerCell from Cocoapod library
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(from_to_container.frame.origin)
-        print(self.view.frame.midX)
-        print(self.view.frame.midY)
-        print(self.view.frame.width)
+        
+        // Arranging layouts
         from_to_container.frame = CGRect(x: self.view.frame.midX - (self.view.frame.width - 40)/2, y: 80, width: self.view.frame.width - 40, height: 88)
         
         add_button.frame = CGRect(x: self.view.frame.midX - (self.view.frame.width - 40)/2, y: 80 + 88 + 8, width: self.view.frame.width - 40, height: 30)
@@ -30,7 +29,11 @@ class ViewController3: UIViewController {
     }
     
     @IBAction func add_button_pressed(_ sender: UIButton) {
-        //var date:Date =
+        // Notify TableView to close expanded DatePickerCells
+        NotificationCenter.default.post(name: vars.AddButtonNotification, object: nil)
+        
+        // TODO: Input data from datePickerCells to save_container
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -39,14 +42,16 @@ class ViewController3: UIViewController {
     }
     
     override func preferredContentSizeDidChange(forChildContentContainer container: UIContentContainer) {
-        from_to_container.frame = CGRect(x: from_to_container.frame.origin.x, y: from_to_container.frame.origin.y, width: from_to_container.frame.size.width, height: from_to_container.frame.size.height + vars.expand_height)
+        UIView.animate(withDuration: 0.25, animations: {
+        self.from_to_container.frame = CGRect(x: self.from_to_container.frame.origin.x, y: self.from_to_container.frame.origin.y, width: self.from_to_container.frame.size.width, height: self.from_to_container.frame.size.height + vars.expand_height)
         
-        add_button.frame = CGRect(x: add_button.frame.origin.x, y: add_button.frame.origin.y + vars.expand_height, width: add_button.frame.size.width, height: add_button.frame.size.height)
+        self.add_button.frame = CGRect(x: self.add_button.frame.origin.x, y: self.add_button.frame.origin.y + vars.expand_height, width: self.add_button.frame.size.width, height: self.add_button.frame.size.height)
         
-        save_container.frame = CGRect(x: save_container.frame.origin.x, y: save_container.frame.origin.y + vars.expand_height, width: save_container.frame.size.width, height: save_container.frame.size.height - vars.expand_height)
+        self.save_container.frame = CGRect(x: self.save_container.frame.origin.x, y: self.save_container.frame.origin.y + vars.expand_height, width: self.save_container.frame.size.width, height: self.save_container.frame.size.height - vars.expand_height)
+        })
         
         // Hide save_container when both from and to cells are expanded
-        if (vars.from_expanded && vars.to_expanded) {
+        if (vars.datePickerCell.expanded && vars.datePickerCell2.expanded) {
             save_container.isHidden = true
         }
         else {
