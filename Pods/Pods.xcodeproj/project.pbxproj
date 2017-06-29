@@ -1,0 +1,866 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B993AB246CC0125168D3F4A704D95CC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		2AB5658D28451C956EA8EA9D4475D37C /* Pods-ImmiCalcTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CC77019EE83A989AE9041B566F81524 /* Pods-ImmiCalcTests-dummy.m */; };
+		2F62F2C6555F38F46A660B54E41DB1C9 /* Pods-ImmiCalcTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 79B0EA1BD7A06C789378504BD110F833 /* Pods-ImmiCalcTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D77F572DCCDF84B95CC8B0DD31F14CD /* Pods-ImmiCalcUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EF550F3B5D12C971F11451089D8C3D1 /* Pods-ImmiCalcUITests-dummy.m */; };
+		464D2260483F9D916E3AA3340F56872E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		514F40FBCE7F5D1479B6CF2477AD73B5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		544813D3F02943D42C98DB0274073E47 /* Pods-ImmiCalc-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B08F91E00D5D80752E5BC244062FFA03 /* Pods-ImmiCalc-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		577E7AC7C884EEADD1C4B672F6DC2F88 /* DatePickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9D1B9272908DC86C9C982803C231E3 /* DatePickerCell.swift */; };
+		7D7928FF41A85A0ED7C48DD2AAE36A14 /* DatePickerCell-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C12CF851F221EAEE1597CDE905A4B6DA /* DatePickerCell-dummy.m */; };
+		7E53EC760052DD91F2EAC4184DDE47FC /* Pods-ImmiCalc-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 14AC3B04A3611DC7E114FE740AC22445 /* Pods-ImmiCalc-dummy.m */; };
+		A2F8C51380FAEF532581D4490220C085 /* DatePickerCell-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B3A7E2F2309A8F905C8E536A864359F /* DatePickerCell-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C63B85DDAAA643115BBF5BA813AB067F /* Pods-ImmiCalcUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 32D1EC1324FDBABF1E5AD68072AA72E6 /* Pods-ImmiCalcUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF7736637984A31CA1D2EAEDA99A9E13 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		867C147292AB284D0F1901FA6659B716 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CD2BD5646BA433C12F2D9AD642383DD9;
+			remoteInfo = DatePickerCell;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05A182687D5675F67038198459476888 /* DatePickerCell.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = DatePickerCell.xcconfig; sourceTree = "<group>"; };
+		080D702FA0947F1D9879CE429595DC66 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		14AC3B04A3611DC7E114FE740AC22445 /* Pods-ImmiCalc-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ImmiCalc-dummy.m"; sourceTree = "<group>"; };
+		1C8784D11210C9A9FE4A06078E781FAA /* Pods-ImmiCalcUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ImmiCalcUITests.modulemap"; sourceTree = "<group>"; };
+		32D1EC1324FDBABF1E5AD68072AA72E6 /* Pods-ImmiCalcUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ImmiCalcUITests-umbrella.h"; sourceTree = "<group>"; };
+		3E4611E03D49311A9F532F7449C42C55 /* Pods_ImmiCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ImmiCalc.framework; path = "Pods-ImmiCalc.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EB3DD4A92BAECD827E159C85B3940C0 /* Pods-ImmiCalcUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ImmiCalcUITests.release.xcconfig"; sourceTree = "<group>"; };
+		423AFDDD07D5385C55468816BA49C52B /* Pods_ImmiCalcUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ImmiCalcUITests.framework; path = "Pods-ImmiCalcUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		447EC2611EDB55470D1CB7276B68D2CD /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B3A7E2F2309A8F905C8E536A864359F /* DatePickerCell-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DatePickerCell-umbrella.h"; sourceTree = "<group>"; };
+		4D9D1B9272908DC86C9C982803C231E3 /* DatePickerCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DatePickerCell.swift; path = Source/DatePickerCell.swift; sourceTree = "<group>"; };
+		4EE53BF903588570B678ED8766245CD8 /* Pods-ImmiCalcUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ImmiCalcUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		5B783758DD8E9C55B3FD401F5627B1B7 /* Pods-ImmiCalcTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ImmiCalcTests.release.xcconfig"; sourceTree = "<group>"; };
+		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		737B768317F5229C9BCFE9A697385CEB /* DatePickerCell.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DatePickerCell.framework; path = DatePickerCell.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7534688038750CC46C33F3A9EE3CD84C /* Pods-ImmiCalcTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ImmiCalcTests.modulemap"; sourceTree = "<group>"; };
+		7733258A1F57100907D61421B6DB227F /* Pods-ImmiCalcUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ImmiCalcUITests-resources.sh"; sourceTree = "<group>"; };
+		79AD23C5F56DD78E46D3AEFC736B7F78 /* Pods-ImmiCalcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ImmiCalcTests.debug.xcconfig"; sourceTree = "<group>"; };
+		79B0EA1BD7A06C789378504BD110F833 /* Pods-ImmiCalcTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ImmiCalcTests-umbrella.h"; sourceTree = "<group>"; };
+		7EF550F3B5D12C971F11451089D8C3D1 /* Pods-ImmiCalcUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ImmiCalcUITests-dummy.m"; sourceTree = "<group>"; };
+		80D1E8A33051ADCBFFB7B49EBCE1581B /* DatePickerCell-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DatePickerCell-prefix.pch"; sourceTree = "<group>"; };
+		8CC77019EE83A989AE9041B566F81524 /* Pods-ImmiCalcTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ImmiCalcTests-dummy.m"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A41EDFFFD63C6232E146DE59CCC838B8 /* Pods-ImmiCalc.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ImmiCalc.release.xcconfig"; sourceTree = "<group>"; };
+		A88FC0737944E2723EB14E6DBE967B2F /* Pods-ImmiCalc.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ImmiCalc.debug.xcconfig"; sourceTree = "<group>"; };
+		AA12E3C1C9295B74AC09C4F4EE5F1771 /* Pods-ImmiCalcTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ImmiCalcTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		ABBEC112ECA1B07ABCE6966220D89160 /* DatePickerCell.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = DatePickerCell.modulemap; sourceTree = "<group>"; };
+		AC4DE87721EE37697D6D0D2DDFC891E0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0810DB021424B54CF4B768925C503AE /* Pods-ImmiCalcTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ImmiCalcTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B08F91E00D5D80752E5BC244062FFA03 /* Pods-ImmiCalc-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ImmiCalc-umbrella.h"; sourceTree = "<group>"; };
+		B5E29A73672FE255EF85173F4DD5F792 /* Pods-ImmiCalc-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ImmiCalc-frameworks.sh"; sourceTree = "<group>"; };
+		B6C3CD65050B1D5148498C9AF1AACA0D /* Pods-ImmiCalc-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ImmiCalc-acknowledgements.markdown"; sourceTree = "<group>"; };
+		B6CCBE3EF731A664674C2EE1A5F35B06 /* Pods-ImmiCalcUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ImmiCalcUITests-frameworks.sh"; sourceTree = "<group>"; };
+		C12CF851F221EAEE1597CDE905A4B6DA /* DatePickerCell-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DatePickerCell-dummy.m"; sourceTree = "<group>"; };
+		C232BCB626AC2AC11F1E72A5A75CC143 /* Pods-ImmiCalcTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ImmiCalcTests-frameworks.sh"; sourceTree = "<group>"; };
+		CA7BEECBA5E624E4E6C17A3E747BE7A3 /* Pods-ImmiCalc-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ImmiCalc-resources.sh"; sourceTree = "<group>"; };
+		D27BD1E9CA369C07C8852E92DC57B447 /* Pods-ImmiCalcUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ImmiCalcUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D2E5A974088E1BE547E539E12EF13AD9 /* Pods_ImmiCalcTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ImmiCalcTests.framework; path = "Pods-ImmiCalcTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DCBDEB6104FBB581F0221EB43FC71CC4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E450DA8260FD3F3296EDD00805FC332F /* Pods-ImmiCalc.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-ImmiCalc.modulemap"; sourceTree = "<group>"; };
+		E4E43625D8712D104B5A89D067C5D48C /* Pods-ImmiCalc-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ImmiCalc-acknowledgements.plist"; sourceTree = "<group>"; };
+		E709044AA426A499B020429BE84FB834 /* Pods-ImmiCalcTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ImmiCalcTests-resources.sh"; sourceTree = "<group>"; };
+		F306ED4E6488C0E9484689B1AD976A3E /* Pods-ImmiCalcUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ImmiCalcUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4AED5EE3E978E870754D28B0279BCEE7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				464D2260483F9D916E3AA3340F56872E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		63EDC3D3316DC30677D4049B81F5E39D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF7736637984A31CA1D2EAEDA99A9E13 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF2D4F076AC82657BB1204DD93396884 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				514F40FBCE7F5D1479B6CF2477AD73B5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DF399356BA52127A85EE3C9910B23866 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0B993AB246CC0125168D3F4A704D95CC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0091B3C1D8D65579E0FC52B000C9A1BC /* Pods-ImmiCalcTests */ = {
+			isa = PBXGroup;
+			children = (
+				DCBDEB6104FBB581F0221EB43FC71CC4 /* Info.plist */,
+				7534688038750CC46C33F3A9EE3CD84C /* Pods-ImmiCalcTests.modulemap */,
+				B0810DB021424B54CF4B768925C503AE /* Pods-ImmiCalcTests-acknowledgements.markdown */,
+				AA12E3C1C9295B74AC09C4F4EE5F1771 /* Pods-ImmiCalcTests-acknowledgements.plist */,
+				8CC77019EE83A989AE9041B566F81524 /* Pods-ImmiCalcTests-dummy.m */,
+				C232BCB626AC2AC11F1E72A5A75CC143 /* Pods-ImmiCalcTests-frameworks.sh */,
+				E709044AA426A499B020429BE84FB834 /* Pods-ImmiCalcTests-resources.sh */,
+				79B0EA1BD7A06C789378504BD110F833 /* Pods-ImmiCalcTests-umbrella.h */,
+				79AD23C5F56DD78E46D3AEFC736B7F78 /* Pods-ImmiCalcTests.debug.xcconfig */,
+				5B783758DD8E9C55B3FD401F5627B1B7 /* Pods-ImmiCalcTests.release.xcconfig */,
+			);
+			name = "Pods-ImmiCalcTests";
+			path = "Target Support Files/Pods-ImmiCalcTests";
+			sourceTree = "<group>";
+		};
+		1238C9976B06E2D787B1065804BD809E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8F4E7672258342B3F77BAD1D7477B2D6 /* DatePickerCell */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		18B3C0F8B56AFBD6BB1E48BFC8983276 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				ABBEC112ECA1B07ABCE6966220D89160 /* DatePickerCell.modulemap */,
+				05A182687D5675F67038198459476888 /* DatePickerCell.xcconfig */,
+				C12CF851F221EAEE1597CDE905A4B6DA /* DatePickerCell-dummy.m */,
+				80D1E8A33051ADCBFFB7B49EBCE1581B /* DatePickerCell-prefix.pch */,
+				4B3A7E2F2309A8F905C8E536A864359F /* DatePickerCell-umbrella.h */,
+				AC4DE87721EE37697D6D0D2DDFC891E0 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/DatePickerCell";
+			sourceTree = "<group>";
+		};
+		5981C98A77DECCA91FE419843961387B /* Pods-ImmiCalc */ = {
+			isa = PBXGroup;
+			children = (
+				447EC2611EDB55470D1CB7276B68D2CD /* Info.plist */,
+				E450DA8260FD3F3296EDD00805FC332F /* Pods-ImmiCalc.modulemap */,
+				B6C3CD65050B1D5148498C9AF1AACA0D /* Pods-ImmiCalc-acknowledgements.markdown */,
+				E4E43625D8712D104B5A89D067C5D48C /* Pods-ImmiCalc-acknowledgements.plist */,
+				14AC3B04A3611DC7E114FE740AC22445 /* Pods-ImmiCalc-dummy.m */,
+				B5E29A73672FE255EF85173F4DD5F792 /* Pods-ImmiCalc-frameworks.sh */,
+				CA7BEECBA5E624E4E6C17A3E747BE7A3 /* Pods-ImmiCalc-resources.sh */,
+				B08F91E00D5D80752E5BC244062FFA03 /* Pods-ImmiCalc-umbrella.h */,
+				A88FC0737944E2723EB14E6DBE967B2F /* Pods-ImmiCalc.debug.xcconfig */,
+				A41EDFFFD63C6232E146DE59CCC838B8 /* Pods-ImmiCalc.release.xcconfig */,
+			);
+			name = "Pods-ImmiCalc";
+			path = "Target Support Files/Pods-ImmiCalc";
+			sourceTree = "<group>";
+		};
+		651393F00E065CD040D7DCFEA4E6BCE3 /* Pods-ImmiCalcUITests */ = {
+			isa = PBXGroup;
+			children = (
+				080D702FA0947F1D9879CE429595DC66 /* Info.plist */,
+				1C8784D11210C9A9FE4A06078E781FAA /* Pods-ImmiCalcUITests.modulemap */,
+				F306ED4E6488C0E9484689B1AD976A3E /* Pods-ImmiCalcUITests-acknowledgements.markdown */,
+				4EE53BF903588570B678ED8766245CD8 /* Pods-ImmiCalcUITests-acknowledgements.plist */,
+				7EF550F3B5D12C971F11451089D8C3D1 /* Pods-ImmiCalcUITests-dummy.m */,
+				B6CCBE3EF731A664674C2EE1A5F35B06 /* Pods-ImmiCalcUITests-frameworks.sh */,
+				7733258A1F57100907D61421B6DB227F /* Pods-ImmiCalcUITests-resources.sh */,
+				32D1EC1324FDBABF1E5AD68072AA72E6 /* Pods-ImmiCalcUITests-umbrella.h */,
+				D27BD1E9CA369C07C8852E92DC57B447 /* Pods-ImmiCalcUITests.debug.xcconfig */,
+				3EB3DD4A92BAECD827E159C85B3940C0 /* Pods-ImmiCalcUITests.release.xcconfig */,
+			);
+			name = "Pods-ImmiCalcUITests";
+			path = "Target Support Files/Pods-ImmiCalcUITests";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				1238C9976B06E2D787B1065804BD809E /* Pods */,
+				E02E1B83E0673DC430792FAB90FE2913 /* Products */,
+				DA140DBBEDC24BDAB94B179928DFE8F3 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8F4E7672258342B3F77BAD1D7477B2D6 /* DatePickerCell */ = {
+			isa = PBXGroup;
+			children = (
+				4D9D1B9272908DC86C9C982803C231E3 /* DatePickerCell.swift */,
+				18B3C0F8B56AFBD6BB1E48BFC8983276 /* Support Files */,
+			);
+			name = DatePickerCell;
+			path = DatePickerCell;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		DA140DBBEDC24BDAB94B179928DFE8F3 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				5981C98A77DECCA91FE419843961387B /* Pods-ImmiCalc */,
+				0091B3C1D8D65579E0FC52B000C9A1BC /* Pods-ImmiCalcTests */,
+				651393F00E065CD040D7DCFEA4E6BCE3 /* Pods-ImmiCalcUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		E02E1B83E0673DC430792FAB90FE2913 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				737B768317F5229C9BCFE9A697385CEB /* DatePickerCell.framework */,
+				3E4611E03D49311A9F532F7449C42C55 /* Pods_ImmiCalc.framework */,
+				D2E5A974088E1BE547E539E12EF13AD9 /* Pods_ImmiCalcTests.framework */,
+				423AFDDD07D5385C55468816BA49C52B /* Pods_ImmiCalcUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		3FCF283A875B1908E75AFDF46C9EEEE4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A2F8C51380FAEF532581D4490220C085 /* DatePickerCell-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7AAE514AC5CB4F3DF2439E344B8E7599 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				544813D3F02943D42C98DB0274073E47 /* Pods-ImmiCalc-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCC18C4392F2901A664CE9FAED63A4EB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C63B85DDAAA643115BBF5BA813AB067F /* Pods-ImmiCalcUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEBB45158CEBD5D40D0986EED6B9A1BF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F62F2C6555F38F46A660B54E41DB1C9 /* Pods-ImmiCalcTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		5907D039273DE326D441E0C6DEF5EF4F /* Pods-ImmiCalcTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76A77BB8A96F193D9C4F417EAB1DF90B /* Build configuration list for PBXNativeTarget "Pods-ImmiCalcTests" */;
+			buildPhases = (
+				3E7B10B547A9B7A991B3FC39A570D8E7 /* Sources */,
+				4AED5EE3E978E870754D28B0279BCEE7 /* Frameworks */,
+				DEBB45158CEBD5D40D0986EED6B9A1BF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-ImmiCalcTests";
+			productName = "Pods-ImmiCalcTests";
+			productReference = D2E5A974088E1BE547E539E12EF13AD9 /* Pods_ImmiCalcTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8E2EB438E2DAAE13AE8347DB2F101590 /* Pods-ImmiCalc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E77F0C914814A0903245697557F5ADA9 /* Build configuration list for PBXNativeTarget "Pods-ImmiCalc" */;
+			buildPhases = (
+				D1A6E6B0531BE9B46D288786495F5628 /* Sources */,
+				63EDC3D3316DC30677D4049B81F5E39D /* Frameworks */,
+				7AAE514AC5CB4F3DF2439E344B8E7599 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0AF482AB35E1103ADFC4080192193DF5 /* PBXTargetDependency */,
+			);
+			name = "Pods-ImmiCalc";
+			productName = "Pods-ImmiCalc";
+			productReference = 3E4611E03D49311A9F532F7449C42C55 /* Pods_ImmiCalc.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CD2BD5646BA433C12F2D9AD642383DD9 /* DatePickerCell */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 261E71B770C042B091E10C9CE0BE52A1 /* Build configuration list for PBXNativeTarget "DatePickerCell" */;
+			buildPhases = (
+				B36024F0FA1E9621B8F5D54B25FAEA16 /* Sources */,
+				CF2D4F076AC82657BB1204DD93396884 /* Frameworks */,
+				3FCF283A875B1908E75AFDF46C9EEEE4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DatePickerCell;
+			productName = DatePickerCell;
+			productReference = 737B768317F5229C9BCFE9A697385CEB /* DatePickerCell.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		F65AC5893D2FC9CEAD2656D79499767C /* Pods-ImmiCalcUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A51E38EA93B24F8FA451DE7338985CE1 /* Build configuration list for PBXNativeTarget "Pods-ImmiCalcUITests" */;
+			buildPhases = (
+				9B108C8696C6EE9EA75BC66F1546432B /* Sources */,
+				DF399356BA52127A85EE3C9910B23866 /* Frameworks */,
+				BCC18C4392F2901A664CE9FAED63A4EB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-ImmiCalcUITests";
+			productName = "Pods-ImmiCalcUITests";
+			productReference = 423AFDDD07D5385C55468816BA49C52B /* Pods_ImmiCalcUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = E02E1B83E0673DC430792FAB90FE2913 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CD2BD5646BA433C12F2D9AD642383DD9 /* DatePickerCell */,
+				8E2EB438E2DAAE13AE8347DB2F101590 /* Pods-ImmiCalc */,
+				5907D039273DE326D441E0C6DEF5EF4F /* Pods-ImmiCalcTests */,
+				F65AC5893D2FC9CEAD2656D79499767C /* Pods-ImmiCalcUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E7B10B547A9B7A991B3FC39A570D8E7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2AB5658D28451C956EA8EA9D4475D37C /* Pods-ImmiCalcTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9B108C8696C6EE9EA75BC66F1546432B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D77F572DCCDF84B95CC8B0DD31F14CD /* Pods-ImmiCalcUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B36024F0FA1E9621B8F5D54B25FAEA16 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D7928FF41A85A0ED7C48DD2AAE36A14 /* DatePickerCell-dummy.m in Sources */,
+				577E7AC7C884EEADD1C4B672F6DC2F88 /* DatePickerCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D1A6E6B0531BE9B46D288786495F5628 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7E53EC760052DD91F2EAC4184DDE47FC /* Pods-ImmiCalc-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0AF482AB35E1103ADFC4080192193DF5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = DatePickerCell;
+			target = CD2BD5646BA433C12F2D9AD642383DD9 /* DatePickerCell */;
+			targetProxy = 867C147292AB284D0F1901FA6659B716 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0186417E6F649FCDC0F00A4FA71AD346 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A88FC0737944E2723EB14E6DBE967B2F /* Pods-ImmiCalc.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ImmiCalc/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ImmiCalc/Pods-ImmiCalc.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ImmiCalc;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		163D87BE96A63549B0EACF1CC31A2E90 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		1E290A1B8C77C18F4DCFC708CD9FB0EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EB3DD4A92BAECD827E159C85B3940C0 /* Pods-ImmiCalcUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ImmiCalcUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ImmiCalcUITests/Pods-ImmiCalcUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ImmiCalcUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		1FFFFEFD9F17A7217E7B63D0F12C5BC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05A182687D5675F67038198459476888 /* DatePickerCell.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DatePickerCell/DatePickerCell-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DatePickerCell/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DatePickerCell/DatePickerCell.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = DatePickerCell;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3A99343369CBF26316651B0B4ECDAEA9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D27BD1E9CA369C07C8852E92DC57B447 /* Pods-ImmiCalcUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ImmiCalcUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ImmiCalcUITests/Pods-ImmiCalcUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ImmiCalcUITests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		707B86CFB21B645E37109F39754D4051 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C22B957C770A9AB9F1BA3A66B2C315BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79AD23C5F56DD78E46D3AEFC736B7F78 /* Pods-ImmiCalcTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ImmiCalcTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ImmiCalcTests/Pods-ImmiCalcTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ImmiCalcTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C43EBB94845C0A73063B060F1112F38B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5B783758DD8E9C55B3FD401F5627B1B7 /* Pods-ImmiCalcTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ImmiCalcTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ImmiCalcTests/Pods-ImmiCalcTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ImmiCalcTests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DC1BC324427F2BC066C2E3ED9B9E4004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05A182687D5675F67038198459476888 /* DatePickerCell.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/DatePickerCell/DatePickerCell-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/DatePickerCell/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/DatePickerCell/DatePickerCell.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = DatePickerCell;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		E45C95A7C3D8EC7A3E5D2FE8D78EE327 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A41EDFFFD63C6232E146DE59CCC838B8 /* Pods-ImmiCalc.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ImmiCalc/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-ImmiCalc/Pods-ImmiCalc.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_ImmiCalc;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		261E71B770C042B091E10C9CE0BE52A1 /* Build configuration list for PBXNativeTarget "DatePickerCell" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1FFFFEFD9F17A7217E7B63D0F12C5BC4 /* Debug */,
+				DC1BC324427F2BC066C2E3ED9B9E4004 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				163D87BE96A63549B0EACF1CC31A2E90 /* Debug */,
+				707B86CFB21B645E37109F39754D4051 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76A77BB8A96F193D9C4F417EAB1DF90B /* Build configuration list for PBXNativeTarget "Pods-ImmiCalcTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C22B957C770A9AB9F1BA3A66B2C315BC /* Debug */,
+				C43EBB94845C0A73063B060F1112F38B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A51E38EA93B24F8FA451DE7338985CE1 /* Build configuration list for PBXNativeTarget "Pods-ImmiCalcUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A99343369CBF26316651B0B4ECDAEA9 /* Debug */,
+				1E290A1B8C77C18F4DCFC708CD9FB0EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E77F0C914814A0903245697557F5ADA9 /* Build configuration list for PBXNativeTarget "Pods-ImmiCalc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0186417E6F649FCDC0F00A4FA71AD346 /* Debug */,
+				E45C95A7C3D8EC7A3E5D2FE8D78EE327 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

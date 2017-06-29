@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>SchemeUserState</key>
+	<dict>
+		<key>DatePickerCell.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-ImmiCalc.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-ImmiCalcTests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-ImmiCalcUITests.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>5907D039273DE326D441E0C6DEF5EF4F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8E2EB438E2DAAE13AE8347DB2F101590</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CD2BD5646BA433C12F2D9AD642383DD9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F65AC5893D2FC9CEAD2656D79499767C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>
