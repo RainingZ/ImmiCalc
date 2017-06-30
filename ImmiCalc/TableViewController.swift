@@ -18,9 +18,15 @@ class TableViewController: UITableViewController {
         // Let this TableView be an observer of add_button_press notification
         NotificationCenter.default.addObserver(self, selector: #selector(TableViewController.NotificationHandler), name: vars.AddButtonNotification, object: nil)
         
+        // Reload data to avoid cell disappear bug
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+        
         // Initialize tableView and datePickerCells
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 44
+        
         
         vars.datePickerCell.dateStyle = DateFormatter.Style.medium
         vars.datePickerCell.timeStyle = DateFormatter.Style.none
@@ -99,5 +105,7 @@ class TableViewController: UITableViewController {
         return section[indexPath.row] as! UITableViewCell
     }
     
-    
+    override func viewWillDisappear(_ animated: Bool) {
+        NotificationHandler()
+    }
 }
