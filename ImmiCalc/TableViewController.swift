@@ -105,6 +105,7 @@ class TableViewController: UITableViewController {
         return section[indexPath.row] as! UITableViewCell
     }
     
+    // Act as an "add button press", to retract all extended cells when leaving the view
     override func viewWillDisappear(_ animated: Bool) {
         NotificationHandler()
     }

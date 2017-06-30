@@ -52,7 +52,7 @@ class ViewController2: UIViewController, UITextFieldDelegate {
         view.endEditing(true)
     }
     
-    @IBAction func done_touch(_ sender: UIButton) {
+    override func viewWillDisappear(_ animated: Bool) {
         view.endEditing(true)
     }
     
