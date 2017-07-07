@@ -37,6 +37,10 @@ class TableViewController: UITableViewController {
         vars.datePickerCell2.datePicker.datePickerMode = UIDatePickerMode.date
         vars.datePickerCell2.leftLabel.text = "To"
         // Cells is a 2D array containing sections and rows.
+        
+        vars.datePickerCell.datePicker.addTarget(self, action: #selector(TableViewController.from_datePickerValueChanged), for: UIControlEvents.valueChanged)
+        vars.datePickerCell2.datePicker.addTarget(self, action: #selector(TableViewController.to_datePickerValueChanged), for: UIControlEvents.valueChanged)
+        
         cells = [[vars.datePickerCell,vars.datePickerCell2]]
     }
     
@@ -103,6 +107,18 @@ class TableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let section = cells[indexPath.section] as! NSArray
         return section[indexPath.row] as! UITableViewCell
+    }
+    
+    func from_datePickerValueChanged(sender:UIDatePicker) {
+        // Format, store and display the selected date every time datepicker is changed
+        vars.from_date = sender.date
+        print("From date: " + vars.formatter.string(from: vars.from_date))
+    }
+    
+    func to_datePickerValueChanged(sender:UIDatePicker) {
+        // Format, store and display the selected date every time datepicker is changed
+        vars.to_date = sender.date
+        print("To date: " + vars.formatter.string(from: vars.to_date))
     }
     
     // Act as an "add button press", to retract all extended cells when leaving the view

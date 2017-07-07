@@ -20,6 +20,8 @@
 		ACB850111ECFCAEC00A4444D /* ImmiCalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB850101ECFCAEC00A4444D /* ImmiCalcUITests.swift */; };
 		ACDB9BDD1F02AA4200230D14 /* ViewController3.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDB9BDC1F02AA4200230D14 /* ViewController3.swift */; };
 		ACDB9BDF1F02FA8A00230D14 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACDB9BDE1F02FA8A00230D14 /* TableViewController.swift */; };
+		ACFE80DD1F0FD74000B93828 /* DateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFE80DC1F0FD74000B93828 /* DateTableViewCell.swift */; };
+		ACFE80DF1F1006B600B93828 /* TableViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACFE80DE1F1006B600B93828 /* TableViewController2.swift */; };
 		D3C4720076EE5BFCE2446D17 /* Pods_ImmiCalcTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC47012871B71529DC53598B /* Pods_ImmiCalcTests.framework */; };
 		E4EF5810543F87A98C6AF852 /* Pods_ImmiCalc.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA509A2F63274EDE16A44E20 /* Pods_ImmiCalc.framework */; };
 /* End PBXBuildFile section */
@@ -67,6 +69,8 @@
 		ACB850121ECFCAEC00A4444D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACDB9BDC1F02AA4200230D14 /* ViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		ACDB9BDE1F02FA8A00230D14 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		ACFE80DC1F0FD74000B93828 /* DateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
+		ACFE80DE1F1006B600B93828 /* TableViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController2.swift; sourceTree = "<group>"; };
 		CA509A2F63274EDE16A44E20 /* Pods_ImmiCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImmiCalc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC47012871B71529DC53598B /* Pods_ImmiCalcTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImmiCalcTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -129,7 +133,9 @@
 				ACB84FEF1ECFCAEC00A4444D /* ViewController.swift */,
 				AC0D8B401ED0AF5A004F0757 /* ViewController2.swift */,
 				ACDB9BDC1F02AA4200230D14 /* ViewController3.swift */,
+				ACFE80DC1F0FD74000B93828 /* DateTableViewCell.swift */,
 				ACDB9BDE1F02FA8A00230D14 /* TableViewController.swift */,
+				ACFE80DE1F1006B600B93828 /* TableViewController2.swift */,
 				ACB84FF11ECFCAEC00A4444D /* Main.storyboard */,
 				ACB84FF71ECFCAEC00A4444D /* Assets.xcassets */,
 				ACB84FF91ECFCAEC00A4444D /* LaunchScreen.storyboard */,
@@ -464,10 +470,12 @@
 				ACDB9BDD1F02AA4200230D14 /* ViewController3.swift in Sources */,
 				AC1D0F451F0556A00061F30A /* NavController.swift in Sources */,
 				ACDB9BDF1F02FA8A00230D14 /* TableViewController.swift in Sources */,
+				ACFE80DD1F0FD74000B93828 /* DateTableViewCell.swift in Sources */,
 				ACB84FF61ECFCAEC00A4444D /* ImmiCalc.xcdatamodeld in Sources */,
 				AC0D8B411ED0AF5A004F0757 /* ViewController2.swift in Sources */,
 				ACB84FF01ECFCAEC00A4444D /* ViewController.swift in Sources */,
 				ACB84FEE1ECFCAEC00A4444D /* AppDelegate.swift in Sources */,
+				ACFE80DF1F1006B600B93828 /* TableViewController2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
