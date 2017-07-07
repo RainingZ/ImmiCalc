@@ -29,12 +29,14 @@ class ViewController3: UIViewController {
     }
     
     @IBAction func add_button_pressed(_ sender: UIButton) {
-        // Notify TableView to close expanded DatePickerCells
-        NotificationCenter.default.post(name: vars.AddButtonNotification, object: nil)
         
         // TODO: Input data from datePickerCells to save_containerd
         vars.dates += [vars.from_date, vars.to_date]
         print("Date array count: " + String(vars.dates.count))
+        
+        // Notify TableView to close expanded DatePickerCells
+        NotificationCenter.default.post(name: vars.AddButtonNotification, object: nil)
+        
     }
     
     override func didReceiveMemoryWarning() {

@@ -11,6 +11,8 @@ import UIKit
 class TableViewController2: UITableViewController {
 
     override func viewDidLoad() {
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(TableViewController2.NotificationHandler), name: vars.AddButtonNotification, object: nil)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -42,13 +44,16 @@ class TableViewController2: UITableViewController {
 
         print("indexPath.row: " + String(indexPath.row))
         // Configure the cell...
-        let from_date = vars.dates[indexPath.row]
-        let to_date = vars.dates[indexPath.row + 1]
+        let from_date = vars.dates[indexPath.row * 2]
+        let to_date = vars.dates[indexPath.row * 2 + 1]
         cell.from_date_label.text = vars.formatter.string(from: from_date)
         cell.to_date_label.text = vars.formatter.string(from: to_date)
         return cell
     }
 
+    func NotificationHandler() {
+        tableView.reloadData()
+    }
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
