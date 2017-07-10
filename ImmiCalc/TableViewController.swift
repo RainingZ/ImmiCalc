@@ -85,6 +85,24 @@ class TableViewController: UITableViewController {
                 vars.expand_height = 0 - datePickerCell.datePicker.frame.size.height
             }
             
+            // Close the other date picker cell
+            if (indexPath.row == 1) {
+                if (vars.datePickerCell.expanded) {
+                    vars.datePickerCell.selectedInTableView(tableView)
+                    vars.expand_height = 0
+                    self.preferredContentSize = from_to_table.contentSize
+                    self.tableView.deselectRow(at: IndexPath(row: 0, section: 0), animated: true)
+                }
+            }
+            else {
+                if (vars.datePickerCell2.expanded) {
+                    vars.datePickerCell2.selectedInTableView(tableView)
+                    vars.expand_height = 0
+                    self.preferredContentSize = from_to_table.contentSize
+                    self.tableView.deselectRow(at: IndexPath(row: 1, section: 0), animated: true)
+                }
+            }
+            
             // TODO: WHEN DATEPICKER CHANGES UPDATE FROM_DATE AND TO_DATE
             // AND WHEN ADD BUTTON IS CLICKED THEY CAN GO ON TO SAVE_CONTAINER
             

@@ -70,12 +70,12 @@ class ViewController3: UIViewController {
         })
         
         // Hide save_container when both from and to cells are expanded
-        if (vars.datePickerCell.expanded && vars.datePickerCell2.expanded) {
+        /*if (vars.datePickerCell.expanded && vars.datePickerCell2.expanded) {
             save_container.isHidden = true
         }
         else {
             save_container.isHidden = false
-        }
+        }*/
     }
 
     func invalidDates(fromdate:Date, todate:Date) -> Bool {
