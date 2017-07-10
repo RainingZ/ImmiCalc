@@ -54,6 +54,23 @@ class TableViewController2: UITableViewController {
     func NotificationHandler() {
         tableView.reloadData()
     }
+    
+    // Swipe left to remove a cell of data
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if (editingStyle == UITableViewCellEditingStyle.delete) {
+            // handle delete (by removing the data from your array and updating the tableview)
+            print(vars.dates[indexPath.row*2])
+            vars.dates.remove(at: indexPath.row * 2)
+            print(vars.dates[indexPath.row*2])
+            vars.dates.remove(at: indexPath.row * 2)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
+    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
