@@ -30,9 +30,25 @@ class ViewController3: UIViewController {
     
     @IBAction func add_button_pressed(_ sender: UIButton) {
         
-        // TODO: Input data from datePickerCells to save_containerd
-        vars.dates += [vars.from_date, vars.to_date]
-        print("Date array count: " + String(vars.dates.count))
+        // All added dates should be greater than landing date
+        if (vars.from_date < vars.land_date || vars.to_date < vars.land_date) {
+            // Pop up
+            print("All added dates should be greater than landing date")
+        }
+        // From dates need to be smaller or equal to To dates
+        else if (vars.to_date < vars.from_date) {
+            print("From dates need to be smaller or equal to To dates")
+        }
+        // Both dates need to be outside of an "away-from-Canada" period
+        else if (invalidDates(fromdate: vars.from_date, todate: vars.to_date)) {
+            print("Both dates need to be outside of an 'away-from-Canada' period")
+        }
+        // Add dates to array, sort the array, send notification to close cells and reload data on save table
+        else {
+            vars.dates += [vars.from_date, vars.to_date]
+            vars.dates.sort(by: {$0.compare($1) == .orderedAscending})
+            print("Date array count: " + String(vars.dates.count))
+        }
         
         // Notify TableView to close expanded DatePickerCells
         NotificationCenter.default.post(name: vars.AddButtonNotification, object: nil)
@@ -62,7 +78,23 @@ class ViewController3: UIViewController {
         }
     }
 
-
+    func invalidDates(fromdate:Date, todate:Date) -> Bool {
+        if (vars.dates.count > 0) {
+            for i in 0...vars.dates.count - 1 {
+                // fromdate or todate cannot be the same as previous from or to dates
+                if (fromdate == vars.dates[i] || todate == vars.dates[i]) {
+                    print("fromdate or todate cannot be the same as previous from or to dates")
+                    return true
+                }
+                // fromdate and todate cannot wrap around a previous from or to dates
+                else if (fromdate < vars.dates[i] && todate > vars.dates[i]) {
+                    print("fromdate and todate cannot wrap around a previous from or to dates")
+                    return true
+                }
+            }
+        }
+        return false
+    }
     
     /*
     // MARK: - Navigation
