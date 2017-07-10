@@ -22,11 +22,10 @@ class TableViewController: UITableViewController {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
-        
+        self.tableView.isScrollEnabled = false
         // Initialize tableView and datePickerCells
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 44
-        
         
         vars.datePickerCell.dateStyle = DateFormatter.Style.medium
         vars.datePickerCell.timeStyle = DateFormatter.Style.none

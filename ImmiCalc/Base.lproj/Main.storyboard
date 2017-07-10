@@ -241,10 +241,10 @@
             </objects>
             <point key="canvasLocation" x="-15.199999999999999" y="742.5787106446777"/>
         </scene>
-        <!--View Controller-->
+        <!--Summary-->
         <scene sceneID="J3U-U2-np5">
             <objects>
-                <viewController id="RlP-oU-vh8" sceneMemberID="viewController">
+                <viewController id="RlP-oU-vh8" customClass="ViewController4" customModule="ImmiCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8ih-mk-Cj2"/>
                         <viewControllerLayoutGuide type="bottom" id="7d4-PA-DZh"/>
@@ -252,12 +252,106 @@
                     <view key="view" contentMode="scaleToFill" id="Xyc-lh-1Xd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.25241416820000001" blue="0.27165030849999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You have stayed in Canada for:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdc-e4-X4F">
+                                <rect key="frame" x="63" y="93" width="248.5" height="21.5"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999999999 Day(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mf-iL-C1g">
+                                <rect key="frame" x="102" y="123.5" width="170" height="20.5"/>
+                                <color key="backgroundColor" red="1" green="0.81066524982452393" blue="0.82554429769515991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="R8M-mv-HBl"/>
+                                    <constraint firstAttribute="height" constant="20.5" id="aTV-Yh-5Fe"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are away from Canada for:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yB-9m-qGF">
+                                <rect key="frame" x="64.5" y="173" width="246.5" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999999999 Day(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWP-AZ-GhW">
+                                <rect key="frame" x="102" y="203" width="170" height="21"/>
+                                <color key="backgroundColor" red="1" green="0.81066524982452393" blue="0.82554429769515991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="7EZ-fy-bAp"/>
+                                    <constraint firstAttribute="height" constant="21" id="H0a-VJ-gFC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starting now,  You need to stay in Canada for:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zO-ae-eec">
+                                <rect key="frame" x="61.5" y="272" width="251.5" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999999999 Day(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnJ-ke-Ai7">
+                                <rect key="frame" x="102.5" y="323" width="170" height="21"/>
+                                <color key="backgroundColor" red="1" green="0.81066524982452393" blue="0.82554429769515991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="170" id="lSw-1D-8PU"/>
+                                    <constraint firstAttribute="height" constant="21" id="zRD-7e-Zp9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Before you could apply for" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8r-ie-58J">
+                                <rect key="frame" x="81.5" y="353" width="212.5" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PR/Citizen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqL-HG-FWU">
+                                <rect key="frame" x="147.5" y="383" width="79.5" height="21"/>
+                                <color key="backgroundColor" red="1" green="0.81066524982452393" blue="0.82554429769515991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="Uik-cv-ANi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.61631768643650775" blue="0.57572968289715953" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Pdc-e4-X4F" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="0d3-yz-Tn5"/>
+                            <constraint firstItem="rqL-HG-FWU" firstAttribute="centerY" secondItem="Xyc-lh-1Xd" secondAttribute="centerY" constant="60" id="5hX-PN-PKW"/>
+                            <constraint firstItem="KnJ-ke-Ai7" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="6ke-Jp-aZH"/>
+                            <constraint firstItem="Pdc-e4-X4F" firstAttribute="centerY" secondItem="Xyc-lh-1Xd" secondAttribute="centerY" constant="-230" id="90a-pa-yFY"/>
+                            <constraint firstItem="7zO-ae-eec" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="EdM-Xw-WFE"/>
+                            <constraint firstItem="HWP-AZ-GhW" firstAttribute="centerY" secondItem="Xyc-lh-1Xd" secondAttribute="centerY" constant="-120" id="FsG-Kv-6GC"/>
+                            <constraint firstItem="HWP-AZ-GhW" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="Nea-Gv-h7Z"/>
+                            <constraint firstItem="rqL-HG-FWU" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="Otv-Ao-7Gg"/>
+                            <constraint firstItem="5yB-9m-qGF" firstAttribute="centerY" secondItem="Xyc-lh-1Xd" secondAttribute="centerY" constant="-150" id="Xow-Rp-fc5"/>
+                            <constraint firstItem="5yB-9m-qGF" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="b6K-y0-KTA"/>
+                            <constraint firstItem="Z8r-ie-58J" firstAttribute="centerY" secondItem="Xyc-lh-1Xd" secondAttribute="centerY" constant="30" id="d6d-F1-api"/>
+                            <constraint firstItem="Z8r-ie-58J" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="exd-ym-hDm"/>
+                            <constraint firstItem="7zO-ae-eec" firstAttribute="centerY" secondItem="Xyc-lh-1Xd" secondAttribute="centerY" constant="-40" id="gbM-vt-R2n"/>
+                            <constraint firstItem="6Mf-iL-C1g" firstAttribute="centerY" secondItem="Xyc-lh-1Xd" secondAttribute="centerY" constant="-200" id="iZy-kt-LBz"/>
+                            <constraint firstItem="6Mf-iL-C1g" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="lSs-a5-H3S"/>
+                            <constraint firstItem="KnJ-ke-Ai7" firstAttribute="centerY" secondItem="Xyc-lh-1Xd" secondAttribute="centerY" id="mCe-dI-tuH"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Summary" id="epc-SY-dKi"/>
+                    <connections>
+                        <outlet property="away_label" destination="HWP-AZ-GhW" id="fXG-Ob-zLm"/>
+                        <outlet property="more_label" destination="KnJ-ke-Ai7" id="Hg7-hQ-46S"/>
+                        <outlet property="perm_citi_label" destination="rqL-HG-FWU" id="V5m-Ua-etw"/>
+                        <outlet property="stayed_label" destination="6Mf-iL-C1g" id="ycx-zV-eVF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3d8-Vp-Opk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="746" y="743"/>
+            <point key="canvasLocation" x="744.79999999999995" y="742.5787106446777"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
