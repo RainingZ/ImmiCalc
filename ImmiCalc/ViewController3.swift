@@ -55,7 +55,7 @@ class ViewController3: UIViewController {
             print("Date array count: " + String(vars.dates.count))
         }
         
-        // Notify TableView to close expanded DatePickerCells
+        // Notify TableView to close expanded DatePickerCells, and TableView2 to reload table
         NotificationCenter.default.post(name: vars.AddButtonNotification, object: nil)
         
     }

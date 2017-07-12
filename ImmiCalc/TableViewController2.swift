@@ -12,7 +12,12 @@ class TableViewController2: UITableViewController {
 
     override func viewDidLoad() {
         
-        NotificationCenter.default.addObserver(self, selector: #selector(TableViewController2.NotificationHandler), name: vars.AddButtonNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(TableViewController2.AddButtonNotificationHandler), name: vars.AddButtonNotification, object: nil)
+        
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
+
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -51,7 +56,7 @@ class TableViewController2: UITableViewController {
         return cell
     }
 
-    func NotificationHandler() {
+    func AddButtonNotificationHandler() {
         tableView.reloadData()
     }
     
@@ -70,7 +75,6 @@ class TableViewController2: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
-    
     /*
     // Override to support conditional editing of the table view.
     override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

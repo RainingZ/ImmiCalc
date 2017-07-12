@@ -16,7 +16,7 @@ class TableViewController: UITableViewController {
     
     override func viewDidLoad() {
         // Let this TableView be an observer of add_button_press notification
-        NotificationCenter.default.addObserver(self, selector: #selector(TableViewController.NotificationHandler), name: vars.AddButtonNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(TableViewController.AddButtonNotificationHandler), name: vars.AddButtonNotification, object: nil)
         
         // Reload data to avoid cell disappear bug
         DispatchQueue.main.async {
@@ -44,7 +44,7 @@ class TableViewController: UITableViewController {
     }
     
     // Handle the notification from add_button_press, if any of the cell is expanded, select the cell again and update height
-    func NotificationHandler() {
+    func AddButtonNotificationHandler() {
         if (vars.datePickerCell.expanded) {
             vars.datePickerCell.selectedInTableView(tableView)
             vars.expand_height = 0 - vars.datePickerCell.datePicker.frame.size.height
@@ -59,7 +59,6 @@ class TableViewController: UITableViewController {
             self.preferredContentSize = from_to_table.contentSize
             self.tableView.deselectRow(at: IndexPath(row: 1, section: 0), animated: true)
         }
-        
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -140,6 +139,6 @@ class TableViewController: UITableViewController {
     
     // Act as an "add button press", to retract all extended cells when leaving the view
     override func viewWillDisappear(_ animated: Bool) {
-        NotificationHandler()
+        AddButtonNotificationHandler()
     }
 }
