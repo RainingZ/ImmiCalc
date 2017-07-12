@@ -210,7 +210,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.78929549169841384" green="0.90340657352414255" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Dates Away from Canada" id="9C2-Sz-ffs">
+                    <navigationItem key="navigationItem" title="Dates in Canada" id="9C2-Sz-ffs">
                         <barButtonItem key="rightBarButtonItem" style="done" id="LFQ-7t-MO6">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" id="jqT-xx-cnz">
                                 <rect key="frame" x="276" y="7" width="83" height="30"/>
@@ -322,6 +322,9 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.61631768643650775" blue="0.57572968289715953" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <accessibility key="accessibilityConfiguration">
+                            <accessibilityTraits key="traits" button="YES"/>
+                        </accessibility>
                         <constraints>
                             <constraint firstItem="Pdc-e4-X4F" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="0d3-yz-Tn5"/>
                             <constraint firstItem="rqL-HG-FWU" firstAttribute="centerY" secondItem="Xyc-lh-1Xd" secondAttribute="centerY" constant="60" id="5hX-PN-PKW"/>

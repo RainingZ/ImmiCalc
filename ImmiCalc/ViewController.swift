@@ -23,6 +23,8 @@ struct vars {
     static let datePickerCell2 = DatePickerCell(style: UITableViewCellStyle.default, reuseIdentifier: nil)
     //Notification
     static let AddButtonNotification = Notification.Name("AddButtonNotification")
+    
+    static var DoNotNotify:Bool = false
 }
 
 class ViewController: UIViewController {
@@ -88,7 +90,6 @@ class ViewController: UIViewController {
     }
     
     func cleardatashowView2(alert: UIAlertAction!) {
-        // TODO: CLEAR DATA
         if (vars.pr_citi_flag == 1) {
             vars.pr_citi_flag = 0
         }
