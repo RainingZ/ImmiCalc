@@ -351,7 +351,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3d8-Vp-Opk" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="744.79999999999995" y="742.5787106446777"/>
+            <point key="canvasLocation" x="737" y="743"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -385,7 +385,6 @@
                                 </state>
                                 <connections>
                                     <action selector="PR_button_pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NKs-R9-sju"/>
-                                    <segue destination="2ZX-ir-FKY" kind="show" id="sn1-aw-zD2"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xcx-UO-K5c">
@@ -408,7 +407,6 @@
                                 </state>
                                 <connections>
                                     <action selector="Citi_button_pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kGi-J1-hUd"/>
-                                    <segue destination="2ZX-ir-FKY" kind="show" id="Soi-by-VZV"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCv-jp-PRD">
@@ -446,6 +444,7 @@
                     <connections>
                         <outlet property="citi_button" destination="Xcx-UO-K5c" id="riv-Xo-U8L"/>
                         <outlet property="pr_button" destination="aNY-pQ-BOJ" id="riz-gV-1IZ"/>
+                        <segue destination="2ZX-ir-FKY" kind="show" identifier="showView2" id="jVW-HS-yms"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -537,7 +536,4 @@
             <point key="canvasLocation" x="-15.199999999999999" y="26.53673163418291"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="Soi-by-VZV"/>
-    </inferredMetricsTieBreakers>
 </document>

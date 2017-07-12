@@ -29,14 +29,19 @@ class ViewController3: UIViewController {
     }
     
     @IBAction func add_button_pressed(_ sender: UIButton) {
-        
-        // All added dates should be greater than landing date
-        if (vars.from_date < vars.land_date || vars.to_date < vars.land_date) {
-            // Pop up
+        // All added dates should be greater than landing date for PR applications
+        if (vars.pr_citi_flag == 0 && (compareDates(fromdate: vars.from_date, todate: vars.land_date) == 0 || compareDates(fromdate: vars.to_date, todate: vars.land_date) == 0)) {
+                // Pop up
             print("All added dates should be greater than landing date")
         }
+        // All added dates should be before today
+        // if (vars.from_date > Date() || vars.to_date > Date())
+        else if (compareDates(fromdate: vars.from_date, todate: Date()) == 2 || compareDates(fromdate: vars.to_date, todate: Date()) == 2) {
+            print("All added dates should be before today")
+        }
         // From dates need to be smaller or equal to To dates
-        else if (vars.to_date < vars.from_date) {
+        // else if (vars.to_date < vars.from_date) {
+        else if (compareDates(fromdate: vars.to_date, todate: vars.from_date) == 0) {
             print("From dates need to be smaller or equal to To dates")
         }
         // Both dates need to be outside of an "away-from-Canada" period
@@ -82,12 +87,14 @@ class ViewController3: UIViewController {
         if (vars.dates.count > 0) {
             for i in 0...vars.dates.count - 1 {
                 // fromdate or todate cannot be the same as previous from or to dates
-                if (fromdate == vars.dates[i] || todate == vars.dates[i]) {
+                // if (fromdate == vars.dates[i] || todate == vars.dates[i]) {
+                if (compareDates(fromdate: fromdate, todate: vars.dates[i]) == 1 || compareDates(fromdate: todate, todate: vars.dates[i]) == 1) {
                     print("fromdate or todate cannot be the same as previous from or to dates")
                     return true
                 }
                 // fromdate and todate cannot wrap around a previous from or to dates
-                else if (fromdate < vars.dates[i] && todate > vars.dates[i]) {
+                // else if (fromdate < vars.dates[i] && todate > vars.dates[i]) {
+                else if (compareDates(fromdate: fromdate, todate: vars.dates[i]) == 0 && compareDates(fromdate: todate, todate: vars.dates[i]) == 2) {
                     print("fromdate and todate cannot wrap around a previous from or to dates")
                     return true
                 }
@@ -96,6 +103,21 @@ class ViewController3: UIViewController {
         return false
     }
     
+    func compareDates(fromdate:Date, todate:Date) -> Int {
+        // 0 is fromdate < todate
+        // 1 is fromdate = todate
+        // 2 is fromdate > todate
+        let order = Calendar.current.compare(fromdate, to: todate, toGranularity: .day)
+        switch order {
+        case .orderedAscending:
+            return 0
+        case .orderedDescending:
+            return 2
+        case .orderedSame:
+            return 1
+        }
+        
+    }
     /*
     // MARK: - Navigation
 
