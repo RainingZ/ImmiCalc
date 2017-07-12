@@ -34,11 +34,10 @@ class ViewController: UIViewController {
         if (vars.pr_citi_flag == 1) {
             let alert = UIAlertController(title: "WARNING", message: "Changing the application type will clear your previous data, are you sure?", preferredStyle: UIAlertControllerStyle.alert)
             
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: showView2))
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.destructive, handler: showView2))
             alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
             // show the alert
             self.present(alert, animated: true, completion: nil)
-            vars.pr_citi_flag = 0
         }
         else {
             performSegue(withIdentifier: "showView2", sender: self)
@@ -49,11 +48,10 @@ class ViewController: UIViewController {
         if (vars.pr_citi_flag == 0) {
             let alert = UIAlertController(title: "WARNING", message: "Changing the application type will clear your previous data, are you sure?", preferredStyle: UIAlertControllerStyle.alert)
             
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: showView2))
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.destructive, handler: showView2))
             alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
             // show the alert
             self.present(alert, animated: true, completion: nil)
-            vars.pr_citi_flag = 1
         }
         else {
             performSegue(withIdentifier: "showView2", sender: self)
@@ -91,6 +89,12 @@ class ViewController: UIViewController {
     
     func showView2(alert: UIAlertAction!) {
         // TODO: CLEAR DATA
+        if (vars.pr_citi_flag == 1) {
+            vars.pr_citi_flag = 0
+        }
+        else {
+            vars.pr_citi_flag = 1
+        }
         performSegue(withIdentifier: "showView2", sender: self)
         return
     }
