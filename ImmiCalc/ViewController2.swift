@@ -25,21 +25,11 @@ class ViewController2: UIViewController, UITextFieldDelegate {
         
         // Date picker initialization and color changes
         let datePicker:UIDatePicker = UIDatePicker()
-        datePicker.backgroundColor = .white
+        datePicker.backgroundColor = .clear
         datePicker.setValue(UIColor.red, forKey: "textColor")
         datePicker.datePickerMode = UIDatePickerMode.date
         datePicker.addTarget(self, action: #selector(ViewController2.datePickerValueChanged), for: UIControlEvents.valueChanged)
-        land_text.inputView = datePicker
-        // Input text field with the datepicker
-        
-        // Testing pr_citi_flag
-        /*if (vars.pr_citi_flag == 0) {
-            land_label.text = "Permanent Resident"
-        }
-        else {
-            land_label.text = "Citizen"
-        }*/
-        // Do any additional setup after loading the view.
+        land_text.inputAccessoryView = datePicker
     }
     
     func datePickerValueChanged(sender:UIDatePicker) {
