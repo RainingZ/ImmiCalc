@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 import DatePickerCell
 
 // Global variables
@@ -27,6 +28,19 @@ struct vars {
     static var DoNotNotify:Bool = false
 }
 
+extension UIImageView
+{
+    func makeBlurImage(targetImageView:UIImageView?)
+    {
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.regular)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = targetImageView!.bounds
+        
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // for supporting device rotation
+        targetImageView?.addSubview(blurEffectView)
+    }
+}
+
 class ViewController: UIViewController {
     @IBOutlet weak var pr_button: UIButton!
     @IBOutlet weak var citi_button: UIButton!
@@ -45,6 +59,7 @@ class ViewController: UIViewController {
             performSegue(withIdentifier: "showView2", sender: self)
             vars.pr_citi_flag = 0
         }
+        vars.DoNotNotify = false
     }
     @IBAction func Citi_button_pressed(_ sender: UIButton) {
         if (vars.pr_citi_flag == 0) {
@@ -59,14 +74,21 @@ class ViewController: UIViewController {
             performSegue(withIdentifier: "showView2", sender: self)
             vars.pr_citi_flag = 1
         }
+        vars.DoNotNotify = false
     }
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Hide the navigation bar on the first page
-        self.navigationController?.isNavigationBarHidden = true
+        // Assign background image
+        assignBackground()
+        
+        // Transparent navigation bar
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
         
         // Make rounded corners for buttons
         pr_button.layer.cornerRadius = 10
@@ -99,6 +121,18 @@ class ViewController: UIViewController {
         vars.dates.removeAll()
         performSegue(withIdentifier: "showView2", sender: self)
         return
+    }
+    
+    func assignBackground() {
+        let background = UIImage(named: "MapleLeafOnWater.jpg")
+        var imageView: UIImageView!
+        imageView = UIImageView(frame: view.bounds)
+        imageView.contentMode = UIViewContentMode.scaleAspectFill
+        imageView.image = background
+        imageView.center = view.center
+        view.addSubview(imageView)
+        imageView.makeBlurImage(targetImageView: imageView)
+        self.view.sendSubview(toBack: imageView)
     }
 }
 

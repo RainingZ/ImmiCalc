@@ -11,6 +11,7 @@
 		AC0D8B411ED0AF5A004F0757 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D8B401ED0AF5A004F0757 /* ViewController2.swift */; };
 		AC1D0F451F0556A00061F30A /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1D0F441F0556A00061F30A /* NavController.swift */; };
 		AC2FC14C1F14284600B9DB27 /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2FC14B1F14284600B9DB27 /* ViewController4.swift */; };
+		AC2FC15E1F17CECB00B9DB27 /* MapleLeafOnWater.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC2FC15D1F17CECB00B9DB27 /* MapleLeafOnWater.jpg */; };
 		ACB84FEE1ECFCAEC00A4444D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB84FED1ECFCAEC00A4444D /* AppDelegate.swift */; };
 		ACB84FF01ECFCAEC00A4444D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB84FEF1ECFCAEC00A4444D /* ViewController.swift */; };
 		ACB84FF31ECFCAEC00A4444D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACB84FF11ECFCAEC00A4444D /* Main.storyboard */; };
@@ -55,6 +56,7 @@
 		AC0D8B401ED0AF5A004F0757 /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
 		AC1D0F441F0556A00061F30A /* NavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 		AC2FC14B1F14284600B9DB27 /* ViewController4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
+		AC2FC15D1F17CECB00B9DB27 /* MapleLeafOnWater.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = MapleLeafOnWater.jpg; path = Resources/MapleLeafOnWater.jpg; sourceTree = SOURCE_ROOT; };
 		ACB84FEA1ECFCAEC00A4444D /* ImmiCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImmiCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB84FED1ECFCAEC00A4444D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACB84FEF1ECFCAEC00A4444D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 		ACB84FEC1ECFCAEC00A4444D /* ImmiCalc */ = {
 			isa = PBXGroup;
 			children = (
+				AC2FC15D1F17CECB00B9DB27 /* MapleLeafOnWater.jpg */,
 				ACB84FED1ECFCAEC00A4444D /* AppDelegate.swift */,
 				AC1D0F441F0556A00061F30A /* NavController.swift */,
 				ACB84FEF1ECFCAEC00A4444D /* ViewController.swift */,
@@ -308,6 +311,7 @@
 				ACB84FFB1ECFCAEC00A4444D /* LaunchScreen.storyboard in Resources */,
 				ACB84FF81ECFCAEC00A4444D /* Assets.xcassets in Resources */,
 				ACB84FF31ECFCAEC00A4444D /* Main.storyboard in Resources */,
+				AC2FC15E1F17CECB00B9DB27 /* MapleLeafOnWater.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
