@@ -9,9 +9,23 @@
 import UIKit
 import DatePickerCell
 
+func compareDates(fromdate:Date, todate:Date) -> Int {
+    // 0 is fromdate < todate
+    // 1 is fromdate = todate
+    // 2 is fromdate > todate
+    let order = Calendar.current.compare(fromdate, to: todate, toGranularity: .day)
+    switch order {
+    case .orderedAscending:
+        return 0
+    case .orderedDescending:
+        return 2
+    case .orderedSame:
+        return 1
+    }
+}
+
 class ViewController3: UIViewController {
 
-    @IBOutlet weak var done_button: UIBarButtonItem!
     @IBOutlet weak var add_button: UIButton!
     @IBOutlet weak var from_to_container: UIView!
     @IBOutlet weak var save_container: UIView!
@@ -62,9 +76,9 @@ class ViewController3: UIViewController {
         }
         // All added dates should be before today
         // if (vars.from_date > Date() || vars.to_date > Date())
-        else if (compareDates(fromdate: vars.from_date, todate: Date()) == 2 || compareDates(fromdate: vars.to_date, todate: Date()) == 2) {
+        /*else if (compareDates(fromdate: vars.from_date, todate: Date()) == 2 || compareDates(fromdate: vars.to_date, todate: Date()) == 2) {
             print("All added dates should be before today")
-        }
+        }*/
         // From dates need to be smaller or equal to To dates
         // else if (vars.to_date < vars.from_date) {
         else if (compareDates(fromdate: vars.to_date, todate: vars.from_date) == 0) {
@@ -72,7 +86,7 @@ class ViewController3: UIViewController {
         }
         // Both dates need to be outside of an "away-from-Canada" period
         else if (invalidDates(fromdate: vars.from_date, todate: vars.to_date)) {
-            print("Both dates need to be outside of an 'away-from-Canada' period")
+            print("Both dates need to be outside of an 'in-Canada' period")
         }
         // Add dates to array, sort the array, send notification to close cells and reload data on save table
         else {
@@ -85,6 +99,19 @@ class ViewController3: UIViewController {
         NotificationCenter.default.post(name: vars.AddButtonNotification, object: nil)
         
     }
+    
+    @IBAction func done_pressed(_ sender: UIButton) {
+        if (vars.dates.count == 0) {
+            let alert = UIAlertController(title: "ImmiCalc", message: "Before proceed to the result, please input all periods of time you spent in Canada", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
+        }
+        else {
+            performSegue(withIdentifier: "showView4", sender: self)
+        }
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -128,30 +155,4 @@ class ViewController3: UIViewController {
         }
         return false
     }
-    
-    func compareDates(fromdate:Date, todate:Date) -> Int {
-        // 0 is fromdate < todate
-        // 1 is fromdate = todate
-        // 2 is fromdate > todate
-        let order = Calendar.current.compare(fromdate, to: todate, toGranularity: .day)
-        switch order {
-        case .orderedAscending:
-            return 0
-        case .orderedDescending:
-            return 2
-        case .orderedSame:
-            return 1
-        }
-        
-    }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
