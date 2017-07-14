@@ -11,6 +11,7 @@ import DatePickerCell
 
 class ViewController3: UIViewController {
 
+    @IBOutlet weak var done_button: UIBarButtonItem!
     @IBOutlet weak var add_button: UIButton!
     @IBOutlet weak var from_to_container: UIView!
     @IBOutlet weak var save_container: UIView!
@@ -19,6 +20,12 @@ class ViewController3: UIViewController {
     // Using DatePickerCell from Cocoapod library
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Assign background image
+        assignBackground(VC: self,name: "MapleLeafOnWater.jpg")
+        
+        add_button.layer.cornerRadius = 5
+        add_button.layer.borderWidth = 0
         
         // Arranging layouts
         from_to_container.frame = CGRect(x: self.view.frame.midX - (self.view.frame.width - 40)/2, y: 80, width: self.view.frame.width - 40, height: 88)

@@ -14,6 +14,10 @@ class ViewController2: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var land_text: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Assign background image
+        assignBackground(VC: self,name: "iPhone-Maple1.jpg")
+        
         // Make rounded corners for done button
         done_button.layer.cornerRadius = 10
         done_button.layer.borderWidth = 0
@@ -26,7 +30,7 @@ class ViewController2: UIViewController, UITextFieldDelegate {
         // Date picker initialization and color changes
         let datePicker:UIDatePicker = UIDatePicker()
         datePicker.backgroundColor = .clear
-        datePicker.setValue(UIColor.red, forKey: "textColor")
+        datePicker.setValue(UIColor.white, forKey: "textColor")
         datePicker.datePickerMode = UIDatePickerMode.date
         datePicker.addTarget(self, action: #selector(ViewController2.datePickerValueChanged), for: UIControlEvents.valueChanged)
         land_text.inputAccessoryView = datePicker
@@ -56,16 +60,4 @@ class ViewController2: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

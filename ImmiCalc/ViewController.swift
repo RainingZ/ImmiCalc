@@ -35,10 +35,22 @@ extension UIImageView
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.regular)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = targetImageView!.bounds
-        
+        blurEffectView.alpha = 0.9
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // for supporting device rotation
         targetImageView?.addSubview(blurEffectView)
     }
+}
+
+func assignBackground(VC:UIViewController, name:String) {
+    let background = UIImage(named: name)
+    var imageView: UIImageView!
+    imageView = UIImageView(frame: VC.view.bounds)
+    imageView.contentMode = UIViewContentMode.scaleAspectFill
+    imageView.image = background
+    imageView.center = VC.view.center
+    VC.view.addSubview(imageView)
+    imageView.makeBlurImage(targetImageView: imageView)
+    VC.view.sendSubview(toBack: imageView)
 }
 
 class ViewController: UIViewController {
@@ -81,8 +93,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Change Navigation bar items to white
+        UINavigationBar.appearance().tintColor = UIColor.white
+        
         // Assign background image
-        assignBackground()
+        assignBackground(VC: self,name: "MapleLeafOnWater.jpg")
         
         // Transparent navigation bar
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -121,18 +136,6 @@ class ViewController: UIViewController {
         vars.dates.removeAll()
         performSegue(withIdentifier: "showView2", sender: self)
         return
-    }
-    
-    func assignBackground() {
-        let background = UIImage(named: "MapleLeafOnWater.jpg")
-        var imageView: UIImageView!
-        imageView = UIImageView(frame: view.bounds)
-        imageView.contentMode = UIViewContentMode.scaleAspectFill
-        imageView.image = background
-        imageView.center = view.center
-        view.addSubview(imageView)
-        imageView.makeBlurImage(targetImageView: imageView)
-        self.view.sendSubview(toBack: imageView)
     }
 }
 

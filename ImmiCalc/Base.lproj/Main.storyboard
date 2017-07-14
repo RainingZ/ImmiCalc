@@ -173,14 +173,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="95Q-C6-kyr">
+                            <containerView opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="95Q-C6-kyr">
                                 <rect key="frame" x="15.5" y="218" width="343" height="429"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="jpK-tD-17q" kind="embed" id="Lfd-C2-QiI"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S5X-nC-kQn">
+                            <containerView opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S5X-nC-kQn">
                                 <rect key="frame" x="15" y="84" width="343" height="88"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -214,7 +214,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="jXN-wr-3II"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" style="done" id="LFQ-7t-MO6">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" id="jqT-xx-cnz">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <rect key="frame" x="289" y="7" width="70" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -234,6 +234,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="add_button" destination="Wfw-Xf-NiL" id="ya0-Ji-lOF"/>
+                        <outlet property="done_button" destination="LFQ-7t-MO6" id="zJV-nU-jEg"/>
                         <outlet property="from_to_container" destination="S5X-nC-kQn" id="pwt-bA-UBg"/>
                         <outlet property="save_container" destination="95Q-C6-kyr" id="1S7-62-2Rb"/>
                     </connections>
@@ -260,15 +261,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999999999 Day(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mf-iL-C1g">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999999999 Day(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mf-iL-C1g">
                                 <rect key="frame" x="102" y="123.5" width="170" height="20.5"/>
-                                <color key="backgroundColor" red="1" green="0.81066524982452393" blue="0.82554429769515991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.46019431176942049" blue="0.46410739597680206" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="170" id="R8M-mv-HBl"/>
                                     <constraint firstAttribute="height" constant="20.5" id="aTV-Yh-5Fe"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You are away from Canada for:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yB-9m-qGF">
@@ -277,15 +278,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999999999 Day(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWP-AZ-GhW">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999999999 Day(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HWP-AZ-GhW">
                                 <rect key="frame" x="102" y="203" width="170" height="21"/>
-                                <color key="backgroundColor" red="1" green="0.81066524982452393" blue="0.82554429769515991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.45869612693786621" blue="0.46388506889343262" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="170" id="7EZ-fy-bAp"/>
                                     <constraint firstAttribute="height" constant="21" id="H0a-VJ-gFC"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.99480842110000001" green="1" blue="0.95276115539999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starting now,  You need to stay in Canada for:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zO-ae-eec">
@@ -294,15 +295,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999999999 Day(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnJ-ke-Ai7">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999999999 Day(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnJ-ke-Ai7">
                                 <rect key="frame" x="102.5" y="323" width="170" height="21"/>
-                                <color key="backgroundColor" red="1" green="0.81066524982452393" blue="0.82554429769515991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.45869612693786621" blue="0.46388506889343262" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="170" id="lSw-1D-8PU"/>
                                     <constraint firstAttribute="height" constant="21" id="zRD-7e-Zp9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Before you could apply for" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8r-ie-58J">
@@ -311,14 +312,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PR/Citizen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqL-HG-FWU">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PR/Citizen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqL-HG-FWU">
                                 <rect key="frame" x="147.5" y="383" width="79.5" height="21"/>
-                                <color key="backgroundColor" red="1" green="0.81066524982452393" blue="0.82554429769515991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.45869612693786621" blue="0.46388506889343262" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Uik-cv-ANi"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -371,7 +372,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aNY-pQ-BOJ">
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aNY-pQ-BOJ">
                                 <rect key="frame" x="47.5" y="273.5" width="120" height="120"/>
                                 <color key="backgroundColor" red="0.77923076799790614" green="0.88151557763626631" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -382,7 +383,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="Permanent Resident">
                                             <attributes>
-                                                <color key="NSColor" red="0.55686148800000002" green="0.46096060830000002" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="NSColor" red="0.46811070567486329" green="0.19490903143002364" blue="0.94136491281732082" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="20" name=".AppleSystemUIFont"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
@@ -393,7 +394,7 @@
                                     <action selector="PR_button_pressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NKs-R9-sju"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xcx-UO-K5c">
+                            <button opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xcx-UO-K5c">
                                 <rect key="frame" x="207.5" y="273.5" width="120" height="120"/>
                                 <color key="backgroundColor" red="0.77923076800000002" green="0.88151557759999999" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -404,7 +405,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="Citizen">
                                             <attributes>
-                                                <color key="NSColor" red="0.5568614879778051" green="0.46096060828505458" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="NSColor" red="0.51102828979492188" green="0.30129089951515198" blue="0.94751185178756714" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" metaFont="system" size="20"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
@@ -424,7 +425,7 @@
                                 <attributedString key="attributedText">
                                     <fragment content="Select Application Type">
                                         <attributes>
-                                            <color key="NSColor" red="0.00033646567800937888" green="1" blue="0.8685158809795408" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" red="0.99480842108535528" green="1" blue="0.95276115543185524" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="19" name=".SFNSText"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -476,9 +477,9 @@
                                     <constraint firstAttribute="height" constant="70" id="wbD-dT-hKL"/>
                                 </constraints>
                                 <attributedString key="attributedText">
-                                    <fragment content="When is your date of landing?">
+                                    <fragment content="Date of Landing">
                                         <attributes>
-                                            <color key="NSColor" red="0.70679030879001292" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="17" name=".SFNSText"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
@@ -508,7 +509,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="Done">
                                             <attributes>
-                                                <color key="NSColor" red="0.70679030879001292" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="NSColor" red="1" green="0.46237523798756808" blue="0.55117170021547457" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="15" name=".SFNSText"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
