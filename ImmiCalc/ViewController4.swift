@@ -19,6 +19,7 @@ extension Date {
 
 class ViewController4: UIViewController {
 
+    @IBOutlet weak var error_label: UILabel!
     @IBOutlet weak var application_date_text: UITextField!
     @IBOutlet weak var perm_citi_label: UILabel!
     @IBOutlet weak var more_label: UILabel!
@@ -30,6 +31,7 @@ class ViewController4: UIViewController {
         assignBackground(VC: self,name: "iPhone-Maple1.jpg")
         
         application_date_text.text = vars.formatter.string(from: vars.application_date)
+        error_label.alpha = 0
         
         // Datepicker for application date
         let datePicker:UIDatePicker = UIDatePicker()
@@ -73,7 +75,6 @@ class ViewController4: UIViewController {
             from = vars.dates[i*2-2]
             to = vars.dates[i*2-1]
             daysbetween = to.interval(ofComponent: .day, fromDate: from)
-            print(daysbetween)
             // If PR application
             if (vars.pr_citi_flag == 0) {
                 // Stayed days
@@ -86,7 +87,7 @@ class ViewController4: UIViewController {
             }
         }
         
-        stayed_label.text = String(stayed) + " Days"
+        stayed_label.text = String(stayed) + " Day(s)"
 //========================================================
 // Starting Now, You Need to Stay in Canada for:
 //========================================================
@@ -116,7 +117,6 @@ class ViewController4: UIViewController {
                 daysNeededAfterNow = 730 - stayedNow
                 if (daysNeededAfterNow > 0) {
                     let daysBeforeFive = 1826 - Date().interval(ofComponent: .day, fromDate: vars.land_date)
-                    print(daysBeforeFive)
                     if (daysBeforeFive < daysNeededAfterNow) {
                         need_now = daysBeforeFive + daysNeededforS1(start:start, daysNeeded: (daysNeededAfterNow - daysBeforeFive))
                     }
@@ -134,7 +134,7 @@ class ViewController4: UIViewController {
             //
         }
         
-        more_label.text = String(need_now) + " Days"
+        more_label.text = String(need_now) + " Day(s)"
 //========================================================
 //
 //========================================================
@@ -184,13 +184,15 @@ class ViewController4: UIViewController {
                 stayednow = stayednow + daysbetween
             }
         }
-        print(stayednow)
         return stayednow
     }
     
     func datePickerValueChanged(sender:UIDatePicker) {
         if (compareDates(fromdate: sender.date, todate: Date()) == 0) {
-            print("Application date cannot be before today")
+            self.view.bringSubview(toFront: error_label)
+            error_label.text = "Application date cannot be before today"
+            error_label.alpha = 1
+            UIView.animate(withDuration: 2, animations: {self.error_label.alpha = 0})
         }
         else {
             vars.application_date = sender.date

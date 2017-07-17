@@ -92,7 +92,6 @@ class ViewController3: UIViewController {
         else {
             vars.dates += [vars.from_date, vars.to_date]
             vars.dates.sort(by: {$0.compare($1) == .orderedAscending})
-            print("Date array count: " + String(vars.dates.count))
         }
         
         // Notify TableView to close expanded DatePickerCells, and TableView2 to reload table

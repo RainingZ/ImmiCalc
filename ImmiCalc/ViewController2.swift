@@ -9,6 +9,7 @@
 import UIKit
 
 class ViewController2: UIViewController, UITextFieldDelegate {
+    @IBOutlet weak var error_label: UILabel!
     @IBOutlet weak var done_button: UIButton!
     @IBOutlet weak var land_label: UILabel!
     @IBOutlet weak var land_text: UITextField!
@@ -26,6 +27,7 @@ class ViewController2: UIViewController, UITextFieldDelegate {
         vars.formatter.dateStyle = DateFormatter.Style.medium
         vars.formatter.timeStyle = DateFormatter.Style.none
         land_text.text = vars.formatter.string(from: vars.land_date)
+        error_label.alpha = 0
         
         // Date picker initialization and color changes
         let datePicker:UIDatePicker = UIDatePicker()
@@ -39,8 +41,11 @@ class ViewController2: UIViewController, UITextFieldDelegate {
     func datePickerValueChanged(sender:UIDatePicker) {
         // Format, store and display the selected date every time datepicker is changed
         // Landing date can be changed after inputing away-from-Canada dates, therefore some restrictions need to be applied
-        if (!vars.dates.isEmpty && compareDates(fromdate: sender.date, todate: vars.dates[0]) != 0) {
-            print("Landing date cannot be changed, some dates-in-Canada are less than your value")
+        if (!vars.dates.isEmpty && compareDates(fromdate: sender.date, todate: vars.dates[0]) == 2) {
+            self.view.bringSubview(toFront: error_label)
+            error_label.text = "Landing date cannot be changed, some dates-in-Canada are before your input date"
+            error_label.alpha = 1
+            UIView.animate(withDuration: 2, animations: {self.error_label.alpha = 0})
         }
         else {
             vars.land_date = sender.date

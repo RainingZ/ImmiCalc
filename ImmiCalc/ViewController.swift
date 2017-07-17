@@ -33,7 +33,7 @@ extension UIImageView
 {
     func makeBlurImage(targetImageView:UIImageView?)
     {
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.regular)
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = targetImageView!.bounds
         blurEffectView.alpha = 0.9
@@ -72,7 +72,6 @@ class ViewController: UIViewController {
             performSegue(withIdentifier: "showView2", sender: self)
             vars.pr_citi_flag = 0
         }
-        vars.DoNotNotify = false
     }
     @IBAction func Citi_button_pressed(_ sender: UIButton) {
         if (vars.pr_citi_flag == 0) {
@@ -87,39 +86,20 @@ class ViewController: UIViewController {
             performSegue(withIdentifier: "showView2", sender: self)
             vars.pr_citi_flag = 1
         }
-        vars.DoNotNotify = false
     }
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Change Navigation bar items to white
-        UINavigationBar.appearance().tintColor = UIColor.white
-        
         // Assign background image
         assignBackground(VC: self,name: "MapleLeafOnWater.jpg")
-        
-        // Transparent navigation bar
-        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        self.navigationController?.navigationBar.shadowImage = UIImage()
-        self.navigationController?.navigationBar.isTranslucent = true
-        self.navigationController?.view.backgroundColor = .clear
         
         // Make rounded corners for buttons
         pr_button.layer.cornerRadius = 10
         pr_button.layer.borderWidth = 0
         citi_button.layer.cornerRadius = 10
         citi_button.layer.borderWidth = 0
-    }
-
-    // Hide the navigation bar on the first page
-    override func viewWillAppear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        self.navigationController?.isNavigationBarHidden = false
     }
     
     override func didReceiveMemoryWarning() {
@@ -134,6 +114,7 @@ class ViewController: UIViewController {
         else {
             vars.pr_citi_flag = 1
         }
+        vars.DoNotNotify = false
         vars.dates.removeAll()
         performSegue(withIdentifier: "showView2", sender: self)
         return

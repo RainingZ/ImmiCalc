@@ -128,13 +128,11 @@ class TableViewController: UITableViewController {
     func from_datePickerValueChanged(sender:UIDatePicker) {
         // Format, store and display the selected date every time datepicker is changed
         vars.from_date = sender.date
-        print("From date: " + vars.formatter.string(from: vars.from_date))
     }
     
     func to_datePickerValueChanged(sender:UIDatePicker) {
         // Format, store and display the selected date every time datepicker is changed
         vars.to_date = sender.date
-        print("To date: " + vars.formatter.string(from: vars.to_date))
     }
     
     // Act as an "add button press", to retract all extended cells when leaving the view

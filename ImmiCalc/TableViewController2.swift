@@ -47,7 +47,6 @@ class TableViewController2: UITableViewController {
             fatalError("The dequeued cell is not an instance of DateTableViewCell.")
         }
 
-        print("indexPath.row: " + String(indexPath.row))
         // Configure the cell...
         let from_date = vars.dates[indexPath.row * 2]
         let to_date = vars.dates[indexPath.row * 2 + 1]
@@ -68,9 +67,7 @@ class TableViewController2: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.delete) {
             // handle delete (by removing the data from your array and updating the tableview)
-            print(vars.dates[indexPath.row*2])
             vars.dates.remove(at: indexPath.row * 2)
-            print(vars.dates[indexPath.row*2])
             vars.dates.remove(at: indexPath.row * 2)
             tableView.deleteRows(at: [indexPath], with: .fade)
         }

@@ -258,7 +258,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Have Stayed in Canada for" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdc-e4-X4F">
                                 <rect key="frame" x="63" y="93" width="249" height="22"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999999999 Day(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mf-iL-C1g">
@@ -275,13 +275,13 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Application Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yB-9m-qGF">
                                 <rect key="frame" x="121" y="342.5" width="133.5" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starting Now,  You Need to Stay in Canada for:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zO-ae-eec">
                                 <rect key="frame" x="59.5" y="162" width="257" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999999999 Day(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnJ-ke-Ai7">
@@ -298,7 +298,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Before You Could Apply for" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8r-ie-58J">
                                 <rect key="frame" x="78.5" y="242.5" width="218" height="22"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PR/Citizen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqL-HG-FWU">
@@ -321,6 +321,23 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueb-dr-z8b">
+                                <rect key="frame" x="13" y="425" width="350" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="DE1-in-0ng"/>
+                                    <constraint firstAttribute="width" constant="350" id="NSh-1v-NaR"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="WARNING">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.61631768643650775" blue="0.57572968289715953" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <accessibility key="accessibilityConfiguration">
@@ -337,12 +354,14 @@
                             <constraint firstItem="Ox7-az-qCK" firstAttribute="centerY" secondItem="Xyc-lh-1Xd" secondAttribute="centerY" constant="50" id="WVU-zK-Jbh"/>
                             <constraint firstItem="5yB-9m-qGF" firstAttribute="centerY" secondItem="Xyc-lh-1Xd" secondAttribute="centerY" constant="20" id="Xow-Rp-fc5"/>
                             <constraint firstItem="5yB-9m-qGF" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="b6K-y0-KTA"/>
+                            <constraint firstItem="ueb-dr-z8b" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="cAe-FM-KJe"/>
                             <constraint firstItem="Z8r-ie-58J" firstAttribute="centerY" secondItem="Xyc-lh-1Xd" secondAttribute="centerY" constant="-80" id="d6d-F1-api"/>
                             <constraint firstItem="Z8r-ie-58J" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="exd-ym-hDm"/>
                             <constraint firstItem="7zO-ae-eec" firstAttribute="centerY" secondItem="Xyc-lh-1Xd" secondAttribute="centerY" constant="-150" id="gbM-vt-R2n"/>
                             <constraint firstItem="6Mf-iL-C1g" firstAttribute="centerY" secondItem="Xyc-lh-1Xd" secondAttribute="centerY" constant="-200" id="iZy-kt-LBz"/>
                             <constraint firstItem="6Mf-iL-C1g" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="lSs-a5-H3S"/>
                             <constraint firstItem="KnJ-ke-Ai7" firstAttribute="centerY" secondItem="Xyc-lh-1Xd" secondAttribute="centerY" constant="-110" id="mCe-dI-tuH"/>
+                            <constraint firstItem="7d4-PA-DZh" firstAttribute="top" secondItem="ueb-dr-z8b" secondAttribute="bottom" constant="220" id="wku-8g-ACk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Summary" id="epc-SY-dKi">
@@ -350,6 +369,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="application_date_text" destination="Ox7-az-qCK" id="ein-w5-3cC"/>
+                        <outlet property="error_label" destination="ueb-dr-z8b" id="2YV-3x-Kw9"/>
                         <outlet property="more_label" destination="KnJ-ke-Ai7" id="Hg7-hQ-46S"/>
                         <outlet property="perm_citi_label" destination="rqL-HG-FWU" id="V5m-Ua-etw"/>
                         <outlet property="stayed_label" destination="6Mf-iL-C1g" id="ycx-zV-eVF"/>
@@ -519,13 +539,32 @@
                                     <segue destination="eDK-W5-cdk" kind="show" id="A3N-G8-9tu"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIn-D2-5ZQ">
+                                <rect key="frame" x="12.5" y="403" width="350" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="2hK-td-G2o"/>
+                                    <constraint firstAttribute="width" constant="350" id="bme-ZY-i5h"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="WARNING">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="17" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.59012916768330193" green="1" blue="0.69844128778454639" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="crC-kx-lTh" firstAttribute="centerX" secondItem="CZz-w0-fJ7" secondAttribute="centerX" id="37V-nD-cR0"/>
+                            <constraint firstItem="QIn-D2-5ZQ" firstAttribute="centerX" secondItem="CZz-w0-fJ7" secondAttribute="centerX" id="88o-YF-glw"/>
                             <constraint firstItem="kRi-Sw-PBw" firstAttribute="centerX" secondItem="CZz-w0-fJ7" secondAttribute="centerX" id="LzQ-wy-HD0"/>
                             <constraint firstItem="crC-kx-lTh" firstAttribute="centerY" secondItem="CZz-w0-fJ7" secondAttribute="centerY" constant="-70" id="cNy-xi-Cjv"/>
                             <constraint firstItem="F87-TD-LW1" firstAttribute="centerY" secondItem="CZz-w0-fJ7" secondAttribute="centerY" constant="-20" id="h3V-7m-PL6"/>
+                            <constraint firstItem="den-FO-VEC" firstAttribute="top" secondItem="QIn-D2-5ZQ" secondAttribute="bottom" constant="220" id="tzN-FN-IQT"/>
                             <constraint firstItem="F87-TD-LW1" firstAttribute="centerX" secondItem="CZz-w0-fJ7" secondAttribute="centerX" id="w5U-l2-P3m"/>
                             <constraint firstItem="kRi-Sw-PBw" firstAttribute="centerY" secondItem="CZz-w0-fJ7" secondAttribute="centerY" constant="30" id="wNK-nd-N5q"/>
                         </constraints>
@@ -533,6 +572,7 @@
                     <navigationItem key="navigationItem" id="Sl5-tF-Gb0"/>
                     <connections>
                         <outlet property="done_button" destination="kRi-Sw-PBw" id="MBk-kN-E3h"/>
+                        <outlet property="error_label" destination="QIn-D2-5ZQ" id="0D2-hh-FvD"/>
                         <outlet property="land_label" destination="crC-kx-lTh" id="Pwh-rd-wKC"/>
                         <outlet property="land_text" destination="F87-TD-LW1" id="dAY-uM-dxr"/>
                     </connections>
