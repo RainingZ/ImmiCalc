@@ -147,8 +147,19 @@ class ViewController4: UIViewController {
     }
 
     func daysNeededforS1(start:Date, daysNeeded:Int) -> Int {
-        //TODO
-        return 0
+        // Might need to change it for citizen, this is currently only for PR
+        let cal  = Calendar.current
+        var need = daysNeeded
+        var start = start
+        var sum = 0
+        // Recursively get inCanadaDays for periods of "daysNeeded", we'll need to stay in Canada to make up for periods we stayed in Canada 5 years ago, since as time passes, those will not count anymore
+        while (need != 0) {
+            sum = sum + need
+            need = inCanadaDays(start: start, end: cal.date(byAdding: .day, value: need - 1, to: start)!)
+            start = cal.date(byAdding: .day, value: need, to: start)!
+        }
+        
+        return sum
     }
 
     // Calculates in-Canada days between start and end
@@ -160,28 +171,33 @@ class ViewController4: UIViewController {
         for i in 1...(vars.dates.count/2) {
             from = vars.dates[i*2-2]
             to = vars.dates[i*2-1]
-            // if (from < start)
-            if (compareDates(fromdate: from, todate: start) == 0) {
-                from = start
-            }
-            // if (from > now)
-            if (compareDates(fromdate: from, todate: end) == 2) {
-                from = end
-            }
-            // if (to < start)
-            if (compareDates(fromdate: to, todate: start) == 0) {
-                to = start
-            }
-            // if (to > now)
-            if (compareDates(fromdate: from, todate: end) == 2) {
-                to = end
-            }
-            daysbetween = to.interval(ofComponent: .day, fromDate: from)
-            if (vars.pr_citi_flag == 0) {
-                stayednow = stayednow + daysbetween + 1
+            if ((compareDates(fromdate: from, todate: start) == 0 && compareDates(fromdate: to, todate: start) == 0) || (compareDates(fromdate: from, todate: end) == 2 && compareDates(fromdate: from, todate: end) == 2)) {
+                stayednow = stayednow + 0
             }
             else {
-                stayednow = stayednow + daysbetween
+                // if (from < start)
+                if (compareDates(fromdate: from, todate: start) == 0) {
+                    from = start
+                }
+                // if (from > now)
+                if (compareDates(fromdate: from, todate: end) == 2) {
+                    from = end
+                }
+                // if (to < start)
+                if (compareDates(fromdate: to, todate: start) == 0) {
+                    to = start
+                }
+                // if (to > now)
+                if (compareDates(fromdate: from, todate: end) == 2) {
+                    to = end
+                }
+                daysbetween = to.interval(ofComponent: .day, fromDate: from)
+                if (vars.pr_citi_flag == 0) {
+                    stayednow = stayednow + daysbetween + 1
+                }
+                else {
+                    stayednow = stayednow + daysbetween
+                }
             }
         }
         return stayednow
