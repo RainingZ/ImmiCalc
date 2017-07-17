@@ -311,7 +311,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ox7-az-qCK">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ox7-az-qCK">
                                 <rect key="frame" x="108" y="368.5" width="160" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="160" id="9E1-2K-BnM"/>
@@ -349,6 +349,7 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="kb4-Q4-Sqe"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="application_date_text" destination="Ox7-az-qCK" id="ein-w5-3cC"/>
                         <outlet property="more_label" destination="KnJ-ke-Ai7" id="Hg7-hQ-46S"/>
                         <outlet property="perm_citi_label" destination="rqL-HG-FWU" id="V5m-Ua-etw"/>
                         <outlet property="stayed_label" destination="6Mf-iL-C1g" id="ycx-zV-eVF"/>

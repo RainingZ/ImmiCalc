@@ -19,6 +19,7 @@ extension Date {
 
 class ViewController4: UIViewController {
 
+    @IBOutlet weak var application_date_text: UITextField!
     @IBOutlet weak var perm_citi_label: UILabel!
     @IBOutlet weak var more_label: UILabel!
     @IBOutlet weak var stayed_label: UILabel!
@@ -27,6 +28,16 @@ class ViewController4: UIViewController {
         
         // Assign background image
         assignBackground(VC: self,name: "iPhone-Maple1.jpg")
+        
+        application_date_text.text = vars.formatter.string(from: vars.application_date)
+        
+        // Datepicker for application date
+        let datePicker:UIDatePicker = UIDatePicker()
+        datePicker.backgroundColor = .clear
+        datePicker.setValue(UIColor.white, forKey: "textColor")
+        datePicker.datePickerMode = UIDatePickerMode.date
+        datePicker.addTarget(self, action: #selector(ViewController4.datePickerValueChanged), for: UIControlEvents.valueChanged)
+        application_date_text.inputAccessoryView = datePicker
         
         perm_citi_label.layer.masksToBounds = true
         perm_citi_label.layer.cornerRadius = 5
@@ -134,18 +145,7 @@ class ViewController4: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-    
     func daysNeededforS1(start:Date, daysNeeded:Int) -> Int {
         //TODO
         return 0
@@ -186,5 +186,23 @@ class ViewController4: UIViewController {
         }
         print(stayednow)
         return stayednow
+    }
+    
+    func datePickerValueChanged(sender:UIDatePicker) {
+        if (compareDates(fromdate: sender.date, todate: Date()) == 0) {
+            print("Application date cannot be before today")
+        }
+        else {
+            vars.application_date = sender.date
+            application_date_text.text = vars.formatter.string(from: vars.application_date)
+        }
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        view.endEditing(true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        view.endEditing(true)
     }
 }

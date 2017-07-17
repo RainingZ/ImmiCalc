@@ -39,8 +39,8 @@ class ViewController2: UIViewController, UITextFieldDelegate {
     func datePickerValueChanged(sender:UIDatePicker) {
         // Format, store and display the selected date every time datepicker is changed
         // Landing date can be changed after inputing away-from-Canada dates, therefore some restrictions need to be applied
-        if (!vars.dates.isEmpty && sender.date >= vars.dates[0]) {
-            print("Landing date cannot be changed, some dates-away-from-Canada are less than your value")
+        if (!vars.dates.isEmpty && compareDates(fromdate: sender.date, todate: vars.dates[0]) != 0) {
+            print("Landing date cannot be changed, some dates-in-Canada are less than your value")
         }
         else {
             vars.land_date = sender.date

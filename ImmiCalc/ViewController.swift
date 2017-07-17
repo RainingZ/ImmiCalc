@@ -19,6 +19,7 @@ struct vars {
     static var dates = [Date]()
     static var from_date = Date()
     static var to_date = Date()
+    static var application_date = Date()
     //DatePickerCells
     static let datePickerCell = DatePickerCell(style: UITableViewCellStyle.default, reuseIdentifier: nil)
     static let datePickerCell2 = DatePickerCell(style: UITableViewCellStyle.default, reuseIdentifier: nil)

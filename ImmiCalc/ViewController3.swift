@@ -102,7 +102,7 @@ class ViewController3: UIViewController {
     
     @IBAction func done_pressed(_ sender: UIButton) {
         if (vars.dates.count == 0) {
-            let alert = UIAlertController(title: "ImmiCalc", message: "Before proceed to the result, please input all periods of time you spent in Canada", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: "ImmiCalc", message: "Before proceeding to the result, please input all periods of time you spent in Canada", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
             // show the alert
             self.present(alert, animated: true, completion: nil)
