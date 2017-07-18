@@ -35,6 +35,7 @@ class ViewController4: UIViewController {
         
         // Datepicker for application date
         let datePicker:UIDatePicker = UIDatePicker()
+        datePicker.date = vars.application_date
         datePicker.backgroundColor = .clear
         datePicker.setValue(UIColor.white, forKey: "textColor")
         datePicker.datePickerMode = UIDatePickerMode.date

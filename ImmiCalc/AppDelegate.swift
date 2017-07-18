@@ -13,9 +13,14 @@ import CoreData
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    let defaults = UserDefaults.standard
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        defaults.register(defaults: ["pr_citi_flag" : -1])
+        defaults.register(defaults: ["land_date" : Date()])
+        defaults.register(defaults: ["dates" : Date()])
+        defaults.register(defaults: ["application_date" : Date()])
+        print("regi")
         // Override point for customization after application launch.
         return true
     }
@@ -26,11 +31,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {
+        defaults.set(vars.pr_citi_flag, forKey: "pr_citi_flag")
+        defaults.set(vars.land_date, forKey: "land_date")
+        defaults.set(vars.dates, forKey: "dates")
+        defaults.set(vars.application_date, forKey: "application_date")
+        defaults.synchronize()
+        print("backgroundset")
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
         // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
     }
 
     func applicationWillEnterForeground(_ application: UIApplication) {
+        vars.pr_citi_flag = defaults.integer(forKey: "pr_citi_flag")
+        vars.land_date = defaults.object(forKey: "land_date") as! Date
+        vars.dates = defaults.array(forKey: "dates") as! [Date]
+        vars.application_date = defaults.object(forKey: "application_date") as! Date
+        print("foregroundget")
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     }
 
@@ -41,6 +57,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
+        defaults.set(vars.pr_citi_flag, forKey: "pr_citi_flag")
+        defaults.set(vars.land_date, forKey: "land_date")
+        defaults.set(vars.dates, forKey: "dates")
+        defaults.set(vars.application_date, forKey: "application_date")
+        defaults.synchronize()
+        print("terminateset")
         self.saveContext()
     }
 

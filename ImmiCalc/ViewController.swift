@@ -16,6 +16,9 @@ struct vars {
     static var pr_citi_flag:Int = -1
     static var land_date = Date()
     static var expand_height:CGFloat = 0
+    // TODO
+    // new array for seperating citi pr
+    // new land_date for seperating citi pr
     static var dates = [Date]()
     static var from_date = Date()
     static var to_date = Date()
@@ -91,6 +94,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let defaults = UserDefaults.standard
+        vars.pr_citi_flag = defaults.integer(forKey: "pr_citi_flag")
+        vars.land_date = defaults.object(forKey: "land_date") as! Date
+        vars.dates = defaults.array(forKey: "dates") as! [Date]
+        vars.application_date = defaults.object(forKey: "application_date") as! Date
+        print("launchget")
         
         // Assign background image
         assignBackground(VC: self,name: "MapleLeafOnWater.jpg")
