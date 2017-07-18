@@ -26,12 +26,22 @@ class ViewController2: UIViewController, UITextFieldDelegate {
         // Date formattor initialization and storing landing date
         vars.formatter.dateStyle = DateFormatter.Style.medium
         vars.formatter.timeStyle = DateFormatter.Style.none
-        land_text.text = vars.formatter.string(from: vars.land_date)
+        if (vars.pr_citi_flag == 0) {
+            land_text.text = vars.formatter.string(from: vars.pr_land_date)
+        }
+        else {
+            land_text.text = vars.formatter.string(from: vars.citi_land_date)
+        }
         error_label.alpha = 0
         
         // Date picker initialization and color changes
         let datePicker:UIDatePicker = UIDatePicker()
-        datePicker.date = vars.land_date
+        if (vars.pr_citi_flag == 0) {
+            datePicker.date = vars.pr_land_date
+        }
+        else {
+            datePicker.date = vars.citi_land_date
+        }
         datePicker.backgroundColor = .clear
         datePicker.setValue(UIColor.white, forKey: "textColor")
         datePicker.datePickerMode = UIDatePickerMode.date
@@ -42,15 +52,21 @@ class ViewController2: UIViewController, UITextFieldDelegate {
     func datePickerValueChanged(sender:UIDatePicker) {
         // Format, store and display the selected date every time datepicker is changed
         // Landing date can be changed after inputing in-Canada dates, therefore some restrictions need to be applied for PR application
-        if (!vars.dates.isEmpty && compareDates(fromdate: sender.date, todate: vars.dates[0]) == 2 && vars.pr_citi_flag == 0) {
-            self.view.bringSubview(toFront: error_label)
-            error_label.text = "Landing date cannot be changed, some dates-in-Canada are before your input date"
-            error_label.alpha = 1
-            UIView.animate(withDuration: 2, animations: {self.error_label.alpha = 0})
+        if (vars.pr_citi_flag == 0) {
+            if (!vars.pr_dates.isEmpty && compareDates(fromdate: sender.date, todate: vars.pr_dates[0]) == 2) {
+                self.view.bringSubview(toFront: error_label)
+                error_label.text = "Landing date cannot be changed, some dates-in-Canada are before your input date"
+                error_label.alpha = 1
+                UIView.animate(withDuration: 2, animations: {self.error_label.alpha = 0})
+            }
+            else {
+                vars.pr_land_date = sender.date
+                land_text.text = vars.formatter.string(from: vars.pr_land_date)
+            }
         }
         else {
-            vars.land_date = sender.date
-            land_text.text = vars.formatter.string(from: vars.land_date)
+            vars.citi_land_date = sender.date
+            land_text.text = vars.formatter.string(from: vars.citi_land_date)
         }
     }
     

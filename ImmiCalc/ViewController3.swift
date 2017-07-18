@@ -70,7 +70,7 @@ class ViewController3: UIViewController {
     
     @IBAction func add_button_pressed(_ sender: UIButton) {
         // All added dates should be greater than landing date for PR applications
-        if (vars.pr_citi_flag == 0 && (compareDates(fromdate: vars.from_date, todate: vars.land_date) == 0 || compareDates(fromdate: vars.to_date, todate: vars.land_date) == 0)) {
+        if (vars.pr_citi_flag == 0 && (compareDates(fromdate: vars.from_date, todate: vars.pr_land_date) == 0 || compareDates(fromdate: vars.to_date, todate: vars.pr_land_date) == 0)) {
                 // Pop up
             print("All added dates should be greater than landing date")
         }
@@ -90,8 +90,14 @@ class ViewController3: UIViewController {
         }
         // Add dates to array, sort the array, send notification to close cells and reload data on save table
         else {
-            vars.dates += [vars.from_date, vars.to_date]
-            vars.dates.sort(by: {$0.compare($1) == .orderedAscending})
+            if (vars.pr_citi_flag == 0) {
+                vars.pr_dates += [vars.from_date, vars.to_date]
+                vars.pr_dates.sort(by: {$0.compare($1) == .orderedAscending})
+            }
+            else {
+                vars.citi_dates += [vars.from_date, vars.to_date]
+                vars.citi_dates.sort(by: {$0.compare($1) == .orderedAscending})
+            }
         }
         
         // Notify TableView to close expanded DatePickerCells, and TableView2 to reload table
@@ -100,7 +106,14 @@ class ViewController3: UIViewController {
     }
     
     @IBAction func done_pressed(_ sender: UIButton) {
-        if (vars.dates.count == 0) {
+        var count = 0
+        if (vars.pr_citi_flag == 0) {
+            count = vars.pr_dates.count
+        }
+        else {
+            count = vars.citi_dates.count
+        }
+        if (count == 0) {
             let alert = UIAlertController(title: "ImmiCalc", message: "Before proceeding to the result, please input all periods of time you spent in Canada", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
             // show the alert
@@ -136,17 +149,25 @@ class ViewController3: UIViewController {
     }
 
     func invalidDates(fromdate:Date, todate:Date) -> Bool {
-        if (vars.dates.count > 0) {
-            for i in 0...vars.dates.count - 1 {
+        var dates = [Date]()
+        if (vars.pr_citi_flag == 0) {
+            dates = vars.pr_dates
+        }
+        else {
+            dates = vars.citi_dates
+        }
+
+        if (dates.count > 0) {
+            for i in 0...dates.count - 1 {
                 // fromdate or todate cannot be the same as previous from or to dates
                 // if (fromdate == vars.dates[i] || todate == vars.dates[i]) {
-                if (compareDates(fromdate: fromdate, todate: vars.dates[i]) == 1 || compareDates(fromdate: todate, todate: vars.dates[i]) == 1) {
+                if (compareDates(fromdate: fromdate, todate: dates[i]) == 1 || compareDates(fromdate: todate, todate: dates[i]) == 1) {
                     print("fromdate or todate cannot be the same as previous from or to dates")
                     return true
                 }
                 // fromdate and todate cannot wrap around a previous from or to dates
                 // else if (fromdate < vars.dates[i] && todate > vars.dates[i]) {
-                else if (compareDates(fromdate: fromdate, todate: vars.dates[i]) == 0 && compareDates(fromdate: todate, todate: vars.dates[i]) == 2) {
+                else if (compareDates(fromdate: fromdate, todate: dates[i]) == 0 && compareDates(fromdate: todate, todate: dates[i]) == 2) {
                     print("fromdate and todate cannot wrap around a previous from or to dates")
                     return true
                 }

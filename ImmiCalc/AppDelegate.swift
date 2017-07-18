@@ -17,8 +17,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         defaults.register(defaults: ["pr_citi_flag" : -1])
-        defaults.register(defaults: ["land_date" : Date()])
-        defaults.register(defaults: ["dates" : Date()])
+        defaults.register(defaults: ["pr_land_date" : Date()])
+        defaults.register(defaults: ["citi_land_date" : Date()])
+        defaults.register(defaults: ["pr_dates" : [Date]()])
+        defaults.register(defaults: ["citi_dates" : [Date]()])
         defaults.register(defaults: ["application_date" : Date()])
         print("regi")
         // Override point for customization after application launch.
@@ -32,8 +34,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationDidEnterBackground(_ application: UIApplication) {
         defaults.set(vars.pr_citi_flag, forKey: "pr_citi_flag")
-        defaults.set(vars.land_date, forKey: "land_date")
-        defaults.set(vars.dates, forKey: "dates")
+        defaults.set(vars.pr_land_date, forKey: "pr_land_date")
+        defaults.set(vars.citi_land_date, forKey: "citi_land_date")
+        defaults.set(vars.pr_dates, forKey: "pr_dates")
+        defaults.set(vars.citi_dates, forKey: "citi_dates")
         defaults.set(vars.application_date, forKey: "application_date")
         defaults.synchronize()
         print("backgroundset")
@@ -43,8 +47,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillEnterForeground(_ application: UIApplication) {
         vars.pr_citi_flag = defaults.integer(forKey: "pr_citi_flag")
-        vars.land_date = defaults.object(forKey: "land_date") as! Date
-        vars.dates = defaults.array(forKey: "dates") as! [Date]
+        vars.pr_land_date = defaults.object(forKey: "pr_land_date") as! Date
+        vars.citi_land_date = defaults.object(forKey: "citi_land_date") as! Date
+        vars.pr_dates = defaults.array(forKey: "pr_dates") as! [Date]
+        vars.citi_dates = defaults.array(forKey: "citi_dates") as! [Date]
         vars.application_date = defaults.object(forKey: "application_date") as! Date
         print("foregroundget")
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
@@ -58,8 +64,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
         defaults.set(vars.pr_citi_flag, forKey: "pr_citi_flag")
-        defaults.set(vars.land_date, forKey: "land_date")
-        defaults.set(vars.dates, forKey: "dates")
+        defaults.set(vars.pr_land_date, forKey: "pr_land_date")
+        defaults.set(vars.citi_land_date, forKey: "citi_land_date")
+        defaults.set(vars.pr_dates, forKey: "pr_dates")
+        defaults.set(vars.citi_dates, forKey: "citi_dates")
         defaults.set(vars.application_date, forKey: "application_date")
         defaults.synchronize()
         print("terminateset")

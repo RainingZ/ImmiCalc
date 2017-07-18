@@ -14,12 +14,11 @@ import DatePickerCell
 struct vars {
     static let formatter = DateFormatter()
     static var pr_citi_flag:Int = -1
-    static var land_date = Date()
+    static var pr_land_date = Date()
+    static var citi_land_date = Date()
     static var expand_height:CGFloat = 0
-    // TODO
-    // new array for seperating citi pr
-    // new land_date for seperating citi pr
-    static var dates = [Date]()
+    static var pr_dates = [Date]()
+    static var citi_dates = [Date]()
     static var from_date = Date()
     static var to_date = Date()
     static var application_date = Date()
@@ -63,32 +62,13 @@ class ViewController: UIViewController {
     
     // Set pr_citi_flag
     @IBAction func PR_button_pressed(_ sender: UIButton) {
-        if (vars.pr_citi_flag == 1) {
-            let alert = UIAlertController(title: "WARNING", message: "Changing the application type will clear your previous data, are you sure?", preferredStyle: UIAlertControllerStyle.alert)
-            
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.destructive, handler: cleardatashowView2))
-            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
-            // show the alert
-            self.present(alert, animated: true, completion: nil)
-        }
-        else {
-            performSegue(withIdentifier: "showView2", sender: self)
-            vars.pr_citi_flag = 0
-        }
+        performSegue(withIdentifier: "showView2", sender: self)
+        vars.pr_citi_flag = 0
     }
+    
     @IBAction func Citi_button_pressed(_ sender: UIButton) {
-        if (vars.pr_citi_flag == 0) {
-            let alert = UIAlertController(title: "WARNING", message: "Changing the application type will clear your previous data, are you sure?", preferredStyle: UIAlertControllerStyle.alert)
-            
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.destructive, handler: cleardatashowView2))
-            alert.addAction(UIAlertAction(title: "Cancel", style: UIAlertActionStyle.cancel, handler: nil))
-            // show the alert
-            self.present(alert, animated: true, completion: nil)
-        }
-        else {
-            performSegue(withIdentifier: "showView2", sender: self)
-            vars.pr_citi_flag = 1
-        }
+        performSegue(withIdentifier: "showView2", sender: self)
+        vars.pr_citi_flag = 1
     }
 
     
@@ -96,8 +76,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         let defaults = UserDefaults.standard
         vars.pr_citi_flag = defaults.integer(forKey: "pr_citi_flag")
-        vars.land_date = defaults.object(forKey: "land_date") as! Date
-        vars.dates = defaults.array(forKey: "dates") as! [Date]
+        vars.pr_land_date = defaults.object(forKey: "pr_land_date") as! Date
+        vars.citi_land_date = defaults.object(forKey: "citi_land_date") as! Date
+        vars.pr_dates = defaults.array(forKey: "pr_dates") as! [Date]
+        vars.citi_dates = defaults.array(forKey: "citi_dates") as! [Date]
         vars.application_date = defaults.object(forKey: "application_date") as! Date
         print("launchget")
         
@@ -124,7 +106,8 @@ class ViewController: UIViewController {
             vars.pr_citi_flag = 1
         }
         vars.DoNotNotify = false
-        vars.dates.removeAll()
+        vars.pr_dates.removeAll()
+        vars.citi_dates.removeAll()
         performSegue(withIdentifier: "showView2", sender: self)
         return
     }

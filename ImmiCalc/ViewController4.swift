@@ -67,14 +67,30 @@ class ViewController4: UIViewController {
         
         var from = Date()
         var to = Date()
+        
+        var land_date = Date()
+        if (vars.pr_citi_flag == 0) {
+            land_date = vars.pr_land_date
+        }
+        else {
+            land_date = vars.citi_land_date
+        }
+        
+        var dates = [Date]()
+        if (vars.pr_citi_flag == 0) {
+            dates = vars.pr_dates
+        }
+        else {
+            dates = vars.citi_dates
+        }
         // Main Calculation
 //========================================================
 // You Have Stayed in Canada for:
 //========================================================
         
-        for i in 1...(vars.dates.count/2) {
-            from = vars.dates[i*2-2]
-            to = vars.dates[i*2-1]
+        for i in 1...(dates.count/2) {
+            from = dates[i*2-2]
+            to = dates[i*2-1]
             daysbetween = to.interval(ofComponent: .day, fromDate: from)
             // If PR application
             if (vars.pr_citi_flag == 0) {
@@ -99,7 +115,7 @@ class ViewController4: UIViewController {
         
         // If PR application
         if (vars.pr_citi_flag == 0) {
-            if (compareDates(fromdate: fiveyearsago!, todate: vars.land_date) == 2) {
+            if (compareDates(fromdate: fiveyearsago!, todate: land_date) == 2) {
             // when landing date is more than 5 years ago (S1)
                 start = fiveyearsago!
                 stayedNow = inCanadaDays(start: start, end: Date())
@@ -113,11 +129,11 @@ class ViewController4: UIViewController {
             }
             else {
                 // when landing date is exactly or less than 5 years ago (S2)
-                start = vars.land_date
+                start = land_date
                 stayedNow = inCanadaDays(start: start, end: Date())
                 daysNeededAfterNow = 730 - stayedNow
                 if (daysNeededAfterNow > 0) {
-                    let daysBeforeFive = 1826 - Date().interval(ofComponent: .day, fromDate: vars.land_date)
+                    let daysBeforeFive = 1826 - Date().interval(ofComponent: .day, fromDate: land_date)
                     if (daysBeforeFive < daysNeededAfterNow) {
                         need_now = daysBeforeFive + daysNeededforS1(start:start, daysNeeded: (daysNeededAfterNow - daysBeforeFive))
                     }
@@ -169,9 +185,17 @@ class ViewController4: UIViewController {
         var daysbetween = 0
         var from = Date()
         var to = Date()
-        for i in 1...(vars.dates.count/2) {
-            from = vars.dates[i*2-2]
-            to = vars.dates[i*2-1]
+        var dates = [Date]()
+        if (vars.pr_citi_flag == 0) {
+            dates = vars.pr_dates
+        }
+        else {
+            dates = vars.citi_dates
+        }
+
+        for i in 1...(dates.count/2) {
+            from = dates[i*2-2]
+            to = dates[i*2-1]
             if ((compareDates(fromdate: from, todate: start) == 0 && compareDates(fromdate: to, todate: start) == 0) || (compareDates(fromdate: from, todate: end) == 2 && compareDates(fromdate: from, todate: end) == 2)) {
                 stayednow = stayednow + 0
             }

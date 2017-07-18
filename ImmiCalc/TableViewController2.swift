@@ -17,7 +17,7 @@ class TableViewController2: UITableViewController {
         DispatchQueue.main.async {
             self.tableView.reloadData()
         }
-
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -37,7 +37,13 @@ class TableViewController2: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return (vars.dates.count / 2)
+        if (vars.pr_citi_flag == 0) {
+            return (vars.pr_dates.count / 2)
+        }
+        else {
+            return (vars.citi_dates.count / 2)
+        }
+        
     }
 
     
@@ -48,8 +54,15 @@ class TableViewController2: UITableViewController {
         }
 
         // Configure the cell...
-        let from_date = vars.dates[indexPath.row * 2]
-        let to_date = vars.dates[indexPath.row * 2 + 1]
+        var dates = [Date]()
+        if (vars.pr_citi_flag == 0) {
+            dates = vars.pr_dates
+        }
+        else {
+            dates = vars.citi_dates
+        }
+        let from_date = dates[indexPath.row * 2]
+        let to_date = dates[indexPath.row * 2 + 1]
         cell.from_date_label.text = vars.formatter.string(from: from_date)
         cell.to_date_label.text = vars.formatter.string(from: to_date)
         return cell
@@ -67,9 +80,16 @@ class TableViewController2: UITableViewController {
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if (editingStyle == UITableViewCellEditingStyle.delete) {
             // handle delete (by removing the data from your array and updating the tableview)
-            vars.dates.remove(at: indexPath.row * 2)
-            vars.dates.remove(at: indexPath.row * 2)
-            tableView.deleteRows(at: [indexPath], with: .fade)
+            if (vars.pr_citi_flag == 0) {
+                vars.pr_dates.remove(at: indexPath.row * 2)
+                vars.pr_dates.remove(at: indexPath.row * 2)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+            else {
+                vars.citi_dates.remove(at: indexPath.row * 2)
+                vars.citi_dates.remove(at: indexPath.row * 2)
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
         }
     }
     /*
