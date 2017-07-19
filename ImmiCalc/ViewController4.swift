@@ -23,7 +23,9 @@ class ViewController4: UIViewController {
     @IBOutlet weak var application_date_text: UITextField!
     @IBOutlet weak var perm_citi_label: UILabel!
     @IBOutlet weak var more_label: UILabel!
+    @IBOutlet weak var more_date_label: UILabel!
     @IBOutlet weak var stayed_label: UILabel!
+    @IBOutlet weak var valid_label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -56,9 +58,15 @@ class ViewController4: UIViewController {
         more_label.layer.masksToBounds = true
         more_label.layer.cornerRadius = 5
         more_label.layer.borderWidth = 0
+        more_date_label.layer.masksToBounds = true
+        more_date_label.layer.cornerRadius = 5
+        more_date_label.layer.borderWidth = 0
         stayed_label.layer.masksToBounds = true
         stayed_label.layer.cornerRadius = 5
         stayed_label.layer.borderWidth = 0
+        valid_label.layer.masksToBounds = true
+        valid_label.layer.cornerRadius = 5
+        valid_label.layer.borderWidth = 0
         
         let cal  = Calendar.current
         var stayed = 0
@@ -185,7 +193,9 @@ class ViewController4: UIViewController {
             }
         }
         
-        more_label.text = String(need_now) + " Day(s)"
+        more_label.text = String(need_now) + " Day(s) Till"
+        more_date_label.text = vars.formatter.string(from: cal.date(byAdding: .day, value: need_now, to: Date())!)
+        
 //========================================================
 //
 //========================================================
