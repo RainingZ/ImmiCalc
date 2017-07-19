@@ -111,6 +111,7 @@ class ViewController4: UIViewController {
         let fiveyearsago = cal.date(byAdding: .year, value: -5, to: Date())
         var start = Date()
         var stayedNow = 0
+        var stayedBeforeLanding = 0
         var daysNeededAfterNow = 0
         
         // If PR application
@@ -148,7 +149,40 @@ class ViewController4: UIViewController {
         }
         // If citi application
         else {
-            //
+            if (compareDates(fromdate: fiveyearsago!, todate: land_date) == 2) {
+                // when landing date is more than 5 years ago (S1)
+                start = fiveyearsago!
+                stayedNow = inCanadaDays(start: vars.citi_land_date, end: Date())
+                if (compareDates(fromdate: vars.citi_dates[0], todate: vars.citi_land_date) == 0) {
+                    stayedBeforeLanding = inCanadaDays(start: vars.citi_dates[0], end: vars.citi_land_date)
+                }
+                // Divide by 2 (floor or ceiling?)
+                daysNeededAfterNow = 1095 - stayedNow - stayedBeforeLanding / 2
+                if (daysNeededAfterNow > 0) {
+                    need_now = daysNeededforS1(start:start, daysNeeded:daysNeededAfterNow)
+                }
+                else {
+                    need_now = 0
+                }
+            }
+            else {
+                // when landing date is exactly or less than 5 years ago (S2)
+                start = land_date
+                stayedNow = inCanadaDays(start: start, end: Date())
+                daysNeededAfterNow = 1095 - stayedNow
+                if (daysNeededAfterNow > 0) {
+                    let daysBeforeFive = 1826 - Date().interval(ofComponent: .day, fromDate: land_date)
+                    if (daysBeforeFive < daysNeededAfterNow) {
+                        need_now = daysBeforeFive + daysNeededforS1(start:start, daysNeeded: (daysNeededAfterNow - daysBeforeFive))
+                    }
+                    else {
+                        need_now = daysNeededAfterNow
+                    }
+                }
+                else {
+                    need_now = 0
+                }
+            }
         }
         
         more_label.text = String(need_now) + " Day(s)"
@@ -167,12 +201,29 @@ class ViewController4: UIViewController {
         // Might need to change it for citizen, this is currently only for PR
         let cal  = Calendar.current
         var need = daysNeeded
+        var halfneed = 0
         var start = start
         var sum = 0
         // Recursively get inCanadaDays for periods of "daysNeeded", we'll need to stay in Canada to make up for periods we stayed in Canada 5 years ago, since as time passes, those will not count anymore
+        var count_half_flag = vars.pr_citi_flag
         while (need != 0) {
             sum = sum + need
-            need = inCanadaDays(start: start, end: cal.date(byAdding: .day, value: need - 1, to: start)!)
+            // if PR application
+            if (count_half_flag == 0) {
+                need = inCanadaDays(start: start, end: cal.date(byAdding: .day, value: need - 1, to: start)!)
+            }
+            // if Citizen application
+            else {
+                // if Citizen application and calculation reached land date, the calculation method will be changed to be the same as PR application (in this case finish the last calculation first)
+                if (compareDates(fromdate: vars.citi_land_date, todate: cal.date(byAdding: .day, value: need - 1, to: start)!) == 0) {
+                    halfneed = inCanadaDays(start: start, end: cal.date(byAdding: .day, value: -1, to: vars.citi_land_date)!) / 2
+                    need = halfneed + inCanadaDays(start: vars.citi_land_date, end: cal.date(byAdding: .day, value: need - 1, to: start)!)
+                    count_half_flag = 0
+                }
+                else {
+                    need = inCanadaDays(start: start, end: cal.date(byAdding: .day, value: need - 1, to: start)!) / 2
+                }
+            }
             start = cal.date(byAdding: .day, value: need, to: start)!
         }
         

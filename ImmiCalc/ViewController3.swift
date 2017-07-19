@@ -61,6 +61,30 @@ class ViewController3: UIViewController {
             // show the alert
             self.present(alert, animated: true, completion: nil)
         }
+        
+        // When one application has dates and the other does not, copy the necessary dates over
+        if (vars.pr_citi_flag == 0 && vars.pr_dates.isEmpty && !vars.citi_dates.isEmpty) {
+            var temp_dates = [Date]()
+            temp_dates = vars.citi_dates
+            for i in 0...(temp_dates.count - 1) {
+                if (compareDates(fromdate: temp_dates[0], todate: vars.pr_land_date) == 0 || (compareDates(fromdate: temp_dates[0], todate: vars.pr_land_date) == 1 && i % 2 == 1)) {
+                    temp_dates.remove(at: 0)
+                }
+                else if (compareDates(fromdate: temp_dates[0], todate: vars.pr_land_date) == 2 && i % 2 == 1) {
+                    temp_dates += [vars.pr_land_date]
+                    temp_dates.sort(by: {$0.compare($1) == .orderedAscending})
+                    break
+                }
+                else {
+                    break
+                }
+            }
+            vars.pr_dates = temp_dates
+        }
+        
+        if (vars.pr_citi_flag == 1 && vars.citi_dates.isEmpty && !vars.pr_dates.isEmpty) {
+            vars.citi_dates = vars.pr_dates
+        }
     }
     
     func donotnotify(alert: UIAlertAction!) {

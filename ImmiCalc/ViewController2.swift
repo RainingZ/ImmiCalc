@@ -26,10 +26,18 @@ class ViewController2: UIViewController, UITextFieldDelegate {
         // Date formattor initialization and storing landing date
         vars.formatter.dateStyle = DateFormatter.Style.medium
         vars.formatter.timeStyle = DateFormatter.Style.none
+        
+        // When the date is today and not for the other application, copy the date over
         if (vars.pr_citi_flag == 0) {
+            if (compareDates(fromdate: vars.pr_land_date, todate: Date()) == 1 && compareDates(fromdate: vars.citi_land_date, todate: Date()) != 1 && vars.pr_dates.isEmpty) {
+                vars.pr_land_date = vars.citi_land_date
+            }
             land_text.text = vars.formatter.string(from: vars.pr_land_date)
         }
         else {
+            if (compareDates(fromdate: vars.pr_land_date, todate: Date()) != 1 && compareDates(fromdate: vars.citi_land_date, todate: Date()) == 1) {
+                vars.citi_land_date = vars.pr_land_date
+            }
             land_text.text = vars.formatter.string(from: vars.citi_land_date)
         }
         error_label.alpha = 0

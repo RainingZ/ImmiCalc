@@ -63,11 +63,17 @@ class ViewController: UIViewController {
     // Set pr_citi_flag
     @IBAction func PR_button_pressed(_ sender: UIButton) {
         performSegue(withIdentifier: "showView2", sender: self)
+        if (vars.pr_citi_flag == 1) {
+            vars.DoNotNotify = false
+        }
         vars.pr_citi_flag = 0
     }
     
     @IBAction func Citi_button_pressed(_ sender: UIButton) {
         performSegue(withIdentifier: "showView2", sender: self)
+        if (vars.pr_citi_flag == 0) {
+            vars.DoNotNotify = false
+        }
         vars.pr_citi_flag = 1
     }
 
@@ -98,6 +104,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    // Unused
     func cleardatashowView2(alert: UIAlertAction!) {
         if (vars.pr_citi_flag == 1) {
             vars.pr_citi_flag = 0
