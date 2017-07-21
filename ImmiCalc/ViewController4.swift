@@ -26,6 +26,35 @@ class ViewController4: UIViewController {
     @IBOutlet weak var more_date_label: UILabel!
     @IBOutlet weak var stayed_label: UILabel!
     @IBOutlet weak var valid_label: UILabel!
+    @IBAction func reset_pressed(_ sender: Any) {
+        let optionMenu = UIAlertController(title: nil, message:"This will clear all saved data, are you sure?", preferredStyle: .actionSheet)
+        let okAction = UIAlertAction(title: "OK", style: .destructive, handler: resetHandler)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        optionMenu.addAction(okAction)
+        optionMenu.addAction(cancelAction)
+        self.present(optionMenu, animated: true, completion: nil)
+    }
+    
+    func resetHandler(alert: UIAlertAction!) {
+        let defaults = UserDefaults.standard
+        vars.pr_dates.removeAll()
+        vars.citi_dates.removeAll()
+        vars.pr_land_date = Date()
+        vars.citi_land_date = Date()
+        vars.application_date = Date()
+        vars.pr_citi_flag = -1
+        vars.DoNotNotify = false
+        defaults.set(vars.pr_citi_flag, forKey: "pr_citi_flag")
+        defaults.set(vars.pr_land_date, forKey: "pr_land_date")
+        defaults.set(vars.citi_land_date, forKey: "citi_land_date")
+        defaults.set(vars.pr_dates, forKey: "pr_dates")
+        defaults.set(vars.citi_dates, forKey: "citi_dates")
+        defaults.set(vars.application_date, forKey: "application_date")
+        defaults.synchronize()
+        print("backgroundset")
+        self.performSegue(withIdentifier: "unwindToVC1", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

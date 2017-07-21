@@ -60,6 +60,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var pr_button: UIButton!
     @IBOutlet weak var citi_button: UIButton!
     
+    // Prepare to unwind on VC4 reset button
+    @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
+    }
     // Set pr_citi_flag
     @IBAction func PR_button_pressed(_ sender: UIButton) {
         performSegue(withIdentifier: "showView2", sender: self)
@@ -80,6 +83,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //self.navigationItem.hidesBackButton = true
         let defaults = UserDefaults.standard
         vars.pr_citi_flag = defaults.integer(forKey: "pr_citi_flag")
         vars.pr_land_date = defaults.object(forKey: "pr_land_date") as! Date

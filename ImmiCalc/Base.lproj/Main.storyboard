@@ -190,7 +190,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wfw-Xf-NiL">
                                 <rect key="frame" x="15.523267032037666" y="180" width="343" height="29.999999999999886"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.61399792489877969" green="0.82567904190488273" blue="1" alpha="0.7" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.61399792489877969" green="0.82567904190488273" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" red="0.11632751030825861" green="0.075243609487150143" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
@@ -263,7 +263,7 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999999999 Day(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mf-iL-C1g">
                                 <rect key="frame" x="102" y="137.5" width="170" height="20.5"/>
-                                <color key="backgroundColor" red="1" green="0.46019431176942049" blue="0.46410739597680206" alpha="0.7" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.46019431176942049" blue="0.46410739597680206" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="170" id="R8M-mv-HBl"/>
                                     <constraint firstAttribute="height" constant="20.5" id="aTV-Yh-5Fe"/>
@@ -278,16 +278,22 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starting Now, 
-You Need To Stay In Canada For" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zO-ae-eec">
-                                <rect key="frame" x="58.5" y="166" width="259.5" height="43"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zO-ae-eec">
+                                <rect key="frame" x="58.5" y="166.5" width="259.5" height="43"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Starting Now,   You Need To Stay In Canada For">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" metaFont="system" size="18"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999999999 Day(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnJ-ke-Ai7">
                                 <rect key="frame" x="102.5" y="217" width="170" height="21"/>
-                                <color key="backgroundColor" red="1" green="0.45869612693786621" blue="0.46388506889343262" alpha="0.7" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.45869612693786621" blue="0.46388506889343262" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="170" id="lSw-1D-8PU"/>
                                     <constraint firstAttribute="height" constant="21" id="zRD-7e-Zp9"/>
@@ -304,7 +310,7 @@ You Need To Stay In Canada For" textAlignment="center" lineBreakMode="tailTrunca
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PR/Citizen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqL-HG-FWU">
                                 <rect key="frame" x="147.5" y="307" width="79.5" height="21"/>
-                                <color key="backgroundColor" red="1" green="0.48667806386947632" blue="0.48404395580291748" alpha="0.7" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.48667806386947632" blue="0.48404395580291748" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="Uik-cv-ANi"/>
                                 </constraints>
@@ -341,7 +347,7 @@ You Need To Stay In Canada For" textAlignment="center" lineBreakMode="tailTrunca
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month Day, Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mby-sy-Xba">
                                 <rect key="frame" x="103" y="247" width="170" height="21"/>
-                                <color key="backgroundColor" red="1" green="0.4586961269" blue="0.46388506889999997" alpha="0.7" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.4586961269" blue="0.46388506889999997" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="170" id="1gl-XK-idG"/>
                                     <constraint firstAttribute="height" constant="21" id="NoQ-hs-3gh"/>
@@ -352,7 +358,7 @@ You Need To Stay In Canada For" textAlignment="center" lineBreakMode="tailTrunca
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valid Application Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h55-96-7hq">
                                 <rect key="frame" x="68" y="403" width="238" height="21"/>
-                                <color key="backgroundColor" red="1" green="0.4586961269" blue="0.46388506889999997" alpha="0.7" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.4586961269" blue="0.46388506889999997" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="DkS-bf-ALs"/>
                                     <constraint firstAttribute="width" constant="238" id="eN7-tQ-n3d"/>
@@ -393,6 +399,25 @@ You Need To Stay In Canada For" textAlignment="center" lineBreakMode="tailTrunca
                     </view>
                     <navigationItem key="navigationItem" title="Summary" id="epc-SY-dKi">
                         <barButtonItem key="backBarButtonItem" title="Back" id="kb4-Q4-Sqe"/>
+                        <barButtonItem key="rightBarButtonItem" style="done" id="cDP-hr-JtM">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" id="fzU-SK-PoI">
+                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Reset">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="ArialUnicodeMS"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="reset_pressed:" destination="RlP-oU-vh8" eventType="touchDown" id="BoL-dd-uYy"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="application_date_text" destination="Ox7-az-qCK" id="ein-w5-3cC"/>
@@ -402,9 +427,11 @@ You Need To Stay In Canada For" textAlignment="center" lineBreakMode="tailTrunca
                         <outlet property="perm_citi_label" destination="rqL-HG-FWU" id="V5m-Ua-etw"/>
                         <outlet property="stayed_label" destination="6Mf-iL-C1g" id="ycx-zV-eVF"/>
                         <outlet property="valid_label" destination="h55-96-7hq" id="foO-ct-D8e"/>
+                        <segue destination="4Df-Ar-Jtn" kind="unwind" identifier="unwindToVC1" unwindAction="prepareForUnwindWithSegue:" id="z8u-Pr-Jfy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3d8-Vp-Opk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="4Df-Ar-Jtn" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="736.79999999999995" y="742.5787106446777"/>
         </scene>
@@ -422,15 +449,14 @@ You Need To Stay In Canada For" textAlignment="center" lineBreakMode="tailTrunca
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aNY-pQ-BOJ">
                                 <rect key="frame" x="47.5" y="273.5" width="120" height="120"/>
-                                <color key="backgroundColor" red="0.77923076799790614" green="0.88151557763626631" blue="1" alpha="0.7" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.77923076799790614" green="0.88151557763626631" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="8Fd-Ib-KGB"/>
                                     <constraint firstAttribute="width" constant="120" id="XY9-ql-ph7"/>
                                 </constraints>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Permanent
-Resident">
+                                        <fragment content="Permanent Resident">
                                             <attributes>
                                                 <color key="NSColor" red="0.46811070567486329" green="0.19490903143002364" blue="0.94136491281732082" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <font key="NSFont" size="20" name=".AppleSystemUIFont"/>

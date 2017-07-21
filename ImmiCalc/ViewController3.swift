@@ -95,7 +95,11 @@ class ViewController3: UIViewController {
     @IBAction func add_button_pressed(_ sender: UIButton) {
         // All added dates should be greater than landing date for PR applications
         if (vars.pr_citi_flag == 0 && (compareDates(fromdate: vars.from_date, todate: vars.pr_land_date) == 0 || compareDates(fromdate: vars.to_date, todate: vars.pr_land_date) == 0)) {
-                // Pop up
+            // Pop up
+            let alert = UIAlertController(title: "ImmiCalc", message: "All added dates should be greater than landing date", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
             print("All added dates should be greater than landing date")
         }
         // All added dates should be before today
@@ -106,10 +110,18 @@ class ViewController3: UIViewController {
         // From dates need to be smaller or equal to To dates
         // else if (vars.to_date < vars.from_date) {
         else if (compareDates(fromdate: vars.to_date, todate: vars.from_date) == 0) {
+            let alert = UIAlertController(title: "ImmiCalc", message: "From dates need to be smaller or equal to To dates", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
             print("From dates need to be smaller or equal to To dates")
         }
-        // Both dates need to be outside of an "away-from-Canada" period
+        // Both dates need to be outside of an "in-Canada" period
         else if (invalidDates(fromdate: vars.from_date, todate: vars.to_date)) {
+            let alert = UIAlertController(title: "ImmiCalc", message: "Both dates need to be outside of an 'in-Canada' period", preferredStyle: UIAlertControllerStyle.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
+            // show the alert
+            self.present(alert, animated: true, completion: nil)
             print("Both dates need to be outside of an 'in-Canada' period")
         }
         // Add dates to array, sort the array, send notification to close cells and reload data on save table

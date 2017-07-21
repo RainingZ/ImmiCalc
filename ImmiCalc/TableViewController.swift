@@ -46,6 +46,7 @@ class TableViewController: UITableViewController {
     // Handle the notification from add_button_press, if any of the cell is expanded, select the cell again and update height
     func AddButtonNotificationHandler() {
         if (vars.datePickerCell.expanded) {
+            print("handled")
             vars.datePickerCell.selectedInTableView(tableView)
             vars.expand_height = 0 - vars.datePickerCell.datePicker.frame.size.height
             from_to_table.contentSize.height = from_to_table.contentSize.height + vars.expand_height
