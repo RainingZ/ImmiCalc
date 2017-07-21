@@ -67,14 +67,10 @@ class ViewController4: UIViewController {
         valid_label.layer.masksToBounds = true
         valid_label.layer.cornerRadius = 5
         valid_label.layer.borderWidth = 0
-        
+
         let cal  = Calendar.current
         var stayed = 0
         var need_now = 0
-        var daysbetween = 0
-        
-        var from = Date()
-        var to = Date()
         
         var land_date = Date()
         if (vars.pr_citi_flag == 0) {
@@ -83,33 +79,20 @@ class ViewController4: UIViewController {
         else {
             land_date = vars.citi_land_date
         }
-        
-        var dates = [Date]()
-        if (vars.pr_citi_flag == 0) {
-            dates = vars.pr_dates
-        }
-        else {
-            dates = vars.citi_dates
-        }
         // Main Calculation
 //========================================================
 // You Have Stayed in Canada for:
 //========================================================
         
-        for i in 1...(dates.count/2) {
-            from = dates[i*2-2]
-            to = dates[i*2-1]
-            daysbetween = to.interval(ofComponent: .day, fromDate: from)
-            // If PR application
-            if (vars.pr_citi_flag == 0) {
-                // Stayed days
-                stayed = stayed + daysbetween + 1 // add 1 to include both in and out dates, according to the bill
-            }
+         // If PR application
+        if (vars.pr_citi_flag == 0) {
+            // Stayed days
+            stayed = inCanadaDays(start: vars.pr_dates[0], end: Date())
+        }
             // If citi application
-            else {
-                // Stayed days
-                stayed = stayed + daysbetween
-            }
+        else {
+            // Stayed days
+            stayed = inCanadaDays(start: vars.citi_dates[0], end: Date())
         }
         
         stayed_label.text = String(stayed) + " Day(s)"
@@ -121,11 +104,12 @@ class ViewController4: UIViewController {
         var stayedNow = 0
         var stayedBeforeLanding = 0
         var daysNeededAfterNow = 0
+        var firstDate = Date()
         
         // If PR application
         if (vars.pr_citi_flag == 0) {
             if (compareDates(fromdate: fiveyearsago!, todate: land_date) == 2) {
-            // when landing date is more than 5 years ago (S1)
+            // when landing date is more than (before) 5 years ago (S1)
                 start = fiveyearsago!
                 stayedNow = inCanadaDays(start: start, end: Date())
                 daysNeededAfterNow = 730 - stayedNow
@@ -137,7 +121,7 @@ class ViewController4: UIViewController {
                 }
             }
             else {
-                // when landing date is exactly or less than 5 years ago (S2)
+                // when landing date is exactly or less than (after) 5 years ago (S2)
                 start = land_date
                 stayedNow = inCanadaDays(start: start, end: Date())
                 daysNeededAfterNow = 730 - stayedNow
@@ -161,11 +145,7 @@ class ViewController4: UIViewController {
                 // when landing date is more than 5 years ago (S1)
                 start = fiveyearsago!
                 stayedNow = inCanadaDays(start: vars.citi_land_date, end: Date())
-                if (compareDates(fromdate: vars.citi_dates[0], todate: vars.citi_land_date) == 0) {
-                    stayedBeforeLanding = inCanadaDays(start: vars.citi_dates[0], end: vars.citi_land_date)
-                }
-                // Divide by 2 (floor or ceiling?)
-                daysNeededAfterNow = 1095 - stayedNow - stayedBeforeLanding / 2
+                daysNeededAfterNow = 1095 - stayedNow
                 if (daysNeededAfterNow > 0) {
                     need_now = daysNeededforS1(start:start, daysNeeded:daysNeededAfterNow)
                 }
@@ -177,11 +157,35 @@ class ViewController4: UIViewController {
                 // when landing date is exactly or less than 5 years ago (S2)
                 start = land_date
                 stayedNow = inCanadaDays(start: start, end: Date())
-                daysNeededAfterNow = 1095 - stayedNow
+                print(fiveyearsago!)
+                // Find the first date after fiveyearsago
+                for i in 0...(vars.citi_dates.count-1) {
+                    if (compareDates(fromdate: fiveyearsago!, todate: vars.citi_dates[i]) == 0) {
+                        // When the first date after fiveyearsago is an in-date
+                        if (i % 2 == 0) {
+                            firstDate = vars.citi_dates[i]
+                            break
+                        }
+                        // When the first date after fiveyearsago is an out-date
+                        else {
+                            firstDate = fiveyearsago!
+                            break
+                        }
+                    }
+                }
+                print(firstDate)
+                if (compareDates(fromdate: firstDate, todate: vars.citi_land_date) == 0) {
+                    stayedBeforeLanding = inCanadaDays(start: firstDate, end: vars.citi_land_date)
+                }
+                
+                // Divide by 2 (currently ceiling, want floor or ceiling?)
+                daysNeededAfterNow = 1095 - stayedNow - stayedBeforeLanding/2
+                print("daysNeededAfterNow" + String(daysNeededAfterNow))
                 if (daysNeededAfterNow > 0) {
-                    let daysBeforeFive = 1826 - Date().interval(ofComponent: .day, fromDate: land_date)
-                    if (daysBeforeFive < daysNeededAfterNow) {
-                        need_now = daysBeforeFive + daysNeededforS1(start:start, daysNeeded: (daysNeededAfterNow - daysBeforeFive))
+                    let daysBeforeFirstDate = firstDate.interval(ofComponent: .day, fromDate: fiveyearsago!)
+                    print("daysBeforeFirstDate" + String(daysBeforeFirstDate))
+                    if (daysBeforeFirstDate < daysNeededAfterNow) {
+                        need_now = daysBeforeFirstDate + daysNeededforS1(start:firstDate, daysNeeded: (daysNeededAfterNow - daysBeforeFirstDate))
                     }
                     else {
                         need_now = daysNeededAfterNow
@@ -195,11 +199,7 @@ class ViewController4: UIViewController {
         
         more_label.text = String(need_now) + " Day(s) Till"
         more_date_label.text = vars.formatter.string(from: cal.date(byAdding: .day, value: need_now, to: Date())!)
-        
-//========================================================
-//
-//========================================================
-        
+        applicationDateValidation()
     }
 
     override func didReceiveMemoryWarning() {
@@ -208,12 +208,13 @@ class ViewController4: UIViewController {
     }
 
     func daysNeededforS1(start:Date, daysNeeded:Int) -> Int {
-        // Might need to change it for citizen, this is currently only for PR
         let cal  = Calendar.current
         var need = daysNeeded
         var halfneed = 0
         var start = start
         var sum = 0
+        print(start)
+        print(need)
         // Recursively get inCanadaDays for periods of "daysNeeded", we'll need to stay in Canada to make up for periods we stayed in Canada 5 years ago, since as time passes, those will not count anymore
         var count_half_flag = vars.pr_citi_flag
         while (need != 0) {
@@ -225,16 +226,24 @@ class ViewController4: UIViewController {
             // if Citizen application
             else {
                 // if Citizen application and calculation reached land date, the calculation method will be changed to be the same as PR application (in this case finish the last calculation first)
-                if (compareDates(fromdate: vars.citi_land_date, todate: cal.date(byAdding: .day, value: need - 1, to: start)!) == 0) {
+                if (compareDates(fromdate: vars.citi_land_date, todate: start) == 0) {
+                    need = inCanadaDays(start: start, end: cal.date(byAdding: .day, value: need - 1, to: start)!)
+                    count_half_flag = 0
+                    print("if")
+                }
+                else if (compareDates(fromdate: vars.citi_land_date, todate: cal.date(byAdding: .day, value: need - 1, to: start)!) == 0) {
                     halfneed = inCanadaDays(start: start, end: cal.date(byAdding: .day, value: -1, to: vars.citi_land_date)!) / 2
                     need = halfneed + inCanadaDays(start: vars.citi_land_date, end: cal.date(byAdding: .day, value: need - 1, to: start)!)
                     count_half_flag = 0
+                    print("elseif")
                 }
                 else {
                     need = inCanadaDays(start: start, end: cal.date(byAdding: .day, value: need - 1, to: start)!) / 2
+                    print("else")
                 }
             }
             start = cal.date(byAdding: .day, value: need, to: start)!
+            print("need" + String(need))
         }
         
         return sum
@@ -290,15 +299,100 @@ class ViewController4: UIViewController {
     }
     
     func datePickerValueChanged(sender:UIDatePicker) {
-        if (compareDates(fromdate: sender.date, todate: Date()) == 0) {
+        var land_date = Date()
+        if (vars.pr_citi_flag == 0) {
+            land_date = vars.pr_land_date
+        }
+        else {
+            land_date = vars.citi_land_date
+        }
+        if (compareDates(fromdate: sender.date, todate: land_date) == 0) {
             self.view.bringSubview(toFront: error_label)
-            error_label.text = "Application date cannot be before today"
+            error_label.text = "Application Date Cannot Be Before\nLanding Date"
             error_label.alpha = 1
             UIView.animate(withDuration: 2, animations: {self.error_label.alpha = 0})
         }
         else {
             vars.application_date = sender.date
             application_date_text.text = vars.formatter.string(from: vars.application_date)
+            applicationDateValidation()
+        }
+    }
+    
+    func applicationDateValidation() {
+//========================================================
+// Application Date Validation:
+//========================================================
+        let cal  = Calendar.current
+        let fiveyearsago = cal.date(byAdding: .year, value: -5, to: vars.application_date)
+        var start = Date()
+        var stayed = 0
+        var stayedBeforeLanding = 0
+        var firstDate = Date()
+        
+        // If PR application
+        if (vars.pr_citi_flag == 0) {
+            if (compareDates(fromdate: fiveyearsago!, todate: vars.pr_land_date) == 2) {
+                // when landing date is more than 5 years ago
+                start = fiveyearsago!
+                stayed = inCanadaDays(start: start, end: vars.application_date)
+            }
+            else {
+                // when landing date is exactly or less than 5 years ago
+                start = vars.pr_land_date
+                stayed = inCanadaDays(start: start, end: vars.application_date)
+            }
+            if (stayed < 730) {
+                valid_label.text = "Invalid Application Date"
+                valid_label.backgroundColor = UIColor.red
+            }
+            else {
+                valid_label.text = "Valid Application Date"
+                valid_label.backgroundColor = UIColor.green
+            }
+        }
+            
+            // If citi application
+        else {
+            if (compareDates(fromdate: fiveyearsago!, todate: vars.citi_land_date) == 2) {
+                // when landing date is more than 5 years ago (S1)
+                start = fiveyearsago!
+                stayed = inCanadaDays(start: start, end: vars.application_date)
+            }
+            else {
+                // when landing date is exactly or less than 5 years ago (S2)
+                start = vars.citi_land_date
+                stayed = inCanadaDays(start: start, end: vars.application_date)
+                // Find the first date after fiveyearsago
+                for i in 0...(vars.citi_dates.count-1) {
+                    if (compareDates(fromdate: fiveyearsago!, todate: vars.citi_dates[i]) == 0) {
+                        // When the first date after fiveyearsago is an in-date
+                        if (i % 2 == 0) {
+                            firstDate = vars.citi_dates[i]
+                            break
+                        }
+                            // When the first date after fiveyearsago is an out-date
+                        else {
+                            firstDate = fiveyearsago!
+                            break
+                        }
+                    }
+                }
+                
+                if (compareDates(fromdate: firstDate, todate: vars.citi_land_date) == 0) {
+                    stayedBeforeLanding = inCanadaDays(start: firstDate, end: vars.citi_land_date)
+                }
+                
+                stayed = stayed + stayedBeforeLanding/2
+            }
+            if (stayed < 1095) {
+                valid_label.text = "Invalid Application Date"
+                valid_label.backgroundColor = UIColor.red
+            }
+            else {
+                valid_label.text = "Valid Application Date"
+                valid_label.backgroundColor = UIColor.green
+            }
         }
     }
     
