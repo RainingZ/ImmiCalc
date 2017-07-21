@@ -54,6 +54,8 @@ class ViewController2: UIViewController, UITextFieldDelegate {
         datePicker.setValue(UIColor.white, forKey: "textColor")
         datePicker.datePickerMode = UIDatePickerMode.date
         datePicker.addTarget(self, action: #selector(ViewController2.datePickerValueChanged), for: UIControlEvents.valueChanged)
+        
+        land_text.inputView = UIView()
         land_text.inputAccessoryView = datePicker
     }
     

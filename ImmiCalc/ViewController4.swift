@@ -42,6 +42,7 @@ class ViewController4: UIViewController {
         datePicker.setValue(UIColor.white, forKey: "textColor")
         datePicker.datePickerMode = UIDatePickerMode.date
         datePicker.addTarget(self, action: #selector(ViewController4.datePickerValueChanged), for: UIControlEvents.valueChanged)
+        application_date_text.inputView = UIView()
         application_date_text.inputAccessoryView = datePicker
         
         perm_citi_label.layer.masksToBounds = true
