@@ -36,7 +36,7 @@ class ViewController3: UIViewController {
         super.viewDidLoad()
         
         // Assign background image
-        assignBackground(VC: self,name: "MapleLeafOnWater.jpg")
+        assignBackground(VC: self,name: "iPhone-Maple3.jpg")
         
         add_button.layer.cornerRadius = 5
         add_button.layer.borderWidth = 0

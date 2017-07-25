@@ -17,7 +17,7 @@ class ViewController2: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         // Assign background image
-        assignBackground(VC: self,name: "iPhone-Maple1.jpg")
+        assignBackground(VC: self,name: "iPhone-Maple2.jpg")
         
         // Make rounded corners for done button
         done_button.layer.cornerRadius = 10

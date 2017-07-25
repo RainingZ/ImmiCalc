@@ -13,6 +13,9 @@
 		AC2FC14C1F14284600B9DB27 /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2FC14B1F14284600B9DB27 /* ViewController4.swift */; };
 		AC2FC15E1F17CECB00B9DB27 /* MapleLeafOnWater.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC2FC15D1F17CECB00B9DB27 /* MapleLeafOnWater.jpg */; };
 		AC2FC1601F19132D00B9DB27 /* iPhone-Maple1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC2FC15F1F19132D00B9DB27 /* iPhone-Maple1.jpg */; };
+		AC4B4B0C1F26822B0006FF72 /* iPhone-Maple2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC4B4B0A1F26822B0006FF72 /* iPhone-Maple2.jpg */; };
+		AC4B4B0D1F26822B0006FF72 /* MapleLeafOnGround.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC4B4B0B1F26822B0006FF72 /* MapleLeafOnGround.jpg */; };
+		AC4B4B0F1F2690B20006FF72 /* iPhone-Maple3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC4B4B0E1F2690B20006FF72 /* iPhone-Maple3.jpg */; };
 		ACB84FEE1ECFCAEC00A4444D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB84FED1ECFCAEC00A4444D /* AppDelegate.swift */; };
 		ACB84FF01ECFCAEC00A4444D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB84FEF1ECFCAEC00A4444D /* ViewController.swift */; };
 		ACB84FF31ECFCAEC00A4444D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACB84FF11ECFCAEC00A4444D /* Main.storyboard */; };
@@ -59,6 +62,9 @@
 		AC2FC14B1F14284600B9DB27 /* ViewController4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
 		AC2FC15D1F17CECB00B9DB27 /* MapleLeafOnWater.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = MapleLeafOnWater.jpg; path = Resources/MapleLeafOnWater.jpg; sourceTree = SOURCE_ROOT; };
 		AC2FC15F1F19132D00B9DB27 /* iPhone-Maple1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "iPhone-Maple1.jpg"; path = "Resources/iPhone-Maple1.jpg"; sourceTree = SOURCE_ROOT; };
+		AC4B4B0A1F26822B0006FF72 /* iPhone-Maple2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "iPhone-Maple2.jpg"; path = "Resources/iPhone-Maple2.jpg"; sourceTree = SOURCE_ROOT; };
+		AC4B4B0B1F26822B0006FF72 /* MapleLeafOnGround.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = MapleLeafOnGround.jpg; path = Resources/MapleLeafOnGround.jpg; sourceTree = SOURCE_ROOT; };
+		AC4B4B0E1F2690B20006FF72 /* iPhone-Maple3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "iPhone-Maple3.jpg"; path = "Resources/iPhone-Maple3.jpg"; sourceTree = SOURCE_ROOT; };
 		ACB84FEA1ECFCAEC00A4444D /* ImmiCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImmiCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB84FED1ECFCAEC00A4444D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACB84FEF1ECFCAEC00A4444D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -134,7 +140,10 @@
 		ACB84FEC1ECFCAEC00A4444D /* ImmiCalc */ = {
 			isa = PBXGroup;
 			children = (
+				AC4B4B0E1F2690B20006FF72 /* iPhone-Maple3.jpg */,
+				AC4B4B0A1F26822B0006FF72 /* iPhone-Maple2.jpg */,
 				AC2FC15F1F19132D00B9DB27 /* iPhone-Maple1.jpg */,
+				AC4B4B0B1F26822B0006FF72 /* MapleLeafOnGround.jpg */,
 				AC2FC15D1F17CECB00B9DB27 /* MapleLeafOnWater.jpg */,
 				ACB84FED1ECFCAEC00A4444D /* AppDelegate.swift */,
 				AC1D0F441F0556A00061F30A /* NavController.swift */,
@@ -272,6 +281,7 @@
 				TargetAttributes = {
 					ACB84FE91ECFCAEC00A4444D = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 52ZV4XCV2H;
 						ProvisioningStyle = Automatic;
 					};
 					ACB850001ECFCAEC00A4444D = {
@@ -312,8 +322,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				ACB84FFB1ECFCAEC00A4444D /* LaunchScreen.storyboard in Resources */,
+				AC4B4B0D1F26822B0006FF72 /* MapleLeafOnGround.jpg in Resources */,
+				AC4B4B0F1F2690B20006FF72 /* iPhone-Maple3.jpg in Resources */,
 				ACB84FF81ECFCAEC00A4444D /* Assets.xcassets in Resources */,
 				ACB84FF31ECFCAEC00A4444D /* Main.storyboard in Resources */,
+				AC4B4B0C1F26822B0006FF72 /* iPhone-Maple2.jpg in Resources */,
 				AC2FC1601F19132D00B9DB27 /* iPhone-Maple1.jpg in Resources */,
 				AC2FC15E1F17CECB00B9DB27 /* MapleLeafOnWater.jpg in Resources */,
 			);
@@ -640,10 +653,15 @@
 			baseConfigurationReference = 3C3A0220F8090039C366B628 /* Pods-ImmiCalc.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 52ZV4XCV2H;
 				INFOPLIST_FILE = ImmiCalc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Raining.ImmiCalc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RainingZ.ImmiCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -654,10 +672,15 @@
 			baseConfigurationReference = 0A74B75ED069AF901E9CE85A /* Pods-ImmiCalc.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 52ZV4XCV2H;
 				INFOPLIST_FILE = ImmiCalc/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Raining.ImmiCalc;
+				PRODUCT_BUNDLE_IDENTIFIER = com.RainingZ.ImmiCalc;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
