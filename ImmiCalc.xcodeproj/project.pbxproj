@@ -154,9 +154,9 @@
 				ACDB9BDE1F02FA8A00230D14 /* TableViewController.swift */,
 				ACFE80DE1F1006B600B93828 /* TableViewController2.swift */,
 				AC2FC14B1F14284600B9DB27 /* ViewController4.swift */,
+				ACB84FF91ECFCAEC00A4444D /* LaunchScreen.storyboard */,
 				ACB84FF11ECFCAEC00A4444D /* Main.storyboard */,
 				ACB84FF71ECFCAEC00A4444D /* Assets.xcassets */,
-				ACB84FF91ECFCAEC00A4444D /* LaunchScreen.storyboard */,
 				ACB84FFC1ECFCAEC00A4444D /* Info.plist */,
 				ACB84FF41ECFCAEC00A4444D /* ImmiCalc.xcdatamodeld */,
 			);
