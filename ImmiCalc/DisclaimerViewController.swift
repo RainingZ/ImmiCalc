@@ -24,7 +24,11 @@ class DisclaimerViewController: UIViewController {
         accept_button.layer.borderWidth = 0
         // Do any additional setup after loading the view.
     }
-
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
