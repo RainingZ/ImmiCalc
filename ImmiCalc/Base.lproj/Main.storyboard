@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -479,11 +480,11 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0qs-r3-J31" firstAttribute="centerX" secondItem="ydI-yj-wlZ" secondAttribute="centerX" id="9Y8-qJ-beR"/>
-                            <constraint firstItem="epd-ky-Do5" firstAttribute="centerY" secondItem="ydI-yj-wlZ" secondAttribute="centerY" constant="250" id="KMC-Pa-dG2"/>
-                            <constraint firstItem="0qs-r3-J31" firstAttribute="centerY" secondItem="ydI-yj-wlZ" secondAttribute="centerY" constant="-250" id="Ukg-yL-epN"/>
+                            <constraint firstItem="Uli-uc-oES" firstAttribute="top" secondItem="epd-ky-Do5" secondAttribute="bottom" constant="67" id="M27-2k-9iA"/>
+                            <constraint firstItem="0qs-r3-J31" firstAttribute="top" secondItem="IYW-7r-4fw" secondAttribute="bottom" constant="47" id="pgK-yg-lxD"/>
                             <constraint firstItem="epd-ky-Do5" firstAttribute="centerX" secondItem="ydI-yj-wlZ" secondAttribute="centerX" id="sAV-Zf-2yV"/>
                         </constraints>
                     </view>
@@ -573,9 +574,8 @@
                                 <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3K-S0-0yO">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3K-S0-0yO">
                                 <rect key="frame" x="325" y="621" width="22" height="22"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <segue destination="VLB-9Z-2b9" kind="popoverPresentation" identifier="showDisclaimer" popoverAnchorView="w3K-S0-0yO" id="cm6-i9-oWl">
                                         <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
@@ -586,10 +586,12 @@
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="w3K-S0-0yO" secondAttribute="trailing" constant="12" id="G5o-pX-9Pj"/>
                             <constraint firstItem="Xcx-UO-K5c" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Gam-h1-Ixh"/>
                             <constraint firstItem="WCv-jp-PRD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="QvM-D2-zZP"/>
                             <constraint firstItem="aNY-pQ-BOJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-80" id="S35-rr-4QZ"/>
                             <constraint firstItem="WCv-jp-PRD" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hnx-lp-cQE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="w3K-S0-0yO" secondAttribute="bottom" constant="24" id="lqs-IJ-J4P"/>
                             <constraint firstItem="Xcx-UO-K5c" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="80" id="v7G-wQ-56e"/>
                             <constraint firstItem="aNY-pQ-BOJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="xXB-S8-U1D"/>
                         </constraints>
