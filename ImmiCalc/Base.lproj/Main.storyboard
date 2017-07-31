@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="cQR-di-sIq"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="441-4q-EZV"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ff1-v0-bGA" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -173,14 +173,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="95Q-C6-kyr">
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="95Q-C6-kyr">
                                 <rect key="frame" x="15.5" y="218" width="343" height="429"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="jpK-tD-17q" kind="embed" id="Lfd-C2-QiI"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" alpha="0.69999999999999996" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S5X-nC-kQn">
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S5X-nC-kQn">
                                 <rect key="frame" x="15" y="84" width="343" height="88"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -190,13 +190,12 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wfw-Xf-NiL">
                                 <rect key="frame" x="15.523267032037666" y="180" width="343" height="29.999999999999886"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.61399792489877969" green="0.82567904190488273" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" red="0.11632751030825861" green="0.075243609487150143" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Add">
                                             <attributes>
-                                                <color key="NSColor" red="0.20656703212550898" green="0.39915860138952686" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" metaFont="system" size="18"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
@@ -208,9 +207,9 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.78929549169841384" green="0.90340657352414255" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Dates in Canada" id="9C2-Sz-ffs">
+                    <navigationItem key="navigationItem" title="Days in Canada" id="9C2-Sz-ffs">
                         <barButtonItem key="backBarButtonItem" title="Back" id="jXN-wr-3II"/>
                         <barButtonItem key="rightBarButtonItem" title="Item" style="done" id="LFQ-7t-MO6">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" id="jqT-xx-cnz">
@@ -368,7 +367,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="0.61631768643650775" blue="0.57572968289715953" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration">
                             <accessibilityTraits key="traits" button="YES"/>
                         </accessibility>
@@ -427,7 +426,7 @@
                         <outlet property="perm_citi_label" destination="rqL-HG-FWU" id="V5m-Ua-etw"/>
                         <outlet property="stayed_label" destination="6Mf-iL-C1g" id="ycx-zV-eVF"/>
                         <outlet property="valid_label" destination="h55-96-7hq" id="foO-ct-D8e"/>
-                        <segue destination="4Df-Ar-Jtn" kind="unwind" identifier="unwindToVC1" unwindAction="prepareForUnwindWithSegue:" id="z8u-Pr-Jfy"/>
+                        <segue destination="4Df-Ar-Jtn" kind="unwind" identifier="unwindToVC1" unwindAction="prepareForUnwindVC1WithSegue:" id="OrZ-wZ-w4C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3d8-Vp-Opk" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -435,10 +434,74 @@
             </objects>
             <point key="canvasLocation" x="736.79999999999995" y="742.5787106446777"/>
         </scene>
+        <!--Disclaimer View Controller-->
+        <scene sceneID="Wnf-fK-BSl">
+            <objects>
+                <viewController storyboardIdentifier="DisclaimerViewController" id="VLB-9Z-2b9" customClass="DisclaimerViewController" customModule="ImmiCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IYW-7r-4fw"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uli-uc-oES"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ydI-yj-wlZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qs-r3-J31">
+                                <rect key="frame" x="137.5" y="67" width="100" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="kuQ-XV-p5x"/>
+                                    <constraint firstAttribute="height" constant="33" id="t33-TY-IqM"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Disclaimer">
+                                        <attributes>
+                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <font key="NSFont" size="20" name=".AppleSystemUIFont"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="epd-ky-Do5">
+                                <rect key="frame" x="137" y="567" width="100" height="33"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="2MT-cU-6so"/>
+                                    <constraint firstAttribute="height" constant="33" id="neB-oR-8Qa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name=".SFNSText" family=".SF NS Text" pointSize="18"/>
+                                <state key="normal" title="Accept">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="accept_button_pressed:" destination="VLB-9Z-2b9" eventType="touchUpInside" id="ZP5-HG-YTh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0qs-r3-J31" firstAttribute="centerX" secondItem="ydI-yj-wlZ" secondAttribute="centerX" id="9Y8-qJ-beR"/>
+                            <constraint firstItem="epd-ky-Do5" firstAttribute="centerY" secondItem="ydI-yj-wlZ" secondAttribute="centerY" constant="250" id="KMC-Pa-dG2"/>
+                            <constraint firstItem="0qs-r3-J31" firstAttribute="centerY" secondItem="ydI-yj-wlZ" secondAttribute="centerY" constant="-250" id="Ukg-yL-epN"/>
+                            <constraint firstItem="epd-ky-Do5" firstAttribute="centerX" secondItem="ydI-yj-wlZ" secondAttribute="centerX" id="sAV-Zf-2yV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oE4-nQ-vyS">
+                        <barButtonItem key="backBarButtonItem" title=" " id="JMy-Qv-Hup"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="accept_button" destination="epd-ky-Do5" id="EeB-HK-nCc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Dc-Ab-HGW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-796" y="-720"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImmiCalc" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="ImmiCalc" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -449,7 +512,7 @@
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aNY-pQ-BOJ">
                                 <rect key="frame" x="47.5" y="273.5" width="120" height="120"/>
-                                <color key="backgroundColor" red="0.77923076799790614" green="0.88151557763626631" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="8Fd-Ib-KGB"/>
                                     <constraint firstAttribute="width" constant="120" id="XY9-ql-ph7"/>
@@ -458,7 +521,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="Permanent Resident">
                                             <attributes>
-                                                <color key="NSColor" red="0.46811070567486329" green="0.19490903143002364" blue="0.94136491281732082" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="20" name=".AppleSystemUIFont"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
@@ -471,7 +534,7 @@
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xcx-UO-K5c">
                                 <rect key="frame" x="207.5" y="273.5" width="120" height="120"/>
-                                <color key="backgroundColor" red="0.77923076800000002" green="0.88151557759999999" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="120" id="06F-Rj-ryv"/>
                                     <constraint firstAttribute="width" constant="120" id="GkB-Dy-gfH"/>
@@ -480,7 +543,7 @@
                                     <attributedString key="attributedTitle">
                                         <fragment content="Citizen">
                                             <attributes>
-                                                <color key="NSColor" red="0.51102828979492188" green="0.30129089951515198" blue="0.94751185178756714" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" metaFont="system" size="20"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
@@ -492,16 +555,16 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCv-jp-PRD">
-                                <rect key="frame" x="76" y="197.5" width="222" height="72"/>
+                                <rect key="frame" x="76" y="217" width="222" height="33"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="72" id="cPU-jP-n39"/>
+                                    <constraint firstAttribute="height" constant="33" id="cPU-jP-n39"/>
                                     <constraint firstAttribute="width" constant="222" id="tcj-yn-RZA"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Select Application Type">
                                         <attributes>
                                             <color key="NSColor" red="0.99480842108535528" green="1" blue="0.95276115543185524" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="19" name=".SFNSText"/>
+                                            <font key="NSFont" size="20" name=".SFNSText"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -510,9 +573,18 @@
                                 <color key="shadowColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3K-S0-0yO">
+                                <rect key="frame" x="325" y="621" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <segue destination="VLB-9Z-2b9" kind="popoverPresentation" identifier="showDisclaimer" popoverAnchorView="w3K-S0-0yO" id="cm6-i9-oWl">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.89167314855752389" green="0.73580744976926749" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" red="0.89167314860000002" green="0.73580744980000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Xcx-UO-K5c" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Gam-h1-Ixh"/>
                             <constraint firstItem="WCv-jp-PRD" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="QvM-D2-zZP"/>
@@ -546,16 +618,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crC-kx-lTh" userLabel="land_label" customClass="Label" customModule="ImmiCalc" customModuleProvider="target">
-                                <rect key="frame" x="37.5" y="228.5" width="300" height="70"/>
+                                <rect key="frame" x="87.5" y="247" width="200" height="33"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="300" id="YFR-lX-BcZ"/>
-                                    <constraint firstAttribute="height" constant="70" id="wbD-dT-hKL"/>
+                                    <constraint firstAttribute="width" constant="200" id="YFR-lX-BcZ"/>
+                                    <constraint firstAttribute="height" constant="33" id="wbD-dT-hKL"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="Date of Landing">
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" size="17" name=".SFNSText"/>
+                                            <font key="NSFont" size="20" name=".SFNSText"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -569,23 +641,22 @@
                                     <constraint firstAttribute="height" constant="30" id="gSa-3r-lLQ"/>
                                 </constraints>
                                 <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kRi-Sw-PBw">
-                                <rect key="frame" x="162" y="348.5" width="50" height="30"/>
-                                <color key="backgroundColor" red="0.99019607843137258" green="1" blue="1" alpha="0.69999999999999996" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="152" y="348.5" width="70" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="VpR-bO-0lo"/>
+                                    <constraint firstAttribute="width" constant="70" id="VpR-bO-0lo"/>
                                     <constraint firstAttribute="height" constant="30" id="wFJ-1X-l3w"/>
                                 </constraints>
-                                <color key="tintColor" red="0.99369202663972589" green="0.49686421996489871" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Done">
                                             <attributes>
-                                                <color key="NSColor" red="1" green="0.46237523798756808" blue="0.55117170021547457" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <font key="NSFont" size="15" name=".SFNSText"/>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <font key="NSFont" size="18" name=".SFNSText"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -613,7 +684,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.59012916768330193" green="1" blue="0.69844128778454639" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="crC-kx-lTh" firstAttribute="centerX" secondItem="CZz-w0-fJ7" secondAttribute="centerX" id="37V-nD-cR0"/>
                             <constraint firstItem="QIn-D2-5ZQ" firstAttribute="centerX" secondItem="CZz-w0-fJ7" secondAttribute="centerX" id="88o-YF-glw"/>

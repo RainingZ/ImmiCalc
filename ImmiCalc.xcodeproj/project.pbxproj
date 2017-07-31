@@ -16,6 +16,7 @@
 		AC4B4B0C1F26822B0006FF72 /* iPhone-Maple2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC4B4B0A1F26822B0006FF72 /* iPhone-Maple2.jpg */; };
 		AC4B4B0D1F26822B0006FF72 /* MapleLeafOnGround.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC4B4B0B1F26822B0006FF72 /* MapleLeafOnGround.jpg */; };
 		AC4B4B0F1F2690B20006FF72 /* iPhone-Maple3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC4B4B0E1F2690B20006FF72 /* iPhone-Maple3.jpg */; };
+		AC4B4B191F2F7F060006FF72 /* DisclaimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4B4B181F2F7F060006FF72 /* DisclaimerViewController.swift */; };
 		ACB84FEE1ECFCAEC00A4444D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB84FED1ECFCAEC00A4444D /* AppDelegate.swift */; };
 		ACB84FF01ECFCAEC00A4444D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB84FEF1ECFCAEC00A4444D /* ViewController.swift */; };
 		ACB84FF31ECFCAEC00A4444D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACB84FF11ECFCAEC00A4444D /* Main.storyboard */; };
@@ -65,6 +66,7 @@
 		AC4B4B0A1F26822B0006FF72 /* iPhone-Maple2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "iPhone-Maple2.jpg"; path = "Resources/iPhone-Maple2.jpg"; sourceTree = SOURCE_ROOT; };
 		AC4B4B0B1F26822B0006FF72 /* MapleLeafOnGround.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = MapleLeafOnGround.jpg; path = Resources/MapleLeafOnGround.jpg; sourceTree = SOURCE_ROOT; };
 		AC4B4B0E1F2690B20006FF72 /* iPhone-Maple3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "iPhone-Maple3.jpg"; path = "Resources/iPhone-Maple3.jpg"; sourceTree = SOURCE_ROOT; };
+		AC4B4B181F2F7F060006FF72 /* DisclaimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisclaimerViewController.swift; sourceTree = "<group>"; };
 		ACB84FEA1ECFCAEC00A4444D /* ImmiCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImmiCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB84FED1ECFCAEC00A4444D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACB84FEF1ECFCAEC00A4444D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				AC2FC15D1F17CECB00B9DB27 /* MapleLeafOnWater.jpg */,
 				ACB84FED1ECFCAEC00A4444D /* AppDelegate.swift */,
 				AC1D0F441F0556A00061F30A /* NavController.swift */,
+				AC4B4B181F2F7F060006FF72 /* DisclaimerViewController.swift */,
 				ACB84FEF1ECFCAEC00A4444D /* ViewController.swift */,
 				AC0D8B401ED0AF5A004F0757 /* ViewController2.swift */,
 				ACDB9BDC1F02AA4200230D14 /* ViewController3.swift */,
@@ -501,6 +504,7 @@
 				ACB84FEE1ECFCAEC00A4444D /* AppDelegate.swift in Sources */,
 				ACFE80DF1F1006B600B93828 /* TableViewController2.swift in Sources */,
 				AC2FC14C1F14284600B9DB27 /* ViewController4.swift in Sources */,
+				AC4B4B191F2F7F060006FF72 /* DisclaimerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

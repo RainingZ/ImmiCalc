@@ -44,12 +44,14 @@ class ViewController4: UIViewController {
         vars.application_date = Date()
         vars.pr_citi_flag = -1
         vars.DoNotNotify = false
+        vars.termsAccepted = false
         defaults.set(vars.pr_citi_flag, forKey: "pr_citi_flag")
         defaults.set(vars.pr_land_date, forKey: "pr_land_date")
         defaults.set(vars.citi_land_date, forKey: "citi_land_date")
         defaults.set(vars.pr_dates, forKey: "pr_dates")
         defaults.set(vars.citi_dates, forKey: "citi_dates")
         defaults.set(vars.application_date, forKey: "application_date")
+        defaults.set(vars.termsAccepted, forKey: "termsAccepted")
         defaults.synchronize()
         print("backgroundset")
         self.performSegue(withIdentifier: "unwindToVC1", sender: self)
@@ -59,7 +61,7 @@ class ViewController4: UIViewController {
         super.viewDidLoad()
         
         // Assign background image
-        assignBackground(VC: self,name: "iPhone-Maple1.jpg")
+        //assignBackground(VC: self,name: "iPhone-Maple1.jpg")
         
         application_date_text.text = vars.formatter.string(from: vars.application_date)
         error_label.alpha = 0

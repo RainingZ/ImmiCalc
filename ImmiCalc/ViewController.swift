@@ -29,6 +29,7 @@ struct vars {
     static let AddButtonNotification = Notification.Name("AddButtonNotification")
     
     static var DoNotNotify:Bool = false
+    static var termsAccepted:Bool = false
 }
 
 extension UIImageView
@@ -61,8 +62,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var citi_button: UIButton!
     
     // Prepare to unwind on VC4 reset button
-    @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
+    @IBAction func prepareForUnwindVC1(segue: UIStoryboardSegue) {
     }
+    
     // Set pr_citi_flag
     @IBAction func PR_button_pressed(_ sender: UIButton) {
         performSegue(withIdentifier: "showView2", sender: self)
@@ -83,7 +85,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.navigationItem.hidesBackButton = true
         let defaults = UserDefaults.standard
         vars.pr_citi_flag = defaults.integer(forKey: "pr_citi_flag")
         vars.pr_land_date = defaults.object(forKey: "pr_land_date") as! Date
@@ -91,16 +92,20 @@ class ViewController: UIViewController {
         vars.pr_dates = defaults.array(forKey: "pr_dates") as! [Date]
         vars.citi_dates = defaults.array(forKey: "citi_dates") as! [Date]
         vars.application_date = defaults.object(forKey: "application_date") as! Date
+        vars.termsAccepted = defaults.bool(forKey: "termsAccepted")
         print("launchget")
-        
         // Assign background image
-        assignBackground(VC: self,name: "MapleLeafOnWater.jpg")
+        //assignBackground(VC: self,name: "MapleLeafOnWater.jpg")
         
         // Make rounded corners for buttons
         pr_button.layer.cornerRadius = 10
         pr_button.layer.borderWidth = 0
         citi_button.layer.cornerRadius = 10
         citi_button.layer.borderWidth = 0
+        
+        if (!vars.termsAccepted) {
+            performSegue(withIdentifier: "showDisclaimer", sender: self)
+        }
     }
     
     override func didReceiveMemoryWarning() {
@@ -108,6 +113,9 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.hidesBackButton = true
+    }
     // Unused
     func cleardatashowView2(alert: UIAlertAction!) {
         if (vars.pr_citi_flag == 1) {
