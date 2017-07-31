@@ -55,8 +55,8 @@
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="zQH-mm-TpD" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-200" id="DD1-Kg-E27"/>
                             <constraint firstItem="zQH-mm-TpD" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Haz-X8-VN2"/>
+                            <constraint firstItem="zQH-mm-TpD" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="51" id="t8k-7w-MUb"/>
                         </constraints>
                     </view>
                 </viewController>
