@@ -129,6 +129,12 @@ class TableViewController: UITableViewController {
     func from_datePickerValueChanged(sender:UIDatePicker) {
         // Format, store and display the selected date every time datepicker is changed
         vars.from_date = sender.date
+        if (compareDates(fromdate: vars.to_date, todate: vars.from_date) == 0) {
+            let cal  = Calendar.current
+            let nextday = cal.date(byAdding: .day, value: 1, to: sender.date)
+            vars.datePickerCell2.date = nextday!
+            vars.to_date = nextday!
+        }
     }
     
     func to_datePickerValueChanged(sender:UIDatePicker) {

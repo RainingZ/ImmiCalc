@@ -50,10 +50,10 @@ class ViewController3: UIViewController {
         if (!vars.DoNotNotify) {
             var alert = UIAlertController()
             if (vars.pr_citi_flag == 0) {
-                alert = UIAlertController(title: "ImmiCalc", message: "Please input all periods of time you spent in Canada after landing date", preferredStyle: UIAlertControllerStyle.alert)
+                alert = UIAlertController(title: nil, message: "Please input all periods of time you spent in Canada after landing date", preferredStyle: UIAlertControllerStyle.alert)
             }
             else {
-                alert = UIAlertController(title: "ImmiCalc", message: "Please input all periods of time you spent in Canada, before and after landing date", preferredStyle: UIAlertControllerStyle.alert)
+                alert = UIAlertController(title: nil, message: "Please input all periods of time you spent in Canada, before and after landing date", preferredStyle: UIAlertControllerStyle.alert)
             }
 
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
@@ -96,7 +96,7 @@ class ViewController3: UIViewController {
         // All added dates should be greater than landing date for PR applications
         if (vars.pr_citi_flag == 0 && (compareDates(fromdate: vars.from_date, todate: vars.pr_land_date) == 0 || compareDates(fromdate: vars.to_date, todate: vars.pr_land_date) == 0)) {
             // Pop up
-            let alert = UIAlertController(title: "ImmiCalc", message: "All added dates should be greater than landing date", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "All added dates should be greater than landing date", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
             // show the alert
             self.present(alert, animated: true, completion: nil)
@@ -110,7 +110,7 @@ class ViewController3: UIViewController {
         // From dates need to be smaller or equal to To dates
         // else if (vars.to_date < vars.from_date) {
         else if (compareDates(fromdate: vars.to_date, todate: vars.from_date) == 0) {
-            let alert = UIAlertController(title: "ImmiCalc", message: "From dates need to be smaller or equal to To dates", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "From dates need to be smaller or equal to To dates", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
             // show the alert
             self.present(alert, animated: true, completion: nil)
@@ -118,7 +118,7 @@ class ViewController3: UIViewController {
         }
         // Both dates need to be outside of an "in-Canada" period
         else if (invalidDates(fromdate: vars.from_date, todate: vars.to_date)) {
-            let alert = UIAlertController(title: "ImmiCalc", message: "Both dates need to be outside of an 'in-Canada' period", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "Both dates need to be outside of an 'in-Canada' period", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
             // show the alert
             self.present(alert, animated: true, completion: nil)
@@ -150,7 +150,7 @@ class ViewController3: UIViewController {
             count = vars.citi_dates.count
         }
         if (count == 0) {
-            let alert = UIAlertController(title: "ImmiCalc", message: "Before proceeding to the result, please input all periods of time you spent in Canada", preferredStyle: UIAlertControllerStyle.alert)
+            let alert = UIAlertController(title: nil, message: "Before proceeding to the result, please input all periods of time you spent in Canada", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
             // show the alert
             self.present(alert, animated: true, completion: nil)

@@ -78,6 +78,14 @@ class ViewController2: UIViewController, UITextFieldDelegate {
             vars.citi_land_date = sender.date
             land_text.text = vars.formatter.string(from: vars.citi_land_date)
         }
+        
+        // When both from date and to date on date picker are equal to today, it is less likely user have edited the date picker, therefore update them with the landing date
+        if (compareDates(fromdate: vars.from_date, todate: Date()) == 1 && compareDates(fromdate: vars.to_date, todate: Date()) == 1) {
+            vars.datePickerCell.date = sender.date
+            vars.datePickerCell2.date = sender.date
+            vars.from_date = sender.date
+            vars.to_date = sender.date
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
