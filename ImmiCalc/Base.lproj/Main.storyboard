@@ -479,7 +479,7 @@
                                     <action selector="accept_button_pressed:" destination="VLB-9Z-2b9" eventType="touchUpInside" id="ZP5-HG-YTh"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4gA-QF-nhl">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4gA-QF-nhl">
                                 <rect key="frame" x="28" y="73" width="319" height="526"/>
                                 <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
                                 <attributedString key="attributedText">
@@ -530,10 +530,23 @@ renewal or Grant of Citizenship by a specific date. 
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
-1. For a resident to be eligible to renew Permanent Residence you must have been physically
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="ArialMT"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">1. For a resident to be eligible to renew Permanent Residence you must have been physically
 present in Canada for at least 730 days in the 5 years immediately before the date of your
-application. 
+application.</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="Arial-ItalicMT"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content"> 
 2. For the purpose of calculating the number of days to comply with the residency obligation, a
 day includes a full day or any part of a day that a permanent resident is physically present in
 Canada. Any part of a day spent in Canada is to be counted as one full day. 
