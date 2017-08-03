@@ -174,14 +174,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="95Q-C6-kyr">
+                            <containerView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="95Q-C6-kyr">
                                 <rect key="frame" x="15.5" y="218" width="343" height="429"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                 <connections>
                                     <segue destination="jpK-tD-17q" kind="embed" id="Lfd-C2-QiI"/>
                                 </connections>
                             </containerView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S5X-nC-kQn">
+                            <containerView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S5X-nC-kQn">
                                 <rect key="frame" x="15" y="84" width="343" height="88"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
@@ -448,13 +448,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qs-r3-J31">
-                                <rect key="frame" x="137.5" y="67" width="100" height="33"/>
+                                <rect key="frame" x="87.5" y="30" width="200" height="33"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="100" id="kuQ-XV-p5x"/>
+                                    <constraint firstAttribute="width" constant="200" id="kuQ-XV-p5x"/>
                                     <constraint firstAttribute="height" constant="33" id="t33-TY-IqM"/>
                                 </constraints>
                                 <attributedString key="attributedText">
-                                    <fragment content="Disclaimer">
+                                    <fragment content="About &amp; Disclaimer">
                                         <attributes>
                                             <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="20" name=".AppleSystemUIFont"/>
@@ -465,7 +465,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="epd-ky-Do5">
-                                <rect key="frame" x="137" y="567" width="100" height="33"/>
+                                <rect key="frame" x="137" y="614" width="100" height="33"/>
                                 <color key="backgroundColor" red="0.77280086280000004" green="0.25518450139999999" blue="0.1630383134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="100" id="2MT-cU-6so"/>
@@ -479,13 +479,142 @@
                                     <action selector="accept_button_pressed:" destination="VLB-9Z-2b9" eventType="touchUpInside" id="ZP5-HG-YTh"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4gA-QF-nhl">
+                                <rect key="frame" x="28" y="73" width="319" height="526"/>
+                                <color key="backgroundColor" white="1" alpha="0.59999999999999998" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Physical Presence Calculator for Canadian PR &amp; Citizenship
+Version 1.0
+Released August 20 2017
+Built by Alex Zhang (hzalex@gmail.com) 
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="ArialMT"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="About">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="Arial-BoldMT"/>
+                                            <font key="NSOriginalFont" size="12" name="Arial-BoldMT"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="ArialMT"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content"> This app is a handy tool to calculate the physical presence in Canada and check, against the basic
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">residence obligation stipulated by law, if you are eligible to apply for Permanent Residence
+renewal or Grant of Citizenship by a specific date. 
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="ArialMT"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="The basic residence requirements for PR renewal: ">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="Arial-BoldMT"/>
+                                            <font key="NSOriginalFont" size="12" name="Arial-BoldMT"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">
+1. For a resident to be eligible to renew Permanent Residence you must have been physically
+present in Canada for at least 730 days in the 5 years immediately before the date of your
+application. 
+2. For the purpose of calculating the number of days to comply with the residency obligation, a
+day includes a full day or any part of a day that a permanent resident is physically present in
+Canada. Any part of a day spent in Canada is to be counted as one full day. 
+</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="ArialMT"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="The basic residence requirements for Citizenship application: ">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="Arial-BoldMT"/>
+                                            <font key="NSOriginalFont" size="12" name="Arial-BoldMT"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">
+1. The calculation for the eligibility of citizenship is based on the newly passed Bill C-6, an act
+amending Canada’s Citizenship Act, which has now received Royal Assent to become law and is
+expected to come into force in late 2017. 
+2. For a resident to be eligible to apply for Citizenship, you must have been physically present in
+Canada as a permanent resident for at least 1,095 days in the 5 years immediately before the
+date of your application. 
+3. For the purpose of calculating the number of days of absence, neither the day you leave
+Canada nor the day you return is considered an absence. Both are counted as days of physical
+presence. 
+4. Applicants may count each day they were physically present in Canada as a temporary
+resident or protected person before becoming a permanent resident as a half-day toward
+meeting the physical presence requirement for citizenship, up to a maximum credit of 365 days.
+
+</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="ArialMT"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Tips ">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="Arial-BoldMT"/>
+                                            <font key="NSOriginalFont" size="12" name="Arial-BoldMT"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+It’s generally self-explanatory to use this app. Just be reminded you can specify a date to check
+the eligibility for applying for either PR renewal or Citizenship on that day. 
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="ArialMT"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Disclaimer ">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="Arial-BoldMT"/>
+                                            <font key="NSOriginalFont" size="12" name="Arial-BoldMT"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <mutableString key="content">
+This app is provided “as is” without warranty of any kind, either express or implied. While the
+developer is trying his best to make it accurate and reliable, the calculation result is for
+illustrative purpose only. The developer is not liable for any loss from using these data. 
+An official web-based calculator for citizenship is available in CIC website. You are suggested to
+check the residence eligibility there as the final authoritative measure when you intend to begin
+the application process.</mutableString>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="ArialMT"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="0qs-r3-J31" firstAttribute="centerX" secondItem="ydI-yj-wlZ" secondAttribute="centerX" id="9Y8-qJ-beR"/>
-                            <constraint firstItem="Uli-uc-oES" firstAttribute="top" secondItem="epd-ky-Do5" secondAttribute="bottom" constant="67" id="M27-2k-9iA"/>
-                            <constraint firstItem="0qs-r3-J31" firstAttribute="top" secondItem="IYW-7r-4fw" secondAttribute="bottom" constant="47" id="pgK-yg-lxD"/>
+                            <constraint firstItem="Uli-uc-oES" firstAttribute="top" secondItem="epd-ky-Do5" secondAttribute="bottom" constant="20" id="M27-2k-9iA"/>
+                            <constraint firstItem="4gA-QF-nhl" firstAttribute="leading" secondItem="ydI-yj-wlZ" secondAttribute="leadingMargin" constant="12" id="bd3-ll-AJ4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4gA-QF-nhl" secondAttribute="trailing" constant="12" id="dQM-9E-FdT"/>
+                            <constraint firstItem="0qs-r3-J31" firstAttribute="top" secondItem="IYW-7r-4fw" secondAttribute="bottom" constant="10" id="pgK-yg-lxD"/>
                             <constraint firstItem="epd-ky-Do5" firstAttribute="centerX" secondItem="ydI-yj-wlZ" secondAttribute="centerX" id="sAV-Zf-2yV"/>
+                            <constraint firstItem="epd-ky-Do5" firstAttribute="top" secondItem="4gA-QF-nhl" secondAttribute="bottom" constant="15" id="vEj-eM-JPf"/>
+                            <constraint firstItem="4gA-QF-nhl" firstAttribute="top" secondItem="0qs-r3-J31" secondAttribute="bottom" constant="10" id="wEB-zw-cq1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oE4-nQ-vyS">
@@ -497,7 +626,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Dc-Ab-HGW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-796" y="-720"/>
+            <point key="canvasLocation" x="-796" y="-720.08995502248877"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -542,7 +671,7 @@
                                 </constraints>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Citizen">
+                                        <fragment content="Citizenship">
                                             <attributes>
                                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" metaFont="system" size="20"/>

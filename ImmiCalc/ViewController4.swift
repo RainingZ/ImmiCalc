@@ -319,12 +319,14 @@ class ViewController4: UIViewController {
                     to = end
                 }
                 daysbetween = to.interval(ofComponent: .day, fromDate: from)
-                if (vars.pr_citi_flag == 0) {
+                // Citizen counts both in and out dates the same as PR
+                stayednow = stayednow + daysbetween + 1
+                /*if (vars.pr_citi_flag == 0) {
                     stayednow = stayednow + daysbetween + 1
                 }
                 else {
                     stayednow = stayednow + daysbetween
-                }
+                }*/
             }
         }
         return stayednow
