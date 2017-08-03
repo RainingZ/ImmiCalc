@@ -21,10 +21,7 @@ class ViewController4: UIViewController {
 
     @IBOutlet weak var error_label: UILabel!
     @IBOutlet weak var application_date_text: UITextField!
-    @IBOutlet weak var perm_citi_label: UILabel!
-    @IBOutlet weak var more_label: UILabel!
-    @IBOutlet weak var more_date_label: UILabel!
-    @IBOutlet weak var stayed_label: UILabel!
+    @IBOutlet weak var summary_text: UITextView!
     @IBOutlet weak var valid_label: UILabel!
     @IBAction func reset_pressed(_ sender: Any) {
         let optionMenu = UIAlertController(title: nil, message:"This will clear all saved data, are you sure?", preferredStyle: .actionSheet)
@@ -59,6 +56,13 @@ class ViewController4: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hideKeyboardWhenTappedAround() 
+        // Attributed string setup
+        print(UIFont.fontNames(forFamilyName: "Arial"))
+        let attribute_bold = [NSFontAttributeName: UIFont(name: "Arial-BoldMT", size: 18.0)!, NSForegroundColorAttributeName: UIColor.white, NSUnderlineStyleAttributeName: NSUnderlineStyle.styleSingle.rawValue] as [String : Any]
+        let attribute_regular = [NSFontAttributeName: UIFont(name: "Arial", size: 18.0)!, NSForegroundColorAttributeName: UIColor.white]
+        var applicationType_string = NSAttributedString()
+        let fullSummary_string = NSMutableAttributedString()
         
         // Assign background image
         //assignBackground(VC: self,name: "iPhone-Maple1.jpg")
@@ -76,26 +80,6 @@ class ViewController4: UIViewController {
         application_date_text.inputView = UIView()
         application_date_text.inputAccessoryView = datePicker
         
-        perm_citi_label.layer.masksToBounds = true
-        perm_citi_label.layer.cornerRadius = 5
-        perm_citi_label.layer.borderWidth = 0
-        if (vars.pr_citi_flag == 0) {
-            perm_citi_label.addConstraint(NSLayoutConstraint(item: perm_citi_label, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 200))
-            perm_citi_label.text = "Permanent Resident"
-        }
-        else {
-            perm_citi_label.addConstraint(NSLayoutConstraint(item: perm_citi_label, attribute: .width, relatedBy: .equal, toItem: nil, attribute: .notAnAttribute, multiplier: 1, constant: 100))
-            perm_citi_label.text = "Citizen"
-        }
-        more_label.layer.masksToBounds = true
-        more_label.layer.cornerRadius = 5
-        more_label.layer.borderWidth = 0
-        more_date_label.layer.masksToBounds = true
-        more_date_label.layer.cornerRadius = 5
-        more_date_label.layer.borderWidth = 0
-        stayed_label.layer.masksToBounds = true
-        stayed_label.layer.cornerRadius = 5
-        stayed_label.layer.borderWidth = 0
         valid_label.layer.masksToBounds = true
         valid_label.layer.cornerRadius = 5
         valid_label.layer.borderWidth = 0
@@ -107,9 +91,11 @@ class ViewController4: UIViewController {
         var land_date = Date()
         if (vars.pr_citi_flag == 0) {
             land_date = vars.pr_land_date
+            applicationType_string = NSAttributedString(string: "Permanent Resident", attributes: attribute_bold)
         }
         else {
             land_date = vars.citi_land_date
+            applicationType_string = NSAttributedString(string: "Citizenship", attributes: attribute_bold)
         }
         // Main Calculation
 //========================================================
@@ -127,7 +113,8 @@ class ViewController4: UIViewController {
             stayed = inCanadaDays(start: vars.citi_dates[0], end: Date())
         }
         
-        stayed_label.text = String(stayed) + " Day(s)"
+        let inCanadaDays_string = NSAttributedString(string: String(stayed), attributes: attribute_bold)
+        
 //========================================================
 // Starting Now, You Need to Stay in Canada for:
 //========================================================
@@ -253,10 +240,31 @@ class ViewController4: UIViewController {
                 }
             }
         }
+        var ready_string = NSAttributedString()
+        if (need_now == 0) {
+            ready_string = NSAttributedString(string: "You are ready to apply!", attributes: attribute_bold)
+        }
+        else {
+            ready_string = NSAttributedString(string: "Sorry it seems you are not ready to apply.", attributes: attribute_bold)
+        }
         
-        more_label.text = String(need_now) + " Day(s) Till"
-        more_date_label.text = vars.formatter.string(from: cal.date(byAdding: .day, value: need_now, to: Date())!)
+        let moreDays_string = NSAttributedString(string: String(need_now), attributes: attribute_bold)
+        let untilDate_string = NSAttributedString(string: vars.formatter.string(from: cal.date(byAdding: .day, value: need_now, to: Date())!), attributes: attribute_bold)
+        
         applicationDateValidation()
+        
+        fullSummary_string.append(ready_string)
+        fullSummary_string.append(NSAttributedString(string: "\n" + "You have stayed in Canada for ", attributes: attribute_regular))
+        fullSummary_string.append(inCanadaDays_string)
+        fullSummary_string.append(NSAttributedString(string: " day(s).\nStarting now, you need to stay for another ", attributes: attribute_regular))
+        fullSummary_string.append(moreDays_string)
+        fullSummary_string.append(NSAttributedString(string: " day(s) until ", attributes: attribute_regular))
+        fullSummary_string.append(untilDate_string)
+        fullSummary_string.append(NSAttributedString(string: " to be elegible for ", attributes: attribute_regular))
+        fullSummary_string.append(applicationType_string)
+        fullSummary_string.append(NSAttributedString(string: " application.\nYou may adjust the presence table and application date below to test possible application dates.", attributes: attribute_regular))
+        
+        summary_text.attributedText = fullSummary_string
     }
 
     override func didReceiveMemoryWarning() {

@@ -14,6 +14,8 @@
         <scene sceneID="6Lo-kK-Xv8">
             <objects>
                 <navigationController id="vlc-bB-Yv6" customClass="NavController" customModule="ImmiCalc" customModuleProvider="target" sceneMemberID="viewController">
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="hT5-ES-sj7">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -255,84 +257,51 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Have Stayed In Canada For" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdc-e4-X4F">
-                                <rect key="frame" x="61" y="106.5" width="253" height="22"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999999999 Day(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Mf-iL-C1g">
-                                <rect key="frame" x="102" y="137.5" width="170" height="20.5"/>
-                                <color key="backgroundColor" red="0.77280086280000004" green="0.25518450139999999" blue="0.1630383134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="170" id="R8M-mv-HBl"/>
-                                    <constraint firstAttribute="height" constant="20.5" id="aTV-Yh-5Fe"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Application Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5yB-9m-qGF">
-                                <rect key="frame" x="121" y="332.5" width="133.5" height="22"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7zO-ae-eec">
-                                <rect key="frame" x="58.5" y="166.5" width="259.5" height="43"/>
-                                <attributedString key="attributedText">
-                                    <fragment content="Starting Now,   You Need To Stay In Canada For">
-                                        <attributes>
-                                            <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <font key="NSFont" metaFont="system" size="18"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                </attributedString>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="999999999 Day(s)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KnJ-ke-Ai7">
-                                <rect key="frame" x="102.5" y="217" width="170" height="21"/>
-                                <color key="backgroundColor" red="0.77280086280000004" green="0.25518450139999999" blue="0.1630383134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="114" y="264" width="148" height="24"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="170" id="lSw-1D-8PU"/>
-                                    <constraint firstAttribute="height" constant="21" id="zRD-7e-Zp9"/>
+                                    <constraint firstAttribute="width" constant="148" id="vWb-JV-n8t"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Before You Could Apply For" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z8r-ie-58J">
-                                <rect key="frame" x="76.5" y="276.5" width="222.5" height="22"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PR/Citizen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqL-HG-FWU">
-                                <rect key="frame" x="147.5" y="307" width="79.5" height="21"/>
-                                <color key="backgroundColor" red="0.77280086280000004" green="0.25518450139999999" blue="0.1630383134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="Uik-cv-ANi"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ox7-az-qCK">
-                                <rect key="frame" x="108" y="358.5" width="160" height="30"/>
+                                <rect key="frame" x="108" y="292" width="160" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="9E1-2K-BnM"/>
-                                    <constraint firstAttribute="height" constant="30" id="bgg-0Z-oxK"/>
+                                    <constraint firstAttribute="width" constant="160" id="skC-NU-G3P"/>
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueb-dr-z8b">
-                                <rect key="frame" x="38" y="351.5" width="300" height="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valid Application Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h55-96-7hq">
+                                <rect key="frame" x="68" y="332" width="238" height="21"/>
+                                <color key="backgroundColor" red="0.77280086280000004" green="0.25518450139999999" blue="0.1630383134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="DE1-in-0ng"/>
-                                    <constraint firstAttribute="width" constant="300" id="NSh-1v-NaR"/>
+                                    <constraint firstAttribute="width" constant="238" id="Ka6-NI-mn9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" usesAttributedText="YES" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="31Z-bp-c7D">
+                                <rect key="frame" x="16" y="64" width="343" height="200"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="14"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ueb-dr-z8b">
+                                <rect key="frame" x="37" y="306" width="300" height="19"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="Vip-nV-0B0"/>
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment content="WARNING">
@@ -345,56 +314,23 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Month Day, Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mby-sy-Xba">
-                                <rect key="frame" x="103" y="247" width="170" height="21"/>
-                                <color key="backgroundColor" red="0.77280086280000004" green="0.25518450139999999" blue="0.1630383134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="170" id="1gl-XK-idG"/>
-                                    <constraint firstAttribute="height" constant="21" id="NoQ-hs-3gh"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Valid Application Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h55-96-7hq">
-                                <rect key="frame" x="68" y="403" width="238" height="21"/>
-                                <color key="backgroundColor" red="0.77280086280000004" green="0.25518450139999999" blue="0.1630383134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="DkS-bf-ALs"/>
-                                    <constraint firstAttribute="width" constant="238" id="eN7-tQ-n3d"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <accessibility key="accessibilityConfiguration">
                             <accessibilityTraits key="traits" button="YES"/>
                         </accessibility>
                         <constraints>
-                            <constraint firstItem="Pdc-e4-X4F" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="0d3-yz-Tn5"/>
-                            <constraint firstItem="h55-96-7hq" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="3Jq-90-yW1"/>
-                            <constraint firstItem="rqL-HG-FWU" firstAttribute="centerY" secondItem="Xyc-lh-1Xd" secondAttribute="centerY" constant="-16" id="5hX-PN-PKW"/>
-                            <constraint firstItem="KnJ-ke-Ai7" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="6ke-Jp-aZH"/>
-                            <constraint firstItem="Pdc-e4-X4F" firstAttribute="centerY" secondItem="Xyc-lh-1Xd" secondAttribute="centerY" constant="-216" id="90a-pa-yFY"/>
-                            <constraint firstItem="7zO-ae-eec" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="EdM-Xw-WFE"/>
-                            <constraint firstItem="h55-96-7hq" firstAttribute="centerY" secondItem="Xyc-lh-1Xd" secondAttribute="centerY" constant="80" id="JVk-c5-K3e"/>
-                            <constraint firstItem="Ox7-az-qCK" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="LLH-K1-Le7"/>
-                            <constraint firstItem="rqL-HG-FWU" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="Otv-Ao-7Gg"/>
-                            <constraint firstItem="Ox7-az-qCK" firstAttribute="centerY" secondItem="Xyc-lh-1Xd" secondAttribute="centerY" constant="40" id="WVU-zK-Jbh"/>
-                            <constraint firstItem="5yB-9m-qGF" firstAttribute="centerY" secondItem="Xyc-lh-1Xd" secondAttribute="centerY" constant="10" id="Xow-Rp-fc5"/>
-                            <constraint firstItem="5yB-9m-qGF" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="b6K-y0-KTA"/>
-                            <constraint firstItem="ueb-dr-z8b" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="cAe-FM-KJe"/>
-                            <constraint firstItem="Z8r-ie-58J" firstAttribute="centerY" secondItem="Xyc-lh-1Xd" secondAttribute="centerY" constant="-46" id="d6d-F1-api"/>
-                            <constraint firstItem="Z8r-ie-58J" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="exd-ym-hDm"/>
-                            <constraint firstItem="7zO-ae-eec" firstAttribute="centerY" secondItem="Xyc-lh-1Xd" secondAttribute="centerY" constant="-146" id="gbM-vt-R2n"/>
-                            <constraint firstItem="mby-sy-Xba" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="iL6-Eo-d2U"/>
-                            <constraint firstItem="6Mf-iL-C1g" firstAttribute="centerY" secondItem="Xyc-lh-1Xd" secondAttribute="centerY" constant="-186" id="iZy-kt-LBz"/>
-                            <constraint firstItem="mby-sy-Xba" firstAttribute="centerY" secondItem="Xyc-lh-1Xd" secondAttribute="centerY" constant="-76" id="igM-fq-v3s"/>
-                            <constraint firstItem="6Mf-iL-C1g" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="lSs-a5-H3S"/>
-                            <constraint firstItem="KnJ-ke-Ai7" firstAttribute="centerY" secondItem="Xyc-lh-1Xd" secondAttribute="centerY" constant="-106" id="mCe-dI-tuH"/>
-                            <constraint firstItem="ueb-dr-z8b" firstAttribute="centerY" secondItem="Xyc-lh-1Xd" secondAttribute="centerY" constant="40" id="vwB-Zk-3sJ"/>
+                            <constraint firstItem="Ox7-az-qCK" firstAttribute="bottom" secondItem="ueb-dr-z8b" secondAttribute="bottom" constant="-3" id="3ZT-o0-JrH"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="31Z-bp-c7D" secondAttribute="trailing" id="A4f-Ce-KId"/>
+                            <constraint firstItem="31Z-bp-c7D" firstAttribute="top" secondItem="8ih-mk-Cj2" secondAttribute="bottom" id="F5d-Ib-mQU"/>
+                            <constraint firstItem="Ox7-az-qCK" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="JWw-9I-ug3"/>
+                            <constraint firstItem="Ox7-az-qCK" firstAttribute="top" secondItem="5yB-9m-qGF" secondAttribute="bottom" constant="4" id="RBb-xg-6Bl"/>
+                            <constraint firstItem="h55-96-7hq" firstAttribute="top" secondItem="Ox7-az-qCK" secondAttribute="bottom" constant="10" id="Wkx-Va-hNK"/>
+                            <constraint firstItem="5yB-9m-qGF" firstAttribute="top" secondItem="31Z-bp-c7D" secondAttribute="bottom" id="Zg1-RF-5PI"/>
+                            <constraint firstItem="ueb-dr-z8b" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="Zvo-JD-qUj"/>
+                            <constraint firstItem="31Z-bp-c7D" firstAttribute="leading" secondItem="Xyc-lh-1Xd" secondAttribute="leadingMargin" id="mZc-ak-jmf"/>
+                            <constraint firstItem="5yB-9m-qGF" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="mtb-gU-0Bh"/>
+                            <constraint firstItem="h55-96-7hq" firstAttribute="centerX" secondItem="Xyc-lh-1Xd" secondAttribute="centerX" id="qPo-RI-ywq"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Summary" id="epc-SY-dKi">
@@ -422,10 +358,7 @@
                     <connections>
                         <outlet property="application_date_text" destination="Ox7-az-qCK" id="ein-w5-3cC"/>
                         <outlet property="error_label" destination="ueb-dr-z8b" id="2YV-3x-Kw9"/>
-                        <outlet property="more_date_label" destination="mby-sy-Xba" id="U5b-N3-67f"/>
-                        <outlet property="more_label" destination="KnJ-ke-Ai7" id="Hg7-hQ-46S"/>
-                        <outlet property="perm_citi_label" destination="rqL-HG-FWU" id="V5m-Ua-etw"/>
-                        <outlet property="stayed_label" destination="6Mf-iL-C1g" id="ycx-zV-eVF"/>
+                        <outlet property="summary_text" destination="31Z-bp-c7D" id="Yko-tC-Rjf"/>
                         <outlet property="valid_label" destination="h55-96-7hq" id="foO-ct-D8e"/>
                         <segue destination="4Df-Ar-Jtn" kind="unwind" identifier="unwindToVC1" unwindAction="prepareForUnwindVC1WithSegue:" id="OrZ-wZ-w4C"/>
                     </connections>
@@ -546,11 +479,11 @@ application.</string>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content"> 
+                                        <string key="content"> 
 2. For the purpose of calculating the number of days to comply with the residency obligation, a
 day includes a full day or any part of a day that a permanent resident is physically present in
 Canada. Any part of a day spent in Canada is to be counted as one full day. 
-</mutableString>
+</string>
                                         <attributes>
                                             <font key="NSFont" size="12" name="ArialMT"/>
                                         </attributes>
@@ -562,7 +495,7 @@ Canada. Any part of a day spent in Canada is to be counted as one full day. 
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
+                                        <string key="content">
 1. The calculation for the eligibility of citizenship is based on the newly passed Bill C-6, an act
 amending Canada’s Citizenship Act, which has now received Royal Assent to become law and is
 expected to come into force in late 2017. 
@@ -576,7 +509,7 @@ presence. 
 resident or protected person before becoming a permanent resident as a half-day toward
 meeting the physical presence requirement for citizenship, up to a maximum credit of 365 days.
 
-</mutableString>
+</string>
                                         <attributes>
                                             <font key="NSFont" size="12" name="ArialMT"/>
                                         </attributes>
@@ -603,13 +536,13 @@ the eligibility for applying for either PR renewal or Citizenship on that day.�
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <mutableString key="content">
+                                        <string key="content">
 This app is provided “as is” without warranty of any kind, either express or implied. While the
 developer is trying his best to make it accurate and reliable, the calculation result is for
 illustrative purpose only. The developer is not liable for any loss from using these data. 
 An official web-based calculator for citizenship is available in CIC website. You are suggested to
 check the residence eligibility there as the final authoritative measure when you intend to begin
-the application process.</mutableString>
+the application process.</string>
                                         <attributes>
                                             <font key="NSFont" size="12" name="ArialMT"/>
                                         </attributes>

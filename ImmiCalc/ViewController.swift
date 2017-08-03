@@ -32,8 +32,19 @@ struct vars {
     static var termsAccepted:Bool = false
 }
 
-extension UIImageView
-{
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    func dismissKeyboard() {
+        view.endEditing(true)
+    }
+}
+
+extension UIImageView {
     func makeBlurImage(targetImageView:UIImageView?)
     {
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
