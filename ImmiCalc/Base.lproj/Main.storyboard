@@ -635,6 +635,7 @@ the application process.</mutableString>
                     </navigationItem>
                     <connections>
                         <outlet property="accept_button" destination="epd-ky-Do5" id="EeB-HK-nCc"/>
+                        <outlet property="disclaimer_text" destination="4gA-QF-nhl" id="QDF-8K-Xem"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Dc-Ab-HGW" userLabel="First Responder" sceneMemberID="firstResponder"/>

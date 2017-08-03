@@ -137,7 +137,8 @@ class ViewController4: UIViewController {
         var stayedBeforeLanding = 0
         var daysNeededAfterNow = 0
         var firstDate = Date()
-        
+        var firstDateIndex = 0
+        var firstValidDate = Date()
         // If PR application
         if (vars.pr_citi_flag == 0) {
             if (compareDates(fromdate: fiveyearsago!, todate: land_date) == 2) {
@@ -196,11 +197,13 @@ class ViewController4: UIViewController {
                         // When the first date after fiveyearsago is an in-date
                         if (i % 2 == 0) {
                             firstDate = vars.citi_dates[i]
+                            firstDateIndex = i + 1
                             break
                         }
                         // When the first date after fiveyearsago is an out-date
                         else {
                             firstDate = fiveyearsago!
+                            firstDateIndex = i
                             break
                         }
                     }
@@ -208,6 +211,28 @@ class ViewController4: UIViewController {
                 print(firstDate)
                 if (compareDates(fromdate: firstDate, todate: vars.citi_land_date) == 0) {
                     stayedBeforeLanding = inCanadaDays(start: firstDate, end: vars.citi_land_date)
+                }
+                
+                // Maximum of 365 days of credit
+                if (stayedBeforeLanding > 730) {
+                    var sum = 0
+                    var offset = 0
+                    sum = sum + inCanadaDays(start: firstDate, end: vars.citi_dates[firstDateIndex])
+                    if (sum > stayedBeforeLanding - 730) {
+                        offset = stayedBeforeLanding - 730 - sum
+                        firstValidDate = cal.date(byAdding: .day, value: offset, to: vars.citi_dates[firstDateIndex])!
+                    }
+                    else {
+                        while (sum < stayedBeforeLanding - 730) {
+                            sum = sum + inCanadaDays(start: vars.citi_dates[firstDateIndex + 1], end: vars.citi_dates[firstDateIndex + 2])
+                            firstDateIndex = firstDateIndex + 2
+                        }
+                        offset = stayedBeforeLanding - 730 - sum
+                        firstValidDate = cal.date(byAdding: .day, value: offset, to: vars.citi_dates[firstDateIndex])!
+                    }
+                    // If number of days in Canada before landing date & after five years ago is more than 730 days, it will count as 730 days, so the first (inCanada - 730) days will not be counted. Therefore we calculate the first valid day, which is not the first day in this case 
+                    firstDate = firstValidDate
+                    stayedBeforeLanding = 730
                 }
                 
                 // Divide by 2 (currently ceiling, want floor or ceiling?)
@@ -415,6 +440,11 @@ class ViewController4: UIViewController {
                 
                 if (compareDates(fromdate: firstDate, todate: vars.citi_land_date) == 0) {
                     stayedBeforeLanding = inCanadaDays(start: firstDate, end: vars.citi_land_date)
+                }
+                
+                // Maximum credit of 365 days for days before landing
+                if (stayedBeforeLanding >= 730) {
+                    stayedBeforeLanding = 730
                 }
                 
                 stayed = stayed + stayedBeforeLanding/2

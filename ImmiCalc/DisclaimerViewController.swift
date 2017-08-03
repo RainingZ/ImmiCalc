@@ -10,6 +10,7 @@ import UIKit
 
 class DisclaimerViewController: UIViewController {
     @IBOutlet weak var accept_button: UIButton!
+    @IBOutlet weak var disclaimer_text: UITextView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,6 +60,12 @@ class DisclaimerViewController: UIViewController {
         let defaults = UserDefaults.standard
         defaults.set(vars.termsAccepted, forKey: "termsAccepted")
         defaults.synchronize()
+    }
+    
+    // Make sure text view starts at top
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        disclaimer_text.setContentOffset(CGPoint.zero, animated: false)
     }
 
     /*
