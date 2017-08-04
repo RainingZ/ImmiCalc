@@ -134,6 +134,13 @@ class ViewController3: UIViewController {
                 vars.citi_dates += [vars.from_date, vars.to_date]
                 vars.citi_dates.sort(by: {$0.compare($1) == .orderedAscending})
             }
+            
+            // Automatically increment input dates when add button is pressed
+            let cal  = Calendar.current
+            vars.datePickerCell.date = cal.date(byAdding: .day, value: 1, to: vars.to_date)!
+            vars.datePickerCell2.date = cal.date(byAdding: .day, value: 2, to: vars.to_date)!
+            vars.from_date = vars.datePickerCell.date
+            vars.to_date = vars.datePickerCell2.date
         }
         
         // Notify TableView to close expanded DatePickerCells, and TableView2 to reload table

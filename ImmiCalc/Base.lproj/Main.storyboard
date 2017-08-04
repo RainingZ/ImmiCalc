@@ -337,14 +337,14 @@
                         <barButtonItem key="backBarButtonItem" title="Back" id="kb4-Q4-Sqe"/>
                         <barButtonItem key="rightBarButtonItem" style="done" id="cDP-hr-JtM">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" id="fzU-SK-PoI">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
+                                <rect key="frame" x="289" y="7" width="70" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Reset">
                                             <attributes>
                                                 <font key="NSFont" size="18" name="ArialUnicodeMS"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
@@ -420,131 +420,121 @@
                                         <string key="content">Physical Presence Calculator for Canadian PR &amp; Citizenship
 Version 1.0
 Released August 20 2017
-Built by Alex Zhang (hzalex@gmail.com) 
+Built by Alex Zhang (hzalex@gmail.com)
+
 </string>
                                         <attributes>
                                             <font key="NSFont" size="12" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Disclaimer ">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+This app is provided “as is” without warranty of any kind, either express or implied. While the developer is trying his best to make it accurate and reliable, the calculation result is for illustrative purpose only. The developer is not liable for any loss from using these data.
+
+An official web-based calculator for citizenship is available on CIC website. You are suggested to check the residence eligibility there as the final authoritative measure when you intend to begin
+the application process.
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
                                         </attributes>
                                     </fragment>
                                     <fragment content="About">
                                         <attributes>
                                             <font key="NSFont" size="12" name="Arial-BoldMT"/>
                                             <font key="NSOriginalFont" size="12" name="Arial-BoldMT"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="ArialMT"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content"> This app is a handy tool to calculate the physical presence in Canada and check, against the basic
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="ArialMT"/>
-                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">residence obligation stipulated by law, if you are eligible to apply for Permanent Residence
-renewal or Grant of Citizenship by a specific date. 
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="ArialMT"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="The basic residence requirements for PR renewal: ">
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Arial-BoldMT"/>
-                                            <font key="NSOriginalFont" size="12" name="Arial-BoldMT"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content" base64-UTF8="YES">
-Cg
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="ArialMT"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content">1. For a resident to be eligible to renew Permanent Residence you must have been physically
-present in Canada for at least 730 days in the 5 years immediately before the date of your
-application.</string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Arial-ItalicMT"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment>
-                                        <string key="content"> 
-2. For the purpose of calculating the number of days to comply with the residency obligation, a
-day includes a full day or any part of a day that a permanent resident is physically present in
-Canada. Any part of a day spent in Canada is to be counted as one full day. 
-</string>
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="ArialMT"/>
-                                        </attributes>
-                                    </fragment>
-                                    <fragment content="The basic residence requirements for Citizenship application: ">
-                                        <attributes>
-                                            <font key="NSFont" size="12" name="Arial-BoldMT"/>
-                                            <font key="NSOriginalFont" size="12" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
                                         <string key="content">
-1. The calculation for the eligibility of citizenship is based on the newly passed Bill C-6, an act
-amending Canada’s Citizenship Act, which has now received Royal Assent to become law and is
-expected to come into force in late 2017. 
-2. For a resident to be eligible to apply for Citizenship, you must have been physically present in
-Canada as a permanent resident for at least 1,095 days in the 5 years immediately before the
-date of your application. 
-3. For the purpose of calculating the number of days of absence, neither the day you leave
-Canada nor the day you return is considered an absence. Both are counted as days of physical
-presence. 
-4. Applicants may count each day they were physically present in Canada as a temporary
-resident or protected person before becoming a permanent resident as a half-day toward
-meeting the physical presence requirement for citizenship, up to a maximum credit of 365 days.
+
+This app is a handy tool to calculate the physical presence in Canada and check, against the basic residence obligation stipulated by law, if you are eligible to apply for Permanent Residence renewal or Grant of Citizenship by a specific date.
 
 </string>
                                         <attributes>
                                             <font key="NSFont" size="12" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="Tips ">
+                                    <fragment content="The basic residence requirements for PR renewal: ">
                                         <attributes>
                                             <font key="NSFont" size="12" name="Arial-BoldMT"/>
                                             <font key="NSOriginalFont" size="12" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">
-It’s generally self-explanatory to use this app. Just be reminded you can specify a date to check
-the eligibility for applying for either PR renewal or Citizenship on that day. 
+                                        <string key="content" base64-UTF8="YES">
+Cg
 </string>
                                         <attributes>
                                             <font key="NSFont" size="12" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
-                                    <fragment content="Disclaimer ">
+                                    <fragment>
+                                        <string key="content">1. For a resident to be eligible to renew Permanent Residence you must have been physically present in Canada for at least 730 days in the 5 years immediately before the date of your application.</string>
                                         <attributes>
-                                            <font key="NSFont" size="12" name="Arial-BoldMT"/>
-                                            <font key="NSOriginalFont" size="12" name="Arial-BoldMT"/>
+                                            <font key="NSFont" size="12" name="Arial-ItalicMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                     <fragment>
                                         <string key="content">
-This app is provided “as is” without warranty of any kind, either express or implied. While the
-developer is trying his best to make it accurate and reliable, the calculation result is for
-illustrative purpose only. The developer is not liable for any loss from using these data. 
-An official web-based calculator for citizenship is available in CIC website. You are suggested to
-check the residence eligibility there as the final authoritative measure when you intend to begin
-the application process.</string>
+
+2. For the purpose of calculating the number of days to comply with the residency obligation, a day includes a full day or any part of a day that a permanent resident is physically present in Canada. Any part of a day spent in Canada is to be counted as one full day.
+
+</string>
                                         <attributes>
                                             <font key="NSFont" size="12" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="The basic residence requirements for Citizenship application: ">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="Arial-BoldMT"/>
+                                            <font key="NSOriginalFont" size="12" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+1. The calculation for the eligibility of citizenship is based on the newly passed Bill C-6, an act amending Canada’s Citizenship Act, which has now received Royal Assent to become law and is expected to come into force in late 2017.
+
+2. For a resident to be eligible to apply for Citizenship, you must have been physically present in Canada as a permanent resident for at least 1,095 days in the 5 years immediately before the date of your application.
+
+3. For the purpose of calculating the number of days of absence, neither the day you leave Canada nor the day you return is considered an absence. Both are counted as days of physical presence.
+
+4. Applicants may count each day they were physically present in Canada as a temporary resident or protected person before becoming a permanent resident as a half-day toward meeting the physical presence requirement for citizenship, up to a maximum credit of 365 days.
+
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Tips ">
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="Arial-BoldMT"/>
+                                            <font key="NSOriginalFont" size="12" name="Arial-BoldMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+It’s generally self-explanatory to use this app. Just be reminded you can specify a date to check the eligibility for applying for either PR renewal or Citizenship on that day.</string>
+                                        <attributes>
+                                            <font key="NSFont" size="12" name="ArialMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
                                 </attributedString>
@@ -596,7 +586,7 @@ the application process.</string>
                                 </constraints>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Permanent Resident">
+                                        <fragment content="Permanent Resident Renewal">
                                             <attributes>
                                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" size="20" name=".AppleSystemUIFont"/>
@@ -618,7 +608,7 @@ the application process.</string>
                                 </constraints>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Citizenship">
+                                        <fragment content="Citizenship Grant">
                                             <attributes>
                                                 <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                 <font key="NSFont" metaFont="system" size="20"/>
@@ -632,13 +622,13 @@ the application process.</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WCv-jp-PRD">
-                                <rect key="frame" x="76" y="217" width="222" height="33"/>
+                                <rect key="frame" x="37" y="200.5" width="300" height="66"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="33" id="cPU-jP-n39"/>
-                                    <constraint firstAttribute="width" constant="222" id="tcj-yn-RZA"/>
+                                    <constraint firstAttribute="height" constant="66" id="cPU-jP-n39"/>
+                                    <constraint firstAttribute="width" constant="300" id="tcj-yn-RZA"/>
                                 </constraints>
                                 <attributedString key="attributedText">
-                                    <fragment content="Select Application Type">
+                                    <fragment content="What are you applying for?">
                                         <attributes>
                                             <color key="NSColor" red="0.99480842108535528" green="1" blue="0.95276115543185524" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="20" name=".SFNSText"/>
@@ -722,28 +712,6 @@ the application process.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kRi-Sw-PBw">
-                                <rect key="frame" x="152" y="348.5" width="70" height="30"/>
-                                <color key="backgroundColor" red="0.77280086280000004" green="0.25518450139999999" blue="0.1630383134" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="70" id="VpR-bO-0lo"/>
-                                    <constraint firstAttribute="height" constant="30" id="wFJ-1X-l3w"/>
-                                </constraints>
-                                <state key="normal">
-                                    <attributedString key="attributedTitle">
-                                        <fragment content="Done">
-                                            <attributes>
-                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <font key="NSFont" size="18" name=".SFNSText"/>
-                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                            </attributes>
-                                        </fragment>
-                                    </attributedString>
-                                </state>
-                                <connections>
-                                    <segue destination="eDK-W5-cdk" kind="show" id="A3N-G8-9tu"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QIn-D2-5ZQ">
                                 <rect key="frame" x="37.5" y="387" width="300" height="60"/>
                                 <constraints>
@@ -766,17 +734,35 @@ the application process.</string>
                         <constraints>
                             <constraint firstItem="crC-kx-lTh" firstAttribute="centerX" secondItem="CZz-w0-fJ7" secondAttribute="centerX" id="37V-nD-cR0"/>
                             <constraint firstItem="QIn-D2-5ZQ" firstAttribute="centerX" secondItem="CZz-w0-fJ7" secondAttribute="centerX" id="88o-YF-glw"/>
-                            <constraint firstItem="kRi-Sw-PBw" firstAttribute="centerX" secondItem="CZz-w0-fJ7" secondAttribute="centerX" id="LzQ-wy-HD0"/>
                             <constraint firstItem="crC-kx-lTh" firstAttribute="centerY" secondItem="CZz-w0-fJ7" secondAttribute="centerY" constant="-70" id="cNy-xi-Cjv"/>
                             <constraint firstItem="F87-TD-LW1" firstAttribute="centerY" secondItem="CZz-w0-fJ7" secondAttribute="centerY" constant="-20" id="h3V-7m-PL6"/>
                             <constraint firstItem="den-FO-VEC" firstAttribute="top" secondItem="QIn-D2-5ZQ" secondAttribute="bottom" constant="220" id="tzN-FN-IQT"/>
                             <constraint firstItem="F87-TD-LW1" firstAttribute="centerX" secondItem="CZz-w0-fJ7" secondAttribute="centerX" id="w5U-l2-P3m"/>
-                            <constraint firstItem="kRi-Sw-PBw" firstAttribute="centerY" secondItem="CZz-w0-fJ7" secondAttribute="centerY" constant="30" id="wNK-nd-N5q"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Sl5-tF-Gb0"/>
+                    <navigationItem key="navigationItem" id="Sl5-tF-Gb0">
+                        <barButtonItem key="rightBarButtonItem" title="Item" style="done" id="DPg-Qy-ahg">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" hasAttributedTitle="YES" id="lRq-lw-aNd">
+                                <rect key="frame" x="289" y="7" width="70" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="Done">
+                                            <attributes>
+                                                <font key="NSFont" size="18" name="ArialUnicodeMS"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="done_press:" destination="2ZX-ir-FKY" eventType="touchUpInside" id="ROY-0b-yqs"/>
+                                    <segue destination="eDK-W5-cdk" kind="show" id="4Bv-qp-3Jy"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
-                        <outlet property="done_button" destination="kRi-Sw-PBw" id="MBk-kN-E3h"/>
                         <outlet property="error_label" destination="QIn-D2-5ZQ" id="0D2-hh-FvD"/>
                         <outlet property="land_label" destination="crC-kx-lTh" id="Pwh-rd-wKC"/>
                         <outlet property="land_text" destination="F87-TD-LW1" id="dAY-uM-dxr"/>

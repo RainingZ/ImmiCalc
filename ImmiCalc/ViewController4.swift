@@ -56,9 +56,10 @@ class ViewController4: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hideKeyboardWhenTappedAround() 
+        
+        self.hideKeyboardWhenTappedAround()
+        
         // Attributed string setup
-        print(UIFont.fontNames(forFamilyName: "Arial"))
         let attribute_bold = [NSFontAttributeName: UIFont(name: "Arial-BoldMT", size: 18.0)!, NSForegroundColorAttributeName: UIColor.white, NSUnderlineStyleAttributeName: NSUnderlineStyle.styleSingle.rawValue] as [String : Any]
         let attribute_regular = [NSFontAttributeName: UIFont(name: "Arial", size: 18.0)!, NSForegroundColorAttributeName: UIColor.white]
         var applicationType_string = NSAttributedString()

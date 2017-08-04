@@ -10,18 +10,29 @@ import UIKit
 
 class ViewController2: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var error_label: UILabel!
-    @IBOutlet weak var done_button: UIButton!
     @IBOutlet weak var land_label: UILabel!
     @IBOutlet weak var land_text: UITextField!
+    @IBAction func done_press(_ sender: UIButton) {
+        // When both from date and to date on date picker are equal to today, it is less likely user have edited the date picker, therefore update them with the landing date
+        var land_date = Date()
+        if (vars.pr_citi_flag == 0) {
+            land_date = vars.pr_land_date
+        }
+        else {
+            land_date = vars.citi_land_date
+        }
+        if (compareDates(fromdate: vars.from_date, todate: Date()) == 1 && compareDates(fromdate: vars.to_date, todate: Date()) == 1) {
+            vars.datePickerCell.date = land_date
+            vars.datePickerCell2.date = land_date
+            vars.from_date = land_date
+            vars.to_date = land_date
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // Assign background image
         //assignBackground(VC: self,name: "iPhone-Maple2.jpg")
-        
-        // Make rounded corners for done button
-        done_button.layer.cornerRadius = 10
-        done_button.layer.borderWidth = 0
         
         // Date formattor initialization and storing landing date
         vars.formatter.dateStyle = DateFormatter.Style.medium
@@ -79,13 +90,6 @@ class ViewController2: UIViewController, UITextFieldDelegate {
             land_text.text = vars.formatter.string(from: vars.citi_land_date)
         }
         
-        // When both from date and to date on date picker are equal to today, it is less likely user have edited the date picker, therefore update them with the landing date
-        if (compareDates(fromdate: vars.from_date, todate: Date()) == 1 && compareDates(fromdate: vars.to_date, todate: Date()) == 1) {
-            vars.datePickerCell.date = sender.date
-            vars.datePickerCell2.date = sender.date
-            vars.from_date = sender.date
-            vars.to_date = sender.date
-        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
