@@ -178,7 +178,6 @@ class ViewController4: UIViewController {
                 // when landing date is exactly or less than 5 years ago (S2)
                 start = land_date
                 stayedNow = inCanadaDays(start: start, end: Date())
-                print(fiveyearsago!)
                 // Find the first date after fiveyearsago
                 for i in 0...(vars.citi_dates.count-1) {
                     if (compareDates(fromdate: fiveyearsago!, todate: vars.citi_dates[i]) == 0) {
@@ -196,7 +195,6 @@ class ViewController4: UIViewController {
                         }
                     }
                 }
-                print(firstDate)
                 if (compareDates(fromdate: firstDate, todate: vars.citi_land_date) == 0) {
                     stayedBeforeLanding = inCanadaDays(start: firstDate, end: vars.citi_land_date)
                 }
@@ -225,10 +223,8 @@ class ViewController4: UIViewController {
                 
                 // Divide by 2 (currently ceiling, want floor or ceiling?)
                 daysNeededAfterNow = 1095 - stayedNow - stayedBeforeLanding/2
-                print("daysNeededAfterNow" + String(daysNeededAfterNow))
                 if (daysNeededAfterNow > 0) {
                     let daysBeforeFirstDate = firstDate.interval(ofComponent: .day, fromDate: fiveyearsago!)
-                    print("daysBeforeFirstDate" + String(daysBeforeFirstDate))
                     if (daysBeforeFirstDate < daysNeededAfterNow) {
                         need_now = daysBeforeFirstDate + daysNeededforS1(start:firstDate, daysNeeded: (daysNeededAfterNow - daysBeforeFirstDate))
                     }
@@ -279,8 +275,6 @@ class ViewController4: UIViewController {
         var halfneed = 0
         var start = start
         var sum = 0
-        print(start)
-        print(need)
         // Recursively get inCanadaDays for periods of "daysNeeded", we'll need to stay in Canada to make up for periods we stayed in Canada 5 years ago, since as time passes, those will not count anymore
         var count_half_flag = vars.pr_citi_flag
         while (need != 0) {
@@ -295,21 +289,17 @@ class ViewController4: UIViewController {
                 if (compareDates(fromdate: vars.citi_land_date, todate: start) == 0) {
                     need = inCanadaDays(start: start, end: cal.date(byAdding: .day, value: need - 1, to: start)!)
                     count_half_flag = 0
-                    print("if")
                 }
                 else if (compareDates(fromdate: vars.citi_land_date, todate: cal.date(byAdding: .day, value: need - 1, to: start)!) == 0) {
                     halfneed = inCanadaDays(start: start, end: cal.date(byAdding: .day, value: -1, to: vars.citi_land_date)!) / 2
                     need = halfneed + inCanadaDays(start: vars.citi_land_date, end: cal.date(byAdding: .day, value: need - 1, to: start)!)
                     count_half_flag = 0
-                    print("elseif")
                 }
                 else {
                     need = inCanadaDays(start: start, end: cal.date(byAdding: .day, value: need - 1, to: start)!) / 2
-                    print("else")
                 }
             }
             start = cal.date(byAdding: .day, value: need, to: start)!
-            print("need" + String(need))
         }
         
         return sum
@@ -340,7 +330,7 @@ class ViewController4: UIViewController {
                 if (compareDates(fromdate: from, todate: start) == 0) {
                     from = start
                 }
-                // if (from > now)
+                // if (from > end)
                 if (compareDates(fromdate: from, todate: end) == 2) {
                     from = end
                 }
@@ -348,8 +338,8 @@ class ViewController4: UIViewController {
                 if (compareDates(fromdate: to, todate: start) == 0) {
                     to = start
                 }
-                // if (to > now)
-                if (compareDates(fromdate: from, todate: end) == 2) {
+                // if (to > end)
+                if (compareDates(fromdate: to, todate: end) == 2) {
                     to = end
                 }
                 daysbetween = to.interval(ofComponent: .day, fromDate: from)
@@ -431,6 +421,7 @@ class ViewController4: UIViewController {
                 // when landing date is exactly or less than 5 years ago (S2)
                 start = vars.citi_land_date
                 stayed = inCanadaDays(start: start, end: vars.application_date)
+                
                 // Find the first date after fiveyearsago
                 for i in 0...(vars.citi_dates.count-1) {
                     if (compareDates(fromdate: fiveyearsago!, todate: vars.citi_dates[i]) == 0) {
