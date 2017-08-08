@@ -104,6 +104,7 @@ class ViewController: UIViewController {
         vars.citi_dates = defaults.array(forKey: "citi_dates") as! [Date]
         vars.application_date = defaults.object(forKey: "application_date") as! Date
         vars.termsAccepted = defaults.bool(forKey: "termsAccepted")
+        vars.DoNotNotify = defaults.bool(forKey: "DoNotNotify")
         print("launchget")
         // Assign background image
         //assignBackground(VC: self,name: "MapleLeafOnWater.jpg")
@@ -126,20 +127,6 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationItem.hidesBackButton = true
-    }
-    // Unused
-    func cleardatashowView2(alert: UIAlertAction!) {
-        if (vars.pr_citi_flag == 1) {
-            vars.pr_citi_flag = 0
-        }
-        else {
-            vars.pr_citi_flag = 1
-        }
-        vars.DoNotNotify = false
-        vars.pr_dates.removeAll()
-        vars.citi_dates.removeAll()
-        performSegue(withIdentifier: "showView2", sender: self)
-        return
     }
 }
 

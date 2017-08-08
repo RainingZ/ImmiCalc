@@ -85,6 +85,13 @@ class ViewController3: UIViewController {
         if (vars.pr_citi_flag == 1 && vars.citi_dates.isEmpty && !vars.pr_dates.isEmpty) {
             vars.citi_dates = vars.pr_dates
         }
+        
+        // If both datepickercells are pointing to the same day, increment the to_date by 1 day
+        if (compareDates(fromdate: vars.from_date, todate: vars.to_date) == 1) {
+            let cal  = Calendar.current
+            vars.datePickerCell2.date = cal.date(byAdding: .day, value: 1, to: vars.to_date)!
+            vars.to_date = vars.datePickerCell2.date
+        }
     }
     
     func donotnotify(alert: UIAlertAction!) {
@@ -102,13 +109,7 @@ class ViewController3: UIViewController {
             self.present(alert, animated: true, completion: nil)
             print("All added dates should be greater than landing date")
         }
-        // All added dates should be before today
-        // if (vars.from_date > Date() || vars.to_date > Date())
-        /*else if (compareDates(fromdate: vars.from_date, todate: Date()) == 2 || compareDates(fromdate: vars.to_date, todate: Date()) == 2) {
-            print("All added dates should be before today")
-        }*/
         // From dates need to be smaller or equal to To dates
-        // else if (vars.to_date < vars.from_date) {
         else if (compareDates(fromdate: vars.to_date, todate: vars.from_date) == 0) {
             let alert = UIAlertController(title: nil, message: "From dates need to be smaller or equal to To dates", preferredStyle: UIAlertControllerStyle.alert)
             alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))

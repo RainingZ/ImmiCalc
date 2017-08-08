@@ -764,7 +764,7 @@ It’s generally self-explanatory to use this app. Just be reminded you can spec
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal">
                                     <attributedString key="attributedTitle">
-                                        <fragment content="Done">
+                                        <fragment content="Next">
                                             <attributes>
                                                 <font key="NSFont" size="18" name="ArialUnicodeMS"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>

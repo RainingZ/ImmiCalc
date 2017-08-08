@@ -42,6 +42,10 @@ class ViewController4: UIViewController {
         vars.pr_citi_flag = -1
         vars.DoNotNotify = false
         vars.termsAccepted = false
+        vars.from_date = Date()
+        vars.to_date = Date()
+        vars.datePickerCell.date = Date()
+        vars.datePickerCell2.date = Date()
         defaults.set(vars.pr_citi_flag, forKey: "pr_citi_flag")
         defaults.set(vars.pr_land_date, forKey: "pr_land_date")
         defaults.set(vars.citi_land_date, forKey: "citi_land_date")
@@ -49,6 +53,7 @@ class ViewController4: UIViewController {
         defaults.set(vars.citi_dates, forKey: "citi_dates")
         defaults.set(vars.application_date, forKey: "application_date")
         defaults.set(vars.termsAccepted, forKey: "termsAccepted")
+        defaults.set(vars.DoNotNotify, forKey: "DoNotNotify")
         defaults.synchronize()
         print("backgroundset")
         self.performSegue(withIdentifier: "unwindToVC1", sender: self)

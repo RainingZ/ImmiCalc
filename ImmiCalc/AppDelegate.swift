@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         defaults.register(defaults: ["citi_dates" : [Date]()])
         defaults.register(defaults: ["application_date" : Date()])
         defaults.register(defaults: ["termsAccepted" : false])
+        defaults.register(defaults: ["DoNotNotify" : false])
         
         print("regi")
         // Override point for customization after application launch.
@@ -42,6 +43,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         defaults.set(vars.citi_dates, forKey: "citi_dates")
         defaults.set(vars.application_date, forKey: "application_date")
         defaults.set(vars.termsAccepted, forKey: "termsAccepted")
+        defaults.set(vars.DoNotNotify, forKey: "DoNotNotify")
         defaults.synchronize()
         print("backgroundset")
         // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
@@ -56,6 +58,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         vars.citi_dates = defaults.array(forKey: "citi_dates") as! [Date]
         vars.application_date = defaults.object(forKey: "application_date") as! Date
         vars.termsAccepted = defaults.bool(forKey: "termsAccepted")
+        vars.DoNotNotify = defaults.bool(forKey: "DoNotNotify")
         print("foregroundget")
         // Called as part of the transition from the background to the active state; here you can undo many of the changes made on entering the background.
     }
@@ -74,6 +77,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         defaults.set(vars.citi_dates, forKey: "citi_dates")
         defaults.set(vars.application_date, forKey: "application_date")
         defaults.set(vars.termsAccepted, forKey: "termsAccepted")
+        defaults.set(vars.DoNotNotify, forKey: "DoNotNotify")
         defaults.synchronize()
         print("terminateset")
         self.saveContext()
