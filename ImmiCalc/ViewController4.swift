@@ -19,10 +19,14 @@ extension Date {
 
 class ViewController4: UIViewController {
 
+    @IBOutlet weak var for_label: UILabel!
+    @IBOutlet weak var ready_label: UILabel!
+    @IBOutlet weak var total_presence_label: UILabel!
+    @IBOutlet weak var effective_presence_label: UILabel!
+    @IBOutlet weak var extra_days_label: UILabel!
+    @IBOutlet weak var earliest_date_label: UILabel!
     @IBOutlet weak var error_label: UILabel!
     @IBOutlet weak var application_date_text: UITextField!
-    @IBOutlet weak var summary_text: UITextView!
-    @IBOutlet weak var valid_label: UILabel!
     @IBAction func reset_pressed(_ sender: Any) {
         let optionMenu = UIAlertController(title: nil, message:"This will clear all saved data, are you sure?", preferredStyle: .actionSheet)
         let okAction = UIAlertAction(title: "OK", style: .destructive, handler: resetHandler)
@@ -63,13 +67,7 @@ class ViewController4: UIViewController {
         super.viewDidLoad()
         
         self.hideKeyboardWhenTappedAround()
-        
-        // Attributed string setup
-        let attribute_bold = [NSFontAttributeName: UIFont(name: "Arial-BoldMT", size: 18.0)!, NSForegroundColorAttributeName: UIColor.white, NSUnderlineStyleAttributeName: NSUnderlineStyle.styleSingle.rawValue] as [String : Any]
-        let attribute_regular = [NSFontAttributeName: UIFont(name: "Arial", size: 18.0)!, NSForegroundColorAttributeName: UIColor.white]
-        var applicationType_string = NSAttributedString()
-        let fullSummary_string = NSMutableAttributedString()
-        
+
         // Assign background image
         //assignBackground(VC: self,name: "iPhone-Maple1.jpg")
         
@@ -85,46 +83,39 @@ class ViewController4: UIViewController {
         datePicker.addTarget(self, action: #selector(ViewController4.datePickerValueChanged), for: UIControlEvents.valueChanged)
         application_date_text.inputView = UIView()
         application_date_text.inputAccessoryView = datePicker
-        
-        valid_label.layer.masksToBounds = true
-        valid_label.layer.cornerRadius = 5
-        valid_label.layer.borderWidth = 0
 
+        calculations()
+    }
+
+    func calculations() {
         let cal  = Calendar.current
         var stayed = 0
         var need_now = 0
-        
         var land_date = Date()
-        if (vars.pr_citi_flag == 0) {
-            land_date = vars.pr_land_date
-            applicationType_string = NSAttributedString(string: "Permanent Resident", attributes: attribute_bold)
-        }
-        else {
-            land_date = vars.citi_land_date
-            applicationType_string = NSAttributedString(string: "Citizenship", attributes: attribute_bold)
-        }
         // Main Calculation
-//========================================================
-// You Have Stayed in Canada for:
-//========================================================
+        //========================================================
+        // You Have Stayed in Canada for:
+        //========================================================
         
-         // If PR application
+        // If PR application
         if (vars.pr_citi_flag == 0) {
             // Stayed days
-            stayed = inCanadaDays(start: vars.pr_dates[0], end: Date())
+            for_label.text = "For Permanent Resident Renewal"
+            land_date = vars.pr_land_date
+            stayed = inCanadaDays(start: vars.pr_dates[0], end: vars.application_date)
         }
-            // If citi application
+        // If citi application
         else {
             // Stayed days
-            stayed = inCanadaDays(start: vars.citi_dates[0], end: Date())
+            for_label.text = "For Citizenship"
+            land_date = vars.citi_land_date
+            stayed = inCanadaDays(start: vars.citi_dates[0], end: vars.application_date)
         }
         
-        let inCanadaDays_string = NSAttributedString(string: String(stayed), attributes: attribute_bold)
-        
-//========================================================
-// Starting Now, You Need to Stay in Canada for:
-//========================================================
-        let fiveyearsago = cal.date(byAdding: .year, value: -5, to: Date())
+        //========================================================
+        // Starting application date, You Need to Stay in Canada for:
+        //========================================================
+        let fiveyearsago = cal.date(byAdding: .year, value: -5, to: vars.application_date)
         var start = Date()
         var stayedNow = 0
         var stayedBeforeLanding = 0
@@ -135,9 +126,9 @@ class ViewController4: UIViewController {
         // If PR application
         if (vars.pr_citi_flag == 0) {
             if (compareDates(fromdate: fiveyearsago!, todate: land_date) == 2) {
-            // when landing date is more than (before) 5 years ago (S1)
+                // when landing date is more than (before) 5 years ago (S1)
                 start = fiveyearsago!
-                stayedNow = inCanadaDays(start: start, end: Date())
+                stayedNow = inCanadaDays(start: start, end: vars.application_date)
                 daysNeededAfterNow = 730 - stayedNow
                 if (daysNeededAfterNow > 0) {
                     need_now = daysNeededforS1(start:start, daysNeeded:daysNeededAfterNow)
@@ -149,10 +140,10 @@ class ViewController4: UIViewController {
             else {
                 // when landing date is exactly or less than (after) 5 years ago (S2)
                 start = land_date
-                stayedNow = inCanadaDays(start: start, end: Date())
+                stayedNow = inCanadaDays(start: start, end: vars.application_date)
                 daysNeededAfterNow = 730 - stayedNow
                 if (daysNeededAfterNow > 0) {
-                    let daysBeforeFive = 1826 - Date().interval(ofComponent: .day, fromDate: land_date)
+                    let daysBeforeFive = 1826 - vars.application_date.interval(ofComponent: .day, fromDate: land_date)
                     if (daysBeforeFive < daysNeededAfterNow) {
                         need_now = daysBeforeFive + daysNeededforS1(start:start, daysNeeded: (daysNeededAfterNow - daysBeforeFive))
                     }
@@ -165,12 +156,12 @@ class ViewController4: UIViewController {
                 }
             }
         }
-        // If citi application
+            // If citi application
         else {
             if (compareDates(fromdate: fiveyearsago!, todate: land_date) == 2) {
                 // when landing date is more than 5 years ago (S1)
                 start = fiveyearsago!
-                stayedNow = inCanadaDays(start: vars.citi_land_date, end: Date())
+                stayedNow = inCanadaDays(start: vars.citi_land_date, end: vars.application_date)
                 daysNeededAfterNow = 1095 - stayedNow
                 if (daysNeededAfterNow > 0) {
                     need_now = daysNeededforS1(start:start, daysNeeded:daysNeededAfterNow)
@@ -182,7 +173,7 @@ class ViewController4: UIViewController {
             else {
                 // when landing date is exactly or less than 5 years ago (S2)
                 start = land_date
-                stayedNow = inCanadaDays(start: start, end: Date())
+                stayedNow = inCanadaDays(start: start, end: vars.application_date)
                 // Find the first date after fiveyearsago
                 for i in 0...(vars.citi_dates.count-1) {
                     if (compareDates(fromdate: fiveyearsago!, todate: vars.citi_dates[i]) == 0) {
@@ -192,7 +183,7 @@ class ViewController4: UIViewController {
                             firstDateIndex = i + 1
                             break
                         }
-                        // When the first date after fiveyearsago is an out-date
+                            // When the first date after fiveyearsago is an out-date
                         else {
                             firstDate = fiveyearsago!
                             firstDateIndex = i
@@ -221,7 +212,7 @@ class ViewController4: UIViewController {
                         offset = stayedBeforeLanding - 730 - sum
                         firstValidDate = cal.date(byAdding: .day, value: offset, to: vars.citi_dates[firstDateIndex])!
                     }
-                    // If number of days in Canada before landing date & after five years ago is more than 730 days, it will count as 730 days, so the first (inCanada - 730) days will not be counted. Therefore we calculate the first valid day, which is not the first day in this case 
+                    // If number of days in Canada before landing date & after five years ago is more than 730 days, it will count as 730 days, so the first (inCanada - 730) days will not be counted. Therefore we calculate the first valid day, which is not the first day in this case
                     firstDate = firstValidDate
                     stayedBeforeLanding = 730
                 }
@@ -242,36 +233,20 @@ class ViewController4: UIViewController {
                 }
             }
         }
-        var ready_string = NSAttributedString()
-        if (need_now == 0) {
-            ready_string = NSAttributedString(string: "You are ready to apply!", attributes: attribute_bold)
-        }
-        else {
-            ready_string = NSAttributedString(string: "Sorry it seems you are not ready to apply.", attributes: attribute_bold)
-        }
-        
-        let moreDays_string = NSAttributedString(string: String(need_now), attributes: attribute_bold)
-        let untilDate_string = NSAttributedString(string: vars.formatter.string(from: cal.date(byAdding: .day, value: need_now, to: Date())!), attributes: attribute_bold)
-        
         applicationDateValidation()
         
-        fullSummary_string.append(ready_string)
-        fullSummary_string.append(NSAttributedString(string: "\n" + "You have stayed in Canada for ", attributes: attribute_regular))
-        fullSummary_string.append(inCanadaDays_string)
-        fullSummary_string.append(NSAttributedString(string: " day(s).\nStarting now, you need to stay for another ", attributes: attribute_regular))
-        fullSummary_string.append(moreDays_string)
-        fullSummary_string.append(NSAttributedString(string: " day(s) until ", attributes: attribute_regular))
-        fullSummary_string.append(untilDate_string)
-        fullSummary_string.append(NSAttributedString(string: " to be elegible for ", attributes: attribute_regular))
-        fullSummary_string.append(applicationType_string)
-        fullSummary_string.append(NSAttributedString(string: " application.\nYou may adjust the presence table and application date below to test possible application dates.", attributes: attribute_regular))
+        if (need_now == 0) {
+            ready_label.text = "Ready to apply by " + vars.formatter.string(from: vars.application_date)
+            ready_label.backgroundColor = UIColor.green
+        }
+        else {
+            ready_label.text = "Not ready to apply by " + vars.formatter.string(from: vars.application_date)
+            ready_label.backgroundColor = UIColor.red
+        }
         
-        summary_text.attributedText = fullSummary_string
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        total_presence_label.text = String(stayed)
+        extra_days_label.text = String(need_now)
+        earliest_date_label.text = vars.formatter.string(from: cal.date(byAdding: .day, value: need_now, to: vars.application_date)!)
     }
 
     func daysNeededforS1(start:Date, daysNeeded:Int) -> Int {
@@ -350,12 +325,6 @@ class ViewController4: UIViewController {
                 daysbetween = to.interval(ofComponent: .day, fromDate: from)
                 // Citizen counts both in and out dates the same as PR
                 stayednow = stayednow + daysbetween + 1
-                /*if (vars.pr_citi_flag == 0) {
-                    stayednow = stayednow + daysbetween + 1
-                }
-                else {
-                    stayednow = stayednow + daysbetween
-                }*/
             }
         }
         return stayednow
@@ -378,7 +347,7 @@ class ViewController4: UIViewController {
         else {
             vars.application_date = sender.date
             application_date_text.text = vars.formatter.string(from: vars.application_date)
-            applicationDateValidation()
+            calculations()
         }
     }
     
@@ -405,17 +374,9 @@ class ViewController4: UIViewController {
                 start = vars.pr_land_date
                 stayed = inCanadaDays(start: start, end: vars.application_date)
             }
-            if (stayed < 730) {
-                valid_label.text = "Invalid Application Date"
-                valid_label.backgroundColor = UIColor.red
-            }
-            else {
-                valid_label.text = "Valid Application Date"
-                valid_label.backgroundColor = UIColor.green
-            }
         }
             
-            // If citi application
+        // If citi application
         else {
             if (compareDates(fromdate: fiveyearsago!, todate: vars.citi_land_date) == 2) {
                 // when landing date is more than 5 years ago (S1)
@@ -454,15 +415,8 @@ class ViewController4: UIViewController {
                 
                 stayed = stayed + stayedBeforeLanding/2
             }
-            if (stayed < 1095) {
-                valid_label.text = "Invalid Application Date"
-                valid_label.backgroundColor = UIColor.red
-            }
-            else {
-                valid_label.text = "Valid Application Date"
-                valid_label.backgroundColor = UIColor.green
-            }
         }
+        effective_presence_label.text = String(stayed)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -471,5 +425,10 @@ class ViewController4: UIViewController {
     
     override func viewWillDisappear(_ animated: Bool) {
         view.endEditing(true)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
 }
