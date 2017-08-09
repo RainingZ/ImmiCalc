@@ -21,12 +21,12 @@ class ViewController2: UIViewController, UITextFieldDelegate {
         else {
             land_date = vars.citi_land_date
         }
-        if (compareDates(fromdate: vars.from_date, todate: Date()) == 1 && compareDates(fromdate: vars.to_date, todate: Date()) == 1) {
+        //if (compareDates(fromdate: vars.from_date, todate: Date()) == 1 && compareDates(fromdate: vars.to_date, todate: Date()) == 1) {
             vars.datePickerCell.date = land_date
             vars.datePickerCell2.date = land_date
             vars.from_date = land_date
             vars.to_date = land_date
-        }
+        //}
     }
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -61,6 +61,11 @@ class ViewController2: UIViewController, UITextFieldDelegate {
         else {
             datePicker.date = vars.citi_land_date
         }
+        
+        if (vars.pr_citi_flag == 0 && !vars.pr_dates.isEmpty) {
+            datePicker.maximumDate = vars.pr_dates[0]
+        }
+        
         datePicker.backgroundColor = .clear
         datePicker.setValue(UIColor.white, forKey: "textColor")
         datePicker.datePickerMode = UIDatePickerMode.date

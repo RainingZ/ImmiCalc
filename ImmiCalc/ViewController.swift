@@ -47,7 +47,7 @@ extension UIViewController {
 extension UIImageView {
     func makeBlurImage(targetImageView:UIImageView?)
     {
-        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.dark)
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = targetImageView!.bounds
         blurEffectView.alpha = 0.9

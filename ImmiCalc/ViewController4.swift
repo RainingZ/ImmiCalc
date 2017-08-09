@@ -26,6 +26,8 @@ class ViewController4: UIViewController {
     @IBOutlet weak var extra_days_label: UILabel!
     @IBOutlet weak var earliest_date_label: UILabel!
     @IBOutlet weak var error_label: UILabel!
+    @IBOutlet weak var home_button: UIButton!
+    @IBOutlet weak var info_button: UIButton!
     @IBOutlet weak var application_date_text: UITextField!
     @IBAction func reset_pressed(_ sender: Any) {
         let optionMenu = UIAlertController(title: nil, message:"This will clear all saved data, are you sure?", preferredStyle: .actionSheet)
@@ -34,6 +36,10 @@ class ViewController4: UIViewController {
         optionMenu.addAction(okAction)
         optionMenu.addAction(cancelAction)
         self.present(optionMenu, animated: true, completion: nil)
+    }
+    
+    @IBAction func home_pressed(_ sender: UIButton) {
+        self.performSegue(withIdentifier: "unwindToVC1", sender: self)
     }
     
     func resetHandler(alert: UIAlertAction!) {
@@ -63,6 +69,16 @@ class ViewController4: UIViewController {
         self.performSegue(withIdentifier: "unwindToVC1", sender: self)
     }
     
+    @IBAction func application_date_text_edit_begin(_ sender: UITextField) {
+        UIView.animate(withDuration: 0.25, animations: {self.home_button.alpha = 0})
+        UIView.animate(withDuration: 0.25, animations: {self.info_button.alpha = 0})
+    }
+    
+    @IBAction func application_date_text_edit_end(_ sender: UITextField) {
+        UIView.animate(withDuration: 0.25, animations: {self.home_button.alpha = 1})
+        UIView.animate(withDuration: 0.25, animations: {self.info_button.alpha = 1})
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -71,13 +87,15 @@ class ViewController4: UIViewController {
         // Assign background image
         assignBackground(VC: self,name: "iPhone-Black.jpg")
         
+        var land_date = Date()
+        
         // If PR application
         if (vars.pr_citi_flag == 0) {
-            vars.application_date = vars.pr_dates[vars.pr_dates.count - 1]
+            land_date = vars.pr_land_date
         }
         // If citi application
         else {
-            vars.application_date = vars.citi_dates[vars.citi_dates.count - 1]
+            land_date = vars.citi_land_date
         }
         
         application_date_text.text = vars.formatter.string(from: vars.application_date)
@@ -90,6 +108,8 @@ class ViewController4: UIViewController {
         datePicker.setValue(UIColor.white, forKey: "textColor")
         datePicker.datePickerMode = UIDatePickerMode.date
         datePicker.addTarget(self, action: #selector(ViewController4.datePickerValueChanged), for: UIControlEvents.valueChanged)
+        datePicker.minimumDate = land_date
+        //datePicker.maximumDate = cal.date(byAdding: .year, value: 100, to: land_date)
         application_date_text.inputView = UIView()
         application_date_text.inputAccessoryView = datePicker
 
@@ -349,7 +369,7 @@ class ViewController4: UIViewController {
         }
         if (compareDates(fromdate: sender.date, todate: land_date) == 0) {
             self.view.bringSubview(toFront: error_label)
-            error_label.text = "Application Date Cannot Be Before\nLanding Date"
+            error_label.text = "Application Date Cannot Be Before Landing Date"
             error_label.alpha = 1
             UIView.animate(withDuration: 2, animations: {self.error_label.alpha = 0})
         }

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		67A04DEE758C2B88EE8CE802 /* Pods_ImmiCalcUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B033C157CA676E16E8EC01F /* Pods_ImmiCalcUITests.framework */; };
 		AC0D8B411ED0AF5A004F0757 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC0D8B401ED0AF5A004F0757 /* ViewController2.swift */; };
+		AC13B5971F3BA5FC00A9FE59 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = AC13B5961F3BA5FC00A9FE59 /* home.png */; };
 		AC1D0F451F0556A00061F30A /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1D0F441F0556A00061F30A /* NavController.swift */; };
 		AC2FC14C1F14284600B9DB27 /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2FC14B1F14284600B9DB27 /* ViewController4.swift */; };
 		AC4B4B191F2F7F060006FF72 /* DisclaimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4B4B181F2F7F060006FF72 /* DisclaimerViewController.swift */; };
@@ -55,6 +56,7 @@
 		5B033C157CA676E16E8EC01F /* Pods_ImmiCalcUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImmiCalcUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0F91C130C514D7C84F640C2 /* Pods-ImmiCalcTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ImmiCalcTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ImmiCalcTests/Pods-ImmiCalcTests.debug.xcconfig"; sourceTree = "<group>"; };
 		AC0D8B401ED0AF5A004F0757 /* ViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		AC13B5961F3BA5FC00A9FE59 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = Resources/home.png; sourceTree = SOURCE_ROOT; };
 		AC1D0F441F0556A00061F30A /* NavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 		AC2FC14B1F14284600B9DB27 /* ViewController4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
 		AC4B4B181F2F7F060006FF72 /* DisclaimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisclaimerViewController.swift; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		ACB84FEC1ECFCAEC00A4444D /* ImmiCalc */ = {
 			isa = PBXGroup;
 			children = (
+				AC13B5961F3BA5FC00A9FE59 /* home.png */,
 				AC8932E41F3A611B0022F800 /* iPhone-Black.jpg */,
 				ACB84FED1ECFCAEC00A4444D /* AppDelegate.swift */,
 				AC1D0F441F0556A00061F30A /* NavController.swift */,
@@ -313,6 +316,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC8932E51F3A611B0022F800 /* iPhone-Black.jpg in Resources */,
+				AC13B5971F3BA5FC00A9FE59 /* home.png in Resources */,
 				ACB84FFB1ECFCAEC00A4444D /* LaunchScreen.storyboard in Resources */,
 				ACB84FF81ECFCAEC00A4444D /* Assets.xcassets in Resources */,
 				ACB84FF31ECFCAEC00A4444D /* Main.storyboard in Resources */,
