@@ -12,6 +12,7 @@
 		AC1D0F451F0556A00061F30A /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1D0F441F0556A00061F30A /* NavController.swift */; };
 		AC2FC14C1F14284600B9DB27 /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2FC14B1F14284600B9DB27 /* ViewController4.swift */; };
 		AC4B4B191F2F7F060006FF72 /* DisclaimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4B4B181F2F7F060006FF72 /* DisclaimerViewController.swift */; };
+		AC8932E51F3A611B0022F800 /* iPhone-Black.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC8932E41F3A611B0022F800 /* iPhone-Black.jpg */; };
 		ACB84FEE1ECFCAEC00A4444D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB84FED1ECFCAEC00A4444D /* AppDelegate.swift */; };
 		ACB84FF01ECFCAEC00A4444D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB84FEF1ECFCAEC00A4444D /* ViewController.swift */; };
 		ACB84FF31ECFCAEC00A4444D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ACB84FF11ECFCAEC00A4444D /* Main.storyboard */; };
@@ -57,6 +58,7 @@
 		AC1D0F441F0556A00061F30A /* NavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 		AC2FC14B1F14284600B9DB27 /* ViewController4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
 		AC4B4B181F2F7F060006FF72 /* DisclaimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisclaimerViewController.swift; sourceTree = "<group>"; };
+		AC8932E41F3A611B0022F800 /* iPhone-Black.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "iPhone-Black.jpg"; path = "Resources/iPhone-Black.jpg"; sourceTree = SOURCE_ROOT; };
 		ACB84FEA1ECFCAEC00A4444D /* ImmiCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImmiCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACB84FED1ECFCAEC00A4444D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ACB84FEF1ECFCAEC00A4444D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 		ACB84FEC1ECFCAEC00A4444D /* ImmiCalc */ = {
 			isa = PBXGroup;
 			children = (
+				AC8932E41F3A611B0022F800 /* iPhone-Black.jpg */,
 				ACB84FED1ECFCAEC00A4444D /* AppDelegate.swift */,
 				AC1D0F441F0556A00061F30A /* NavController.swift */,
 				AC4B4B181F2F7F060006FF72 /* DisclaimerViewController.swift */,
@@ -309,6 +312,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC8932E51F3A611B0022F800 /* iPhone-Black.jpg in Resources */,
 				ACB84FFB1ECFCAEC00A4444D /* LaunchScreen.storyboard in Resources */,
 				ACB84FF81ECFCAEC00A4444D /* Assets.xcassets in Resources */,
 				ACB84FF31ECFCAEC00A4444D /* Main.storyboard in Resources */,

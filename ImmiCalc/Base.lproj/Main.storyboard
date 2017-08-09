@@ -461,6 +461,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="iPhone-Black.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="Rw7-xn-nvi">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ptf-Xh-I5i">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="v9K-n4-wOq">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0qs-r3-J31">
                                 <rect key="frame" x="87.5" y="30" width="200" height="33"/>
                                 <constraints>
@@ -499,7 +512,7 @@
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Physical Presence Calculator for Canadian PR &amp; Citizenship
-Version 1.0
+Version 1.1
 Released August 20 2017
 Built by Alex Zhang (hzalex@gmail.com)
 
@@ -726,7 +739,7 @@ It’s generally self-explanatory to use this app. Just be reminded you can spec
                                     <constraint firstAttribute="width" constant="300" id="tcj-yn-RZA"/>
                                 </constraints>
                                 <attributedString key="attributedText">
-                                    <fragment content="What are you applying for?">
+                                    <fragment content="What Are You Applying For?">
                                         <attributes>
                                             <color key="NSColor" red="0.99480842108535528" green="1" blue="0.95276115543185524" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <font key="NSFont" size="20" name=".SFNSText"/>
@@ -871,4 +884,7 @@ It’s generally self-explanatory to use this app. Just be reminded you can spec
             <point key="canvasLocation" x="-15.199999999999999" y="26.53673163418291"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="iPhone-Black.jpg" width="640" height="1136"/>
+    </resources>
 </document>

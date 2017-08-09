@@ -32,7 +32,7 @@ class ViewController2: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         
         // Assign background image
-        //assignBackground(VC: self,name: "iPhone-Maple2.jpg")
+        assignBackground(VC: self,name: "iPhone-Black.jpg")
         
         // Date formattor initialization and storing landing date
         vars.formatter.dateStyle = DateFormatter.Style.medium

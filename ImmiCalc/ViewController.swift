@@ -107,7 +107,7 @@ class ViewController: UIViewController {
         vars.DoNotNotify = defaults.bool(forKey: "DoNotNotify")
         print("launchget")
         // Assign background image
-        //assignBackground(VC: self,name: "MapleLeafOnWater.jpg")
+        assignBackground(VC: self,name: "iPhone-Black.jpg")
         
         // Make rounded corners for buttons
         pr_button.layer.cornerRadius = 10

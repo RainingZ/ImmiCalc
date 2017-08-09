@@ -69,7 +69,16 @@ class ViewController4: UIViewController {
         self.hideKeyboardWhenTappedAround()
 
         // Assign background image
-        //assignBackground(VC: self,name: "iPhone-Maple1.jpg")
+        assignBackground(VC: self,name: "iPhone-Black.jpg")
+        
+        // If PR application
+        if (vars.pr_citi_flag == 0) {
+            vars.application_date = vars.pr_dates[vars.pr_dates.count - 1]
+        }
+        // If citi application
+        else {
+            vars.application_date = vars.citi_dates[vars.citi_dates.count - 1]
+        }
         
         application_date_text.text = vars.formatter.string(from: vars.application_date)
         error_label.alpha = 0
@@ -161,7 +170,7 @@ class ViewController4: UIViewController {
             if (compareDates(fromdate: fiveyearsago!, todate: land_date) == 2) {
                 // when landing date is more than 5 years ago (S1)
                 start = fiveyearsago!
-                stayedNow = inCanadaDays(start: vars.citi_land_date, end: vars.application_date)
+                stayedNow = inCanadaDays(start: start, end: vars.application_date)
                 daysNeededAfterNow = 1095 - stayedNow
                 if (daysNeededAfterNow > 0) {
                     need_now = daysNeededforS1(start:start, daysNeeded:daysNeededAfterNow)
