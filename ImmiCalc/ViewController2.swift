@@ -28,6 +28,9 @@ class ViewController2: UIViewController, UITextFieldDelegate {
             vars.to_date = land_date
         //}
     }
+    
+    let datePicker:UIDatePicker = UIDatePicker()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -54,16 +57,11 @@ class ViewController2: UIViewController, UITextFieldDelegate {
         error_label.alpha = 0
         
         // Date picker initialization and color changes
-        let datePicker:UIDatePicker = UIDatePicker()
         if (vars.pr_citi_flag == 0) {
             datePicker.date = vars.pr_land_date
         }
         else {
             datePicker.date = vars.citi_land_date
-        }
-        
-        if (vars.pr_citi_flag == 0 && !vars.pr_dates.isEmpty) {
-            datePicker.maximumDate = vars.pr_dates[0]
         }
         
         datePicker.backgroundColor = .clear
@@ -95,6 +93,15 @@ class ViewController2: UIViewController, UITextFieldDelegate {
             land_text.text = vars.formatter.string(from: vars.citi_land_date)
         }
         
+    }
+    
+    @IBAction func land_date_text_edit_begin(_ sender: UITextField) {
+        if (vars.pr_citi_flag == 0 && !vars.pr_dates.isEmpty) {
+            datePicker.maximumDate = vars.pr_dates[0]
+        }
+        else {
+            datePicker.maximumDate = nil
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

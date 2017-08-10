@@ -47,7 +47,7 @@ class ViewController3: UIViewController {
         add_button.frame = CGRect(x: self.view.frame.midX - (self.view.frame.width - 40)/2, y: 80 + 88 + 8, width: self.view.frame.width - 40, height: 30)
         
         save_container.frame = CGRect(x: self.view.frame.midX - (self.view.frame.width - 40)/2, y: 80 + 88 + 8 + 30 + 8, width: self.view.frame.width - 40, height: self.view.frame.height - 40 - 88 - 8 - 30 - 8 - 60)
-        if (!vars.DoNotNotify) {
+        if ((vars.pr_citi_flag == 0 && !vars.pr_DoNotNotify) || (vars.pr_citi_flag == 1 && !vars.citi_DoNotNotify)) {
             var alert = UIAlertController()
             if (vars.pr_citi_flag == 0) {
                 alert = UIAlertController(title: nil, message: "Please input all periods of time you spent in Canada after landing date", preferredStyle: UIAlertControllerStyle.alert)
@@ -95,7 +95,12 @@ class ViewController3: UIViewController {
     }
     
     func donotnotify(alert: UIAlertAction!) {
-        vars.DoNotNotify = true
+        if (vars.pr_citi_flag == 0) {
+            vars.pr_DoNotNotify = true
+        }
+        else {
+            vars.citi_DoNotNotify = true
+        }
         return
     }
     

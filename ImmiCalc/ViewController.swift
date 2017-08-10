@@ -28,7 +28,8 @@ struct vars {
     //Notification
     static let AddButtonNotification = Notification.Name("AddButtonNotification")
     
-    static var DoNotNotify:Bool = false
+    static var pr_DoNotNotify:Bool = false
+    static var citi_DoNotNotify:Bool = false
     static var termsAccepted:Bool = false
 }
 
@@ -79,17 +80,11 @@ class ViewController: UIViewController {
     // Set pr_citi_flag
     @IBAction func PR_button_pressed(_ sender: UIButton) {
         performSegue(withIdentifier: "showView2", sender: self)
-        if (vars.pr_citi_flag == 1) {
-            vars.DoNotNotify = false
-        }
         vars.pr_citi_flag = 0
     }
     
     @IBAction func Citi_button_pressed(_ sender: UIButton) {
         performSegue(withIdentifier: "showView2", sender: self)
-        if (vars.pr_citi_flag == 0) {
-            vars.DoNotNotify = false
-        }
         vars.pr_citi_flag = 1
     }
 
@@ -104,7 +99,8 @@ class ViewController: UIViewController {
         vars.citi_dates = defaults.array(forKey: "citi_dates") as! [Date]
         vars.application_date = defaults.object(forKey: "application_date") as! Date
         vars.termsAccepted = defaults.bool(forKey: "termsAccepted")
-        vars.DoNotNotify = defaults.bool(forKey: "DoNotNotify")
+        vars.pr_DoNotNotify = defaults.bool(forKey: "pr_DoNotNotify")
+        vars.citi_DoNotNotify = defaults.bool(forKey: "citi_DoNotNotify")
         print("launchget")
         // Assign background image
         assignBackground(VC: self,name: "iPhone-Black.jpg")

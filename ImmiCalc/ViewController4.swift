@@ -20,11 +20,13 @@ extension Date {
 class ViewController4: UIViewController {
 
     @IBOutlet weak var for_label: UILabel!
+    @IBOutlet weak var eligibility_by_label: UILabel!
     @IBOutlet weak var ready_label: UILabel!
     @IBOutlet weak var total_presence_label: UILabel!
     @IBOutlet weak var effective_presence_label: UILabel!
     @IBOutlet weak var extra_days_label: UILabel!
     @IBOutlet weak var earliest_date_label: UILabel!
+    @IBOutlet weak var earliest_date_title_label: UILabel!
     @IBOutlet weak var error_label: UILabel!
     @IBOutlet weak var home_button: UIButton!
     @IBOutlet weak var info_button: UIButton!
@@ -50,7 +52,8 @@ class ViewController4: UIViewController {
         vars.citi_land_date = Date()
         vars.application_date = Date()
         vars.pr_citi_flag = -1
-        vars.DoNotNotify = false
+        vars.pr_DoNotNotify = false
+        vars.citi_DoNotNotify = false
         vars.termsAccepted = false
         vars.from_date = Date()
         vars.to_date = Date()
@@ -63,7 +66,8 @@ class ViewController4: UIViewController {
         defaults.set(vars.citi_dates, forKey: "citi_dates")
         defaults.set(vars.application_date, forKey: "application_date")
         defaults.set(vars.termsAccepted, forKey: "termsAccepted")
-        defaults.set(vars.DoNotNotify, forKey: "DoNotNotify")
+        defaults.set(vars.pr_DoNotNotify, forKey: "pr_DoNotNotify")
+        defaults.set(vars.citi_DoNotNotify, forKey: "citi_DoNotNotify")
         defaults.synchronize()
         print("backgroundset")
         self.performSegue(withIdentifier: "unwindToVC1", sender: self)
@@ -92,10 +96,14 @@ class ViewController4: UIViewController {
         // If PR application
         if (vars.pr_citi_flag == 0) {
             land_date = vars.pr_land_date
+            earliest_date_label.isHidden = true
+            earliest_date_title_label.isHidden = true
         }
         // If citi application
         else {
             land_date = vars.citi_land_date
+            earliest_date_label.isHidden = false
+            earliest_date_title_label.isHidden = false
         }
         
         application_date_text.text = vars.formatter.string(from: vars.application_date)
@@ -264,12 +272,14 @@ class ViewController4: UIViewController {
         }
         applicationDateValidation()
         
+        eligibility_by_label.text = "Eligibility By " + vars.formatter.string(from: vars.application_date)
+        
         if (need_now == 0) {
-            ready_label.text = "Ready to apply by " + vars.formatter.string(from: vars.application_date)
+            ready_label.text = "YES"
             ready_label.backgroundColor = UIColor.green
         }
         else {
-            ready_label.text = "Not ready to apply by " + vars.formatter.string(from: vars.application_date)
+            ready_label.text = "NO"
             ready_label.backgroundColor = UIColor.red
         }
         
