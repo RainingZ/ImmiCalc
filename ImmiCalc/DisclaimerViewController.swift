@@ -14,7 +14,9 @@ class DisclaimerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("load disclaimer")
+        
+        assignBackground(VC: self,name: "iPhone-Black.jpg")
+        
         if (vars.termsAccepted) {
             accept_button.setTitle("Close", for: .normal)
         }
