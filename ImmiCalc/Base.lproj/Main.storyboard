@@ -546,9 +546,8 @@
                                 <attributedString key="attributedText">
                                     <fragment>
                                         <string key="content">Physical Presence Calculator for Canadian PR &amp; Citizenship
-Version 1.1
-Released August 20 2017
-Built by Alex Zhang (hzalex@gmail.com)
+Version 2.0
+Developed by Alex Zhang
 
 </string>
                                         <attributes>
@@ -563,12 +562,12 @@ Built by Alex Zhang (hzalex@gmail.com)
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">
+                                        <mutableString key="content">
 This app is provided “as is” without warranty of any kind, either express or implied. While the developer is trying his best to make it accurate and reliable, the calculation result is for illustrative purpose only. The developer is not liable for any loss from using these data.
 
 An official web-based calculator for citizenship is available on CIC website. You are suggested to check the residence eligibility there as the final authoritative measure when you intend to begin the application process.
 
-</string>
+</mutableString>
                                         <attributes>
                                             <font key="NSFont" size="12" name="ArialMT"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
@@ -622,11 +621,11 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">
+                                        <mutableString key="content">
 
 2. For the purpose of calculating the number of days to comply with the residency obligation, a day includes a full day or any part of a day that a permanent resident is physically present in Canada. Any part of a day spent in Canada is to be counted as one full day.
 
-</string>
+</mutableString>
                                         <attributes>
                                             <font key="NSFont" size="12" name="ArialMT"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -646,7 +645,7 @@ Cg
                                         </attributes>
                                     </fragment>
                                     <fragment>
-                                        <string key="content">
+                                        <mutableString key="content">
 1. The calculation for the eligibility of citizenship is based on the newly passed Bill C-6, an act amending Canada’s Citizenship Act, which has now received Royal Assent to become law and is expected to come into force in late 2017.
 
 2. For a resident to be eligible to apply for Citizenship, you must have been physically present in Canada as a permanent resident for at least 1,095 days in the 5 years immediately before the date of your application.
@@ -655,7 +654,7 @@ Cg
 
 4. Applicants may count each day they were physically present in Canada as a temporary resident or protected person before becoming a permanent resident as a half-day toward meeting the physical presence requirement for citizenship, up to a maximum credit of 365 days.
 
-</string>
+</mutableString>
                                         <attributes>
                                             <font key="NSFont" size="12" name="ArialMT"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
