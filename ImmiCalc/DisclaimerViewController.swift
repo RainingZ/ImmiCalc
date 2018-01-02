@@ -11,17 +11,21 @@ import UIKit
 class DisclaimerViewController: UIViewController {
     @IBOutlet weak var accept_button: UIButton!
     @IBOutlet weak var disclaimer_text: UITextView!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         assignBackground(VC: self,name: "iPhone-Black.jpg")
-        
+        // Localization of accept button
+        let closeString = NSLocalizedString("Close", comment: "")
+        let acceptString = NSLocalizedString("Accept", comment: "")
+        let disclaimerString = NSLocalizedString("disclaimer", comment: "")
+        disclaimer_text.text = disclaimerString
         if (vars.termsAccepted) {
-            accept_button.setTitle("Close", for: .normal)
+            accept_button.setTitle(closeString, for: .normal)
         }
         else {
-            accept_button.setTitle("Accept", for: .normal)
+            accept_button.setTitle(acceptString, for: .normal)
         }
         accept_button.layer.cornerRadius = 10
         accept_button.layer.borderWidth = 0

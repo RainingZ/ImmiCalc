@@ -47,17 +47,22 @@ class ViewController3: UIViewController {
         add_button.frame = CGRect(x: self.view.frame.midX - (self.view.frame.width - 40)/2, y: 80 + 88 + 8, width: self.view.frame.width - 40, height: 30)
         
         save_container.frame = CGRect(x: self.view.frame.midX - (self.view.frame.width - 40)/2, y: 80 + 88 + 8 + 30 + 8, width: self.view.frame.width - 40, height: self.view.frame.height - 40 - 88 - 8 - 30 - 8 - 60)
+       
+        let inputprString = NSLocalizedString("Please input all periods of time you spent in Canada after landing date", comment: "")
+        let inputcitiString = NSLocalizedString("Please input all periods of time you spent in Canada, before and after landing date", comment: "")
+        let okString = NSLocalizedString("OK", comment: "")
+        let donotshowString = NSLocalizedString("Do Not Show This Again", comment: "")
         if ((vars.pr_citi_flag == 0 && !vars.pr_DoNotNotify) || (vars.pr_citi_flag == 1 && !vars.citi_DoNotNotify)) {
             var alert = UIAlertController()
             if (vars.pr_citi_flag == 0) {
-                alert = UIAlertController(title: nil, message: "Please input all periods of time you spent in Canada after landing date", preferredStyle: UIAlertControllerStyle.alert)
+                alert = UIAlertController(title: nil, message: inputprString, preferredStyle: UIAlertControllerStyle.alert)
             }
             else {
-                alert = UIAlertController(title: nil, message: "Please input all periods of time you spent in Canada, before and after landing date", preferredStyle: UIAlertControllerStyle.alert)
+                alert = UIAlertController(title: nil, message: inputcitiString, preferredStyle: UIAlertControllerStyle.alert)
             }
 
-            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.cancel, handler: nil))
-            alert.addAction(UIAlertAction(title: "Don't Show This Again", style: UIAlertActionStyle.default, handler: donotnotify))
+            alert.addAction(UIAlertAction(title: okString, style: UIAlertActionStyle.cancel, handler: nil))
+            alert.addAction(UIAlertAction(title: donotshowString, style: UIAlertActionStyle.default, handler: donotnotify))
             // show the alert
             self.present(alert, animated: true, completion: nil)
         }

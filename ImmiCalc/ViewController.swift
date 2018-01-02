@@ -110,6 +110,8 @@ class ViewController: UIViewController {
         pr_button.layer.borderWidth = 0
         citi_button.layer.cornerRadius = 10
         citi_button.layer.borderWidth = 0
+        pr_button.titleLabel?.textAlignment = NSTextAlignment.center;
+        citi_button.titleLabel?.textAlignment = NSTextAlignment.center;
         
         if (!vars.termsAccepted) {
             performSegue(withIdentifier: "showDisclaimer", sender: self)

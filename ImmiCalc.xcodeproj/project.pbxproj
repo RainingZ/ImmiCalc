@@ -12,6 +12,7 @@
 		AC13B5971F3BA5FC00A9FE59 /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = AC13B5961F3BA5FC00A9FE59 /* home.png */; };
 		AC1D0F451F0556A00061F30A /* NavController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC1D0F441F0556A00061F30A /* NavController.swift */; };
 		AC2FC14C1F14284600B9DB27 /* ViewController4.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC2FC14B1F14284600B9DB27 /* ViewController4.swift */; };
+		AC3CE7441FFB3B82001351D8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = AC3CE7461FFB3B82001351D8 /* Localizable.strings */; };
 		AC4B4B191F2F7F060006FF72 /* DisclaimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC4B4B181F2F7F060006FF72 /* DisclaimerViewController.swift */; };
 		AC8932E51F3A611B0022F800 /* iPhone-Black.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AC8932E41F3A611B0022F800 /* iPhone-Black.jpg */; };
 		ACB84FEE1ECFCAEC00A4444D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB84FED1ECFCAEC00A4444D /* AppDelegate.swift */; };
@@ -59,6 +60,9 @@
 		AC13B5961F3BA5FC00A9FE59 /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = Resources/home.png; sourceTree = SOURCE_ROOT; };
 		AC1D0F441F0556A00061F30A /* NavController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavController.swift; sourceTree = "<group>"; };
 		AC2FC14B1F14284600B9DB27 /* ViewController4.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController4.swift; sourceTree = "<group>"; };
+		AC3CE7401FFB3A4B001351D8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		AC3CE7451FFB3B82001351D8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		AC3CE7481FFB3BDE001351D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		AC4B4B181F2F7F060006FF72 /* DisclaimerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisclaimerViewController.swift; sourceTree = "<group>"; };
 		AC8932E41F3A611B0022F800 /* iPhone-Black.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "iPhone-Black.jpg"; path = "Resources/iPhone-Black.jpg"; sourceTree = SOURCE_ROOT; };
 		ACB84FEA1ECFCAEC00A4444D /* ImmiCalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImmiCalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,6 +81,7 @@
 		ACB850121ECFCAEC00A4444D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ACDB9BDC1F02AA4200230D14 /* ViewController3.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController3.swift; sourceTree = "<group>"; };
 		ACDB9BDE1F02FA8A00230D14 /* TableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		ACF28B5F1FFB4E2000F5F1F8 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		ACFE80DC1F0FD74000B93828 /* DateTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateTableViewCell.swift; sourceTree = "<group>"; };
 		ACFE80DE1F1006B600B93828 /* TableViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewController2.swift; sourceTree = "<group>"; };
 		CA509A2F63274EDE16A44E20 /* Pods_ImmiCalc.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ImmiCalc.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -153,6 +158,7 @@
 				ACB84FF71ECFCAEC00A4444D /* Assets.xcassets */,
 				ACB84FFC1ECFCAEC00A4444D /* Info.plist */,
 				ACB84FF41ECFCAEC00A4444D /* ImmiCalc.xcdatamodeld */,
+				AC3CE7461FFB3B82001351D8 /* Localizable.strings */,
 			);
 			path = ImmiCalc;
 			sourceTree = "<group>";
@@ -297,6 +303,7 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
 			);
 			mainGroup = ACB84FE11ECFCAEC00A4444D;
 			productRefGroup = ACB84FEB1ECFCAEC00A4444D /* Products */;
@@ -316,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AC8932E51F3A611B0022F800 /* iPhone-Black.jpg in Resources */,
+				AC3CE7441FFB3B82001351D8 /* Localizable.strings in Resources */,
 				AC13B5971F3BA5FC00A9FE59 /* home.png in Resources */,
 				ACB84FFB1ECFCAEC00A4444D /* LaunchScreen.storyboard in Resources */,
 				ACB84FF81ECFCAEC00A4444D /* Assets.xcassets in Resources */,
@@ -528,10 +536,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		AC3CE7461FFB3B82001351D8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC3CE7451FFB3B82001351D8 /* zh-Hans */,
+				AC3CE7481FFB3BDE001351D8 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		ACB84FF11ECFCAEC00A4444D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				ACB84FF21ECFCAEC00A4444D /* Base */,
+				ACF28B5F1FFB4E2000F5F1F8 /* zh-Hans */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -540,6 +558,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				ACB84FFA1ECFCAEC00A4444D /* Base */,
+				AC3CE7401FFB3A4B001351D8 /* zh-Hans */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -551,6 +570,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -601,6 +621,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";

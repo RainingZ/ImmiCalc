@@ -27,14 +27,17 @@ class TableViewController: UITableViewController {
         self.tableView.rowHeight = UITableViewAutomaticDimension
         self.tableView.estimatedRowHeight = 44
         
+        // Localization of the left label of datepickercell
+        let fromString = NSLocalizedString("From", comment: "")
+        let toString = NSLocalizedString("To", comment: "")
         vars.datePickerCell.dateStyle = DateFormatter.Style.medium
         vars.datePickerCell.timeStyle = DateFormatter.Style.none
         vars.datePickerCell.datePicker.datePickerMode = UIDatePickerMode.date
-        vars.datePickerCell.leftLabel.text = "From"
+        vars.datePickerCell.leftLabel.text = fromString
         vars.datePickerCell2.dateStyle = DateFormatter.Style.medium
         vars.datePickerCell2.timeStyle = DateFormatter.Style.none
         vars.datePickerCell2.datePicker.datePickerMode = UIDatePickerMode.date
-        vars.datePickerCell2.leftLabel.text = "To"
+        vars.datePickerCell2.leftLabel.text = toString
         // Cells is a 2D array containing sections and rows.
         
         vars.datePickerCell.datePicker.addTarget(self, action: #selector(TableViewController.from_datePickerValueChanged), for: UIControlEvents.valueChanged)

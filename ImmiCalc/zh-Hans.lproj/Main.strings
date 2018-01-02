@@ -1,0 +1,113 @@
+
+/* Class = "UILabel"; text = "About & Disclaimer"; ObjectID = "0qs-r3-J31"; */
+"0qs-r3-J31.text" = "关于";
+
+/* Class = "UILabel"; text = "YES/NO"; ObjectID = "4eE-DB-c7P"; */
+"4eE-DB-c7P.text" = "YES/NO";
+
+/* Class = "UITextView"; text = "Physical Presence Calculator for Canadian PR & Citizenship\nVersion 2.0.2\nReleased August 20 2017\nDeveloped by Alex Zhang\n\nDisclaimer\n\nThis app is provided “as is” without warranty of any kind, either express or implied. While the developer is trying his best to make it accurate and reliable, the calculation result is for illustrative purpose only. The developer is not liable for any loss from using these data by any means.\n\nAn official web-based calculator for citizenship is available in CIC website. You are suggested to check the residence eligibility there as the authoritative and final measure when you intend to begin the application process.\n\nAbout\n\nThis app is a handy tool to calculate the physical presence in Canada and check, against the basic residence obligation stipulated by law, whether you are eligible by a specific date to apply for Permanent Residence Card renewal or Grant of Citizenship.\n\nThe basic residence requirements for PR status or PR Card renewal:\n\n1, For a resident to be eligible to renew Permanent Residence Card you must have been physically present in Canada for at least 730 days in the 5 years immediately before the date of your application.\n\n2, For the purpose of calculating the number of days to comply with the residency obligation, a day includes a full day or any part of a day that a permanent resident is physically present in Canada. Any part of a day spent in Canada is to be counted as one full day.\n\nThe basic residence requirements for Citizenship application:\n\n1, For a resident to be eligible to apply for Citizenship, you must have been physically present in Canada as a permanent resident for at least 1,095 days in the 5 years immediately before the date of your application.\n\n2, For the purpose of calculating the number of days of absence, neither the day you leave Canada nor the day you return is considered an absence. Both are counted as days of physical presence.\n\n3, Applicants may count each day they were physically present in Canada as a temporary resident or protected person before becoming a permanent resident as a half-day toward meeting the physical presence requirement for citizenship, up to a maximum credit of 365 days.\n\nTips\n\nIt’s generally self-explanatory to use this app. Here are a few definitions you may like to know.\n\n“Landing Date” is the first day when you became a Canadian permanent resident.\n\n“Total Presence” is the sum of days when you’ve been physically present in Canada during the period from the first day you entered Canada to the “Application Date” you specify. For Citizenship application, those physical presence before the “Landing Date” is counted as half of it.\n\n“Effective Presence” is the sum of days when you’ve been physically present in Canada during the 5 years period immediately before the “Application Date”.\n\n“Extra Days Required” is the minimum days which you need to stay continuously (without any absence) in Canada from the “Application Date” onwards in order to be eligible. It is not necessarily equal to the difference between the legally required days and your effective presence.\n\n“Earliest Date to Meet Obligation” is the forecast day when you will meet the residence obligation for your PR status query or PR card renewal if and when you will be staying continuously (without any absence) in Canada for “Extra Days” from the “Application Date” onwards. The time to apply for PR card renewal is not only governed by the residence obligation, it is also very much dependent upon the issue/expiry time of the existing card. CIC states if your PR card will expire within 6 months you should apply to renew your card. So the “Earliest Date to Meet Obligation” is not necessarily the “Earliest Date to Apply”.\n\n“Earliest Date to Apply” is the forecast day that you’re eligible to apply for Citizenship if and when you will be staying continuously (without any absence) in Canada for “Extra Days” from the “Application Date” onwards.\n\n“Application Date” is the day to sign and submit your application. You can specify a date to test if you are eligible on that day. For the PR card holder, it is useful to test your compliance with the residence requirement of “staying at least 2 in 5 years” immediately before any time in the future you’d like to enter Canada."; ObjectID = "4gA-QF-nhl"; */
+"4gA-QF-nhl.text" = "有效居留时间计算器 – 用于加拿大永久居民及公民资格申请符合性计算\n版本: 2.0.2\n软件开发: Alex Zhang\n\n免责申明\n\n本程序为免费程序，以既有状态发布，开发者不做任何明示或暗示的保证。尽管开发者会尽最大努力使计算结果精确可靠，此结果仅供参考之用。对用户因使用该程序数据而造成的任何损失，无论直接或间接，开发者不承担任何责任。\n\n对于公民申请，在CIC官网上有一个基于网页的计算器。建议用户在开始正式申请时使用该官方网页作为最终的计算方式以免造成偏差。\n\n关于\n\n本程序依据现行加拿大法律对永久居民以及公民申请之居住要求规定，用以计算在某一指定的申请日期时申请人是否符合相应的居住要求。这个简捷的工具可以帮助申请人计算并记录居住日期、预测并合理安排申请时间。\n\n永久居民（PR卡）更新换卡之基本居住要求:\n\n1, 对于PR卡更新申请，申请人必须以居民身份在申请日期前5年时间里在加拿大至少住满730天。\n\n2, 在计算居住时间时，不管你是全天、还是一天中只有部分时间住在加拿大，这一天都作为有效居住时间。\n\n公民申请之基本居住要求:\n\n1, 对于公民申请，申请人必须以居民身份在申请日期前5年时间里在加拿大至少住满1095天。\n\n2, 在计算有效居住时间时，不管你是全天、还是一天中只有部分时间住在加拿大，这一天都作为有效居住时间。\n\n3, 申请人在成为永久居民前的居住时间可以按一半计入有效居住时间，但最长计入时间不超过365天。\n\n帮助\n\n本程序的使用总体来说一目了然。以下是一些简要说明：\n\n“登陆日”是你成为加拿大永久居民的当天。\n\n“总居住天数”是从你第一次进入加拿大到你”申请日”期间在加拿大的居住时间总和。对于公民申请，“登陆日”之前的居住天数按半数计算。\n\n“有效居住天数”是你“申请日”之前5年内的居住时间总和。\n\n“还需居住天数” 是为了满足居住要求，你从”申请日“起最少还需连续居住在加拿大的时间。注意，这个天数不一定是法定要求天数减去你有效居住天数的差额。\n\n“最早满足居住要求日期”只针对PR卡换卡申请或PR状态查询。这是你从”申请日“起又连续居住在加拿大”还需居住天数“后的日期。注意，PR卡换卡申请时间除了必须满足规定的居住要求，还和PR卡的发卡/过期时间有关。CIC明确规定，你可以在PR过期日前6个月内申请换卡。所以“最早满足居住要求日期”不一定是最早申请日期，你要根据PR卡的情况自己判断最早申请日期，这也是为什么PR卡换卡模块并没有列出“最早申请日期”的原因。\n\n“最早申请日期” 只针对加拿大公民申请。这是你从”申请日“起又连续居住在加拿大”还需居住天数“后的日期。\n\n“申请日期”是你签署并递交申请的当天。你可以指定一个过去或将来的日子来测试你是否符合相关申请的居住要求。对于PR卡持有者，你可以用此功能测算“任何时刻之前5年内居住满2年”的要求是否满足。";
+
+/* Class = "UILabel"; text = "Change Application Date Below to Test Eligibility"; ObjectID = "5yB-9m-qGF"; */
+"5yB-9m-qGF.text" = "更改申请日期来测试有效性";
+
+/* Class = "UINavigationItem"; title = "Days in Canada"; ObjectID = "9C2-Sz-ffs"; */
+"9C2-Sz-ffs.title" = "居住在加拿大的时间";
+
+/* Class = "UILabel"; text = "Earliest Date to Apply"; ObjectID = "BfK-jg-Jxm"; */
+"BfK-jg-Jxm.text" = "最早申请日期";
+
+/* Class = "UILabel"; text = "MM/DD/YYYY"; ObjectID = "EDx-eH-T9B"; */
+"EDx-eH-T9B.text" = "MM/DD/YYYY";
+
+/* Class = "UILabel"; text = "Total Presence"; ObjectID = "EFa-hH-PSe"; */
+"EFa-hH-PSe.text" = "总居住天数";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "FvR-T2-g7d"; */
+"FvR-T2-g7d.text" = "Label";
+
+/* Class = "UILabel"; text = "123"; ObjectID = "H6c-Rm-cMP"; */
+"H6c-Rm-cMP.text" = "123";
+
+/* Class = "UILabel"; text = "For Citi/PR"; ObjectID = "Hz1-IO-uHo"; */
+"Hz1-IO-uHo.text" = "For Citi/PR";
+
+/* Class = "UILabel"; text = "MM/DD/YYYY"; ObjectID = "JE2-UL-xBW"; */
+"JE2-UL-xBW.text" = "MM/DD/YYYY";
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "JMy-Qv-Hup"; */
+"JMy-Qv-Hup.title" = " ";
+
+/* Class = "UIBarButtonItem"; title = "Item"; ObjectID = "LFQ-7t-MO6"; */
+"jqT-xx-cnz.normalTitle" = "完成";
+
+/* Class = "UILabel"; text = "WARNING"; ObjectID = "QIn-D2-5ZQ"; */
+"QIn-D2-5ZQ.text" = "WARNING";
+
+/* Class = "UILabel"; text = "Jan. 01, 1990"; ObjectID = "S7W-4l-YNe"; */
+"S7W-4l-YNe.text" = "Jan. 01, 1990";
+
+/* Class = "UILabel"; text = "What Are You Applying For?"; ObjectID = "WCv-jp-PRD"; */
+"WCv-jp-PRD.text" = "你要申请的类型?";
+
+/* Class = "UIButton"; normalTitle = "Add"; ObjectID = "Wfw-Xf-NiL"; */
+"Wfw-Xf-NiL.normalTitle" = "添加";
+
+/* Class = "UILabel"; text = "123"; ObjectID = "X6a-CB-d48"; */
+"X6a-CB-d48.text" = "123";
+
+/* Class = "UIButton"; normalTitle = "Citizenship Grant"; ObjectID = "Xcx-UO-K5c"; */
+"Xcx-UO-K5c.normalTitle" = "公民申请";
+
+/* Class = "UIButton"; normalTitle = "Permanent Resident Renewal"; ObjectID = "aNY-pQ-BOJ"; */
+"aNY-pQ-BOJ.normalTitle" = "永久居民更新";
+
+/* Class = "UILabel"; text = "Date of Landing"; ObjectID = "crC-kx-lTh"; */
+"crC-kx-lTh.text" = "登录日期";
+
+/* Class = "UILabel"; text = "From"; ObjectID = "enh-IS-WZ1"; */
+"enh-IS-WZ1.text" = "从";
+
+/* Class = "UILabel"; text = "To"; ObjectID = "7ci-uv-3WQ"; */
+"7ci-uv-3WQ.text" = "到";
+
+/* Class = "UINavigationItem"; title = "Summary"; ObjectID = "epc-SY-dKi"; */
+"epc-SY-dKi.title" = "结论";
+
+/* Class = "UIButton"; normalTitle = "Accept"; ObjectID = "epd-ky-Do5"; */
+"epd-ky-Do5.normalTitle" = "Accept";
+
+/* Class = "UIButton"; norma lTitle = "Reset"; ObjectID = "fzU-SK-PoI"; */
+"fzU-SK-PoI.normalTitle" = "重置";
+
+/* Class = "UILabel"; text = "Extra Days Required"; ObjectID = "gJs-BN-h4d"; */
+"gJs-BN-h4d.text" = "还需居住天数";
+
+/* Class = "UILabel"; text = "From"; ObjectID = "hfC-AL-jwg"; */
+"hfC-AL-jwg.text" = "从";
+
+"s34-br-zI1.text" = "到";
+
+/* Class = "UILabel"; text = "123"; ObjectID = "if4-Th-aLK"; */
+"if4-Th-aLK.text" = "123";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "jXN-wr-3II"; */
+"jXN-wr-3II.title" = "返回";
+
+/* Class = "UIBarButtonItem"; title = "Back"; ObjectID = "kb4-Q4-Sqe"; */
+"kb4-Q4-Sqe.title" = "返回";
+
+/* Class = "UIButton"; normalTitle = "Next"; ObjectID = "lRq-lw-aNd"; */
+"lRq-lw-aNd.normalTitle" = "下一步";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "mfa-B9-UOf"; */
+"mfa-B9-UOf.text" = "Label";
+
+/* Class = "UILabel"; text = "Eligibility By Date"; ObjectID = "rnv-EO-yzt"; */
+"rnv-EO-yzt.text" = "Eligibility By Date";
+
+/* Class = "UILabel"; text = "WARNING"; ObjectID = "ueb-dr-z8b"; */
+"ueb-dr-z8b.text" = "WARNING";
+
+/* Class = "UILabel"; text = "Effective Presence"; ObjectID = "vKg-x9-rzX"; */
+"vKg-x9-rzX.text" = "有效居住天数";

@@ -31,10 +31,13 @@ class ViewController4: UIViewController {
     @IBOutlet weak var home_button: UIButton!
     @IBOutlet weak var info_button: UIButton!
     @IBOutlet weak var application_date_text: UITextField!
+    let resetmsgString = NSLocalizedString("This will clear all saved data, are you sure?", comment: "")
+    let okString = NSLocalizedString("OK", comment: "")
+    let cancelString = NSLocalizedString("Cancel", comment: "")
     @IBAction func reset_pressed(_ sender: Any) {
-        let optionMenu = UIAlertController(title: nil, message:"This will clear all saved data, are you sure?", preferredStyle: .actionSheet)
-        let okAction = UIAlertAction(title: "OK", style: .destructive, handler: resetHandler)
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let optionMenu = UIAlertController(title: nil, message:resetmsgString, preferredStyle: .actionSheet)
+        let okAction = UIAlertAction(title: okString, style: .destructive, handler: resetHandler)
+        let cancelAction = UIAlertAction(title: cancelString, style: .cancel, handler: nil)
         optionMenu.addAction(okAction)
         optionMenu.addAction(cancelAction)
         self.present(optionMenu, animated: true, completion: nil)
@@ -134,17 +137,20 @@ class ViewController4: UIViewController {
         // You Have Stayed in Canada for:
         //========================================================
         
+        // Localization for summary page title
+        let forprString = NSLocalizedString("For Permanent Resident Renewal", comment: "")
+        let forcitiString = NSLocalizedString("For Citizenship", comment: "")
         // If PR application
         if (vars.pr_citi_flag == 0) {
             // Stayed days
-            for_label.text = "For Permanent Resident Renewal"
+            for_label.text = forprString
             land_date = vars.pr_land_date
             stayed = inCanadaDays(start: vars.pr_dates[0], end: vars.application_date)
         }
         // If citi application
         else {
             // Stayed days
-            for_label.text = "For Citizenship"
+            for_label.text = forcitiString
             land_date = vars.citi_land_date
             stayed = inCanadaDays(start: vars.citi_dates[0], end: vars.application_date)
         }
@@ -272,14 +278,19 @@ class ViewController4: UIViewController {
         }
         applicationDateValidation()
         
-        eligibility_by_label.text = "Eligibility By " + vars.formatter.string(from: vars.application_date)
+        // Localization
+        let eligibilityString = NSLocalizedString("Eligibility By ", comment: "")
+        eligibility_by_label.text = eligibilityString + vars.formatter.string(from: vars.application_date)
         
+        // Localization of yes/no
+        let yesString = NSLocalizedString("YES", comment: "")
+        let noString = NSLocalizedString("NO", comment: "")
         if (need_now == 0) {
-            ready_label.text = "YES"
+            ready_label.text = yesString
             ready_label.backgroundColor = UIColor.green
         }
         else {
-            ready_label.text = "NO"
+            ready_label.text = noString
             ready_label.backgroundColor = UIColor.red
         }
         
