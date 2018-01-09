@@ -11,11 +11,11 @@
 "NO" = "否";
 "From" = "从";
 "To" = "到";
-"For Permanent Resident Renewal" = "为永久居民更新";
-"For Citizenship" = "为公民申请";
+"For Permanent Resident Renewal" = "永久居民更新";
+"For Citizenship" = "公民申请";
 "Please input all periods of time you spent in Canada after landing date" = "请输入所有你在登陆加拿大后居住在加拿大的时间段";
 "Please input all periods of time you spent in Canada, before and after landing date" = "请输入所有你居住在加拿大的时间段";
-"Eligibility By " = "申请有效性于";
+"Eligibility By " = "申请资格 - ";
 "OK" = "好的";
 "Do Not Show This Again" = "不再提醒";
 "This will clear all saved data, are you sure?" = "该操作会清除所有储存内容, 你确定吗?";
